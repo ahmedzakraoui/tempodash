@@ -5,13 +5,11 @@
       data-navigation-color="inverted"
       data-is-fluid="true">
 
-<!-- Mirrored from dashly-theme.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Jan 2026 11:33:41 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta content="Webinning" name="author">
-        
+
             <!-- Theme CSS -->
             <!--<link rel="stylesheet" href="assets/css/theme.bundle.css" id="stylesheetLTR">-->
             <link rel="stylesheet" href="assets/css/theme.rtl.bundle.css" id="stylesheetRTL">
@@ -22,36 +20,36 @@
                 padding-bottom: 0rem !important;
             }
             </style>
-        
+
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap">
         <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap">
-        
+
         <!-- no-JS fallback -->
         <noscript>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap">
         </noscript>
-        
+
         <!-- Favicon -->
         <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
 
             <!-- Page Title -->
         <title>Dashboard | Dashly</title>
     </head>
-    
+
     <body>
 
             <!-- THEME CONFIGURATION -->
             <script>
                 let themeAttrs = document.documentElement.dataset;
-            
+
                 for(let attr in themeAttrs) {
                     if(localStorage.getItem(attr) != null) {
                         document.documentElement.dataset[attr] = localStorage.getItem(attr);
-            
+
                         if (theme === 'auto') {
                             document.documentElement.dataset.theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            
+
                             window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
                                 e.matches ? document.documentElement.dataset.theme = 'dark' : document.documentElement.dataset.theme = 'light';
                             });
@@ -61,12 +59,12 @@
             </script>
         <!-- NAVIGATION -->
         <nav id="mainNavbar" class="navbar navbar-vertical navbar-expand-lg scrollbar bg-dark navbar-dark">
-            
+
             <!-- Theme configuration (navbar) -->
                 <script>
                     let navigationColor = localStorage.getItem('navigationColor'),
                         navbar = document.getElementById('mainNavbar');
-                
+
                     if(navigationColor != null && navbar != null) {
                         if(navigationColor == 'inverted') {
                             navbar.classList.add('bg-dark', 'navbar-dark');
@@ -76,26 +74,26 @@
                             navbar.classList.remove('bg-dark', 'navbar-dark');
                         }
                     }
-                </script>    
+                </script>
             <div class="container-fluid">
-                
+
                 <!-- Brand -->
                 <a class="navbar-brand" href="#" style="margin: auto;">
                     <img src="assets/images/cnss_logo.svg" class="navbar-brand-img logo-light logo-small" alt="..." width="19" height="60" style="  ">
                     <img src="assets/images/cnss_logo.svg" class="navbar-brand-img logo-light logo-large" alt="..." width="125" height="60">
-        
+
                     <img src="assets/images/cnss_logo.svg" class="navbar-brand-img logo-dark logo-small" alt="..." width="19" height="60">
                     <img src="assets/images/cnss_logo.svg" class="navbar-brand-img logo-dark logo-large" alt="..." width="125" height="60">
                 </a>
-        
+
                 <!-- Navbar toggler -->
                 <a href="javascript: void(0);" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#sidenavCollapse" aria-controls="sidenavCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </a>
-        
+
                 <!-- Collapse -->
                 <div class="collapse navbar-collapse" id="sidenavCollapse">
-        
+
                     <!-- Navigation -->
                     <ul class="navbar-nav mb-lg-7">
                         <li class="nav-item">
@@ -133,11 +131,11 @@
                                             <span>إضافة مصلحة طالبة لبحث</span>
                                         </a>
                                     </li>
-                                    
+
                                 </ul>
                             </div>
                         </li>
-                        
+
                     </ul>
                     <!-- End of Navigation -->
                 </div>
@@ -149,16 +147,16 @@
 
             <!-- HEADER -->
             <header class="container-fluid d-flex py-6 mb-4">
-            
+
                 <!-- Top buttons -->
                 <div class="d-flex align-items-center ms-auto me-n1 me-lg-n2">
-            
+
                     <!-- Mode light/Dark -->
                     <div class="dropdown" id="themeSwitcher">
                         <a href="javascript: void(0);" class="dropdown-toggle no-arrow d-flex align-items-center justify-content-center bg-white rounded-circle shadow-sm mx-1 mx-lg-2 w-40px h-40px link-secondary" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-offset="0,0">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="18" width="18"><g><path d="M12,4.64A7.36,7.36,0,1,0,19.36,12,7.37,7.37,0,0,0,12,4.64Zm0,12.72A5.36,5.36,0,1,1,17.36,12,5.37,5.37,0,0,1,12,17.36Z" style="fill: currentColor"/><path d="M12,3.47a1,1,0,0,0,1-1V1a1,1,0,0,0-2,0V2.47A1,1,0,0,0,12,3.47Z" style="fill: currentColor"/><path d="M4.55,6a1,1,0,0,0,.71.29A1,1,0,0,0,6,6,1,1,0,0,0,6,4.55l-1-1A1,1,0,0,0,3.51,4.93Z" style="fill: currentColor"/><path d="M2.47,11H1a1,1,0,0,0,0,2H2.47a1,1,0,1,0,0-2Z" style="fill: currentColor"/><path d="M4.55,18l-1,1a1,1,0,0,0,0,1.42,1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29l1-1A1,1,0,0,0,4.55,18Z" style="fill: currentColor"/><path d="M12,20.53a1,1,0,0,0-1,1V23a1,1,0,0,0,2,0V21.53A1,1,0,0,0,12,20.53Z" style="fill: currentColor"/><path d="M19.45,18A1,1,0,0,0,18,19.45l1,1a1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.42Z" style="fill: currentColor"/><path d="M23,11H21.53a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z" style="fill: currentColor"/><path d="M18.74,6.26A1,1,0,0,0,19.45,6l1-1a1,1,0,1,0-1.42-1.42l-1,1A1,1,0,0,0,18,6,1,1,0,0,0,18.74,6.26Z" style="fill: currentColor"/></g></svg>
                         </a>
-            
+
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
                                 <button type="button" class="dropdown-item active" data-theme-value="light">
@@ -174,16 +172,16 @@
                             </li>
                         </ul>
                     </div>
-            
+
                     <!-- Separator -->
                     <div class="vr bg-gray-700 mx-2 mx-lg-3"></div>
-            
+
                     <!-- Langue slector -->
                     <div class="dropdown">
                         <a href="javascript: void(0);" class="dropdown-toggle no-arrow d-flex align-items-center justify-content-center bg-white rounded-circle shadow-sm mx-1 mx-lg-2 w-40px h-40px" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-offset="0,0">
                             <span class="avatar avatar-circle avatar-xxs"><img class="avatar-img" src="assets/images/flags/1x1/sa.svg" alt="..." width="18" height="18"></span>
                         </a>
-            
+
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
                                 <h6 class="dropdown-header text-uppercase">Sélectionner langue</h6>
@@ -200,10 +198,10 @@
                             </li>
                         </ul>
                     </div>
-            
+
                     <!-- Separator -->
                     <div class="vr bg-gray-700 mx-2 mx-lg-3"></div>
-            
+
                     <!-- User account bouton -->
                     <div class="dropdown">
                         <a href="#" class="dropdown-toggle no-arrow d-flex align-items-center justify-content-center bg-white rounded-circle shadow-sm mx-1 mx-lg-2 w-40px h-40px" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false" data-bs-offset="0,0">
@@ -212,20 +210,108 @@
                             </div>
                         </a>
                     </div>
-                </div>  
+                </div>
             </header>
+            <!--top info enquete-->
             <div class="container-fluid">
                 <div class="row">
                     <div class="col">
                         <div class="card border-0 p-md-6">
                             <div class="card-body">
+                                <ul class="nav nav-tabs mb-4" id="myTab-07" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active"
+                                                id="preview-tab-07" data-bs-toggle="tab" data-bs-target="#preview-tab-pane-07"
+                                                type="button" role="tab" aria-controls="preview-tab-pane-07"
+                                                aria-selected="true">Historique</button>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
-            <!-- Footer-->
+            <!--معلومات البحث-->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="card border-0 p-md-6">
+                            <div class="card-body">
+                                <ul class="nav nav-tabs mb-4" id="myTab-07" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active"
+                                                id="preview-tab-07" data-bs-toggle="tab" data-bs-target="#preview-tab-pane-07"
+                                                type="button" role="tab" aria-controls="preview-tab-pane-07"
+                                                aria-selected="true">معلومات البحث</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--Affectation-->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="card border-0 p-md-6">
+                            <div class="card-body">
+                                <ul class="nav nav-tabs mb-4" id="myTab-07" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active"
+                                                id="preview-tab-07" data-bs-toggle="tab" data-bs-target="#preview-tab-pane-07"
+                                                type="button" role="tab" aria-controls="preview-tab-pane-07"
+                                                aria-selected="true">Affectation</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="card border-0 p-md-6">
+                            <div class="card-body">
+                                <ul class="nav nav-tabs mb-4" id="myTab-07" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active"
+                                                id="preview-tab-07" data-bs-toggle="tab" data-bs-target="#preview-tab-pane-07"
+                                                type="button" role="tab" aria-controls="preview-tab-pane-07"
+                                                aria-selected="true">Transfert</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="card border-0 p-md-6">
+                            <div class="card-body">
+                                <ul class="nav nav-tabs mb-4" id="myTab-07" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active"
+                                                id="preview-tab-07" data-bs-toggle="tab" data-bs-target="#preview-tab-pane-07"
+                                                type="button" role="tab" aria-controls="preview-tab-pane-07"
+                                                aria-selected="true">Résultat de l'enquête</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             <!-- Footer -->
             <footer class="mt-auto">
                 <div class="container-fluid mt-4 mb-6 text-body-secondary">
@@ -233,14 +319,14 @@
                         <div class="col">
                             Direction de controle
                         </div>
-            
+
                         <div class="col-auto">
                             Application de saisie
                         </div>
                     </div> <!-- / .row -->
                 </div>
             </footer>
-            
+
         </main> <!-- / main -->
 
         <!-- JAVASCRIPT-->
