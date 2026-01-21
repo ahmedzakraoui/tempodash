@@ -11,7 +11,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta content="Webinning" name="author">
-        
+
             <!-- Theme CSS -->
             <!--<link rel="stylesheet" href="assets/css/theme.bundle.css" id="stylesheetLTR">-->
             <link rel="stylesheet" href="assets/css/theme.rtl.bundle.css" id="stylesheetRTL">
@@ -22,36 +22,36 @@
                 padding-bottom: 0rem !important;
             }
             </style>
-        
+
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap">
         <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap">
-        
+
         <!-- no-JS fallback -->
         <noscript>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap">
         </noscript>
-        
+
         <!-- Favicon -->
         <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
 
             <!-- Page Title -->
         <title>Dashboard | Dashly</title>
     </head>
-    
+
     <body>
 
             <!-- THEME CONFIGURATION -->
             <script>
                 let themeAttrs = document.documentElement.dataset;
-            
+
                 for(let attr in themeAttrs) {
                     if(localStorage.getItem(attr) != null) {
                         document.documentElement.dataset[attr] = localStorage.getItem(attr);
-            
+
                         if (theme === 'auto') {
                             document.documentElement.dataset.theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            
+
                             window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
                                 e.matches ? document.documentElement.dataset.theme = 'dark' : document.documentElement.dataset.theme = 'light';
                             });
@@ -61,12 +61,12 @@
             </script>
         <!-- NAVIGATION -->
         <nav id="mainNavbar" class="navbar navbar-vertical navbar-expand-lg scrollbar bg-dark navbar-dark">
-            
+
             <!-- Theme configuration (navbar) -->
                 <script>
                     let navigationColor = localStorage.getItem('navigationColor'),
                         navbar = document.getElementById('mainNavbar');
-                
+
                     if(navigationColor != null && navbar != null) {
                         if(navigationColor == 'inverted') {
                             navbar.classList.add('bg-dark', 'navbar-dark');
@@ -76,26 +76,26 @@
                             navbar.classList.remove('bg-dark', 'navbar-dark');
                         }
                     }
-                </script>    
+                </script>
             <div class="container-fluid">
-                
+
                 <!-- Brand -->
                 <a class="navbar-brand" href="#" style="margin: auto;">
                     <img src="assets/images/cnss_logo.svg" class="navbar-brand-img logo-light logo-small" alt="..." width="19" height="60" style="  ">
                     <img src="assets/images/cnss_logo.svg" class="navbar-brand-img logo-light logo-large" alt="..." width="125" height="60">
-        
+
                     <img src="assets/images/cnss_logo.svg" class="navbar-brand-img logo-dark logo-small" alt="..." width="19" height="60">
                     <img src="assets/images/cnss_logo.svg" class="navbar-brand-img logo-dark logo-large" alt="..." width="125" height="60">
                 </a>
-        
+
                 <!-- Navbar toggler -->
                 <a href="javascript: void(0);" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#sidenavCollapse" aria-controls="sidenavCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </a>
-        
+
                 <!-- Collapse -->
                 <div class="collapse navbar-collapse" id="sidenavCollapse">
-        
+
                     <!-- Navigation -->
                     <ul class="navbar-nav mb-lg-7">
                         <li class="nav-item">
@@ -133,11 +133,11 @@
                                             <span>إضافة مصلحة طالبة لبحث</span>
                                         </a>
                                     </li>
-                                    
+
                                 </ul>
                             </div>
                         </li>
-                        
+
                     </ul>
                     <!-- End of Navigation -->
                 </div>
@@ -149,16 +149,16 @@
 
             <!-- HEADER -->
             <header class="container-fluid d-flex py-6 mb-4">
-            
+
                 <!-- Top buttons -->
                 <div class="d-flex align-items-center ms-auto me-n1 me-lg-n2">
-            
+
                     <!-- Mode light/Dark -->
                     <div class="dropdown" id="themeSwitcher">
                         <a href="javascript: void(0);" class="dropdown-toggle no-arrow d-flex align-items-center justify-content-center bg-white rounded-circle shadow-sm mx-1 mx-lg-2 w-40px h-40px link-secondary" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-offset="0,0">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="18" width="18"><g><path d="M12,4.64A7.36,7.36,0,1,0,19.36,12,7.37,7.37,0,0,0,12,4.64Zm0,12.72A5.36,5.36,0,1,1,17.36,12,5.37,5.37,0,0,1,12,17.36Z" style="fill: currentColor"/><path d="M12,3.47a1,1,0,0,0,1-1V1a1,1,0,0,0-2,0V2.47A1,1,0,0,0,12,3.47Z" style="fill: currentColor"/><path d="M4.55,6a1,1,0,0,0,.71.29A1,1,0,0,0,6,6,1,1,0,0,0,6,4.55l-1-1A1,1,0,0,0,3.51,4.93Z" style="fill: currentColor"/><path d="M2.47,11H1a1,1,0,0,0,0,2H2.47a1,1,0,1,0,0-2Z" style="fill: currentColor"/><path d="M4.55,18l-1,1a1,1,0,0,0,0,1.42,1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29l1-1A1,1,0,0,0,4.55,18Z" style="fill: currentColor"/><path d="M12,20.53a1,1,0,0,0-1,1V23a1,1,0,0,0,2,0V21.53A1,1,0,0,0,12,20.53Z" style="fill: currentColor"/><path d="M19.45,18A1,1,0,0,0,18,19.45l1,1a1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.42Z" style="fill: currentColor"/><path d="M23,11H21.53a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z" style="fill: currentColor"/><path d="M18.74,6.26A1,1,0,0,0,19.45,6l1-1a1,1,0,1,0-1.42-1.42l-1,1A1,1,0,0,0,18,6,1,1,0,0,0,18.74,6.26Z" style="fill: currentColor"/></g></svg>
                         </a>
-            
+
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
                                 <button type="button" class="dropdown-item active" data-theme-value="light">
@@ -174,16 +174,16 @@
                             </li>
                         </ul>
                     </div>
-            
+
                     <!-- Separator -->
                     <div class="vr bg-gray-700 mx-2 mx-lg-3"></div>
-            
+
                     <!-- Langue slector -->
                     <div class="dropdown">
                         <a href="javascript: void(0);" class="dropdown-toggle no-arrow d-flex align-items-center justify-content-center bg-white rounded-circle shadow-sm mx-1 mx-lg-2 w-40px h-40px" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-offset="0,0">
                             <span class="avatar avatar-circle avatar-xxs"><img class="avatar-img" src="assets/images/flags/1x1/sa.svg" alt="..." width="18" height="18"></span>
                         </a>
-            
+
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
                                 <h6 class="dropdown-header text-uppercase">Sélectionner langue</h6>
@@ -200,10 +200,10 @@
                             </li>
                         </ul>
                     </div>
-            
+
                     <!-- Separator -->
                     <div class="vr bg-gray-700 mx-2 mx-lg-3"></div>
-            
+
                     <!-- User account bouton -->
                     <div class="dropdown">
                         <a href="#" class="dropdown-toggle no-arrow d-flex align-items-center justify-content-center bg-white rounded-circle shadow-sm mx-1 mx-lg-2 w-40px h-40px" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false" data-bs-offset="0,0">
@@ -212,7 +212,7 @@
                             </div>
                         </a>
                     </div>
-                </div>  
+                </div>
             </header>
             <div class="container-fluid">
                 <div class="row">
@@ -227,7 +227,7 @@
                                         </ul>
                                     <div class="col">
                                         <div class="row g-3">
-                                            <p class="lead mb-3 col-md-4">إضافة بحث</p>
+                                            <p class="lead mb-3 col-md-4 invisible">إضافة بحث</p>
                                             <h6 class="lead mb-3 col-md-8" style="text-align: left">تاريخ التسجيل <span class="badge bg-secondary" id="todayDate"></span></h6>
                                         </div>
                                         <form class="row g-6 needs-validation" novalidate="">
@@ -319,31 +319,162 @@
                                                 <!-- بلوك معلومات الشركة (مخفي بشكل افتراضي) -->
                                                     <div id="companyBlock" class="row g-2 d-none">
 
-                                                        <div class="col-md-2">
+                                                        <div class="col-md-3">
                                                             <label class="form-label">اسم المعني (شركة/TNS/اخر)</label>
                                                             <input type="text" class="form-control">
                                                         </div>
 
-                                                        <div class="col-md-2">
+                                                        <div class="col-md-3">
                                                             <label class="form-label">المعرف الجبائي (شركة/TNS)</label>
                                                             <input type="text" class="form-control">
                                                         </div>
 
-                                                        <div class="col-md-2">
+                                                        <div class="col-md-3">
                                                             <label class="form-label">اسم أول مسؤول (شركة/TNS)</label>
                                                             <input type="text" class="form-control">
                                                         </div>
 
-                                                        <div class="col-md-2">
+                                                        <div class="col-md-3">
                                                             <label class="form-label">رقم بطاقة التعريف (CIN)</label>
                                                             <input type="text" class="form-control">
                                                         </div>
+                                                        <div class="row g-3 d-flex justify-content-center">
+                                                            <div class="col-md-3">
+                                                                <label class="form-label">العنوان</label>
+                                                                <textarea id="exampleFormControlTextarea1"
+                                                                          class="form-control" placeholder="   "
+                                                                          rows="4" style="height: 1.5em;"></textarea>
+                                                            </div>
 
-                                                        <div class="col-md-3">
-                                                            <label class="form-label">العنوان</label>
-                                                            <textarea id="exampleFormControlTextarea1" class="form-control" placeholder="   " rows="4" style="height: 1.5em;"></textarea>
+                                                            <div class="col-md-3">
+                                                                <label class="form-label">الترقيم البريدي</label>
+                                                                <input type="text" class="form-control">
+                                                            </div>
+
+                                                            <div class="col-md-3">
+                                                                <label class="form-label">المنطقة (Zone)</label>
+                                                                <input type="text" class="form-control">
+                                                            </div>
                                                         </div>
 
+                                                    </div>
+                                                    <div class="row g-3 mb-5 mt-5">
+                                                        <label class="form-label">العملة (موضوع الشكوى)</label>
+                                                            <div class="table-responsive">
+                                                                <table class="table table-nowrap mb-0" data-list='{"valueNames": ["matricule", "key", "type_piece", "n_piece", "Identity"]}'>
+                                                                    <thead class="thead-light">
+                                                                    <tr>
+                                                                        <th class="w-80px">
+                                                                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="matricule">
+                                                                                Matricule
+                                                                            </a>
+                                                                        </th>
+                                                                        <th>
+                                                                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="key">
+                                                                                Clé
+                                                                            </a>
+                                                                        </th>
+                                                                        <th class="min-w-200px">
+                                                                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="type_piece">
+                                                                                Type piéce d'identité
+                                                                            </a>
+                                                                        </th>
+                                                                        <th>
+                                                                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="n_piece">
+                                                                                Numéro piéce d'identité
+                                                                            </a>
+                                                                        </th>
+                                                                        <th>
+                                                                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="Identity">
+                                                                                Identité
+                                                                            </a>
+                                                                        </th>
+                                                                    </tr>
+                                                                    </thead>
+
+                                                                    <tbody class="list">
+                                                                    <tr>
+                                                                        <td class="matricule">12345678</td>
+                                                                        <td class="key">01</td>
+                                                                        <td class="type_piece">CIN</td>
+                                                                        <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
+                                                                        <td class="identity">Mohamed ben Mohamed</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="matricule">12345678</td>
+                                                                        <td class="key">01</td>
+                                                                        <td class="type_piece">CIN</td>
+                                                                        <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
+                                                                        <td class="identity">Mohamed ben Mohamed</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="matricule">12345678</td>
+                                                                        <td class="key">01</td>
+                                                                        <td class="type_piece">CIN</td>
+                                                                        <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
+                                                                        <td class="identity">Mohamed ben Mohamed</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="matricule">12345678</td>
+                                                                        <td class="key">01</td>
+                                                                        <td class="type_piece">CIN</td>
+                                                                        <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
+                                                                        <td class="identity">Mohamed ben Mohamed</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="matricule">12345678</td>
+                                                                        <td class="key">01</td>
+                                                                        <td class="type_piece">CIN</td>
+                                                                        <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
+                                                                        <td class="identity">Mohamed ben Mohamed</td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    <div class="row g-3 mt-5">
+                                                        <label class="form-label">آخرون (Autres adverses)</label>
+                                                        <div class="table-responsive">
+                                                            <table class="table table-nowrap mb-0" data-list='{"valueNames": ["type_piece", "n_piece", "Identity"]}'>
+                                                                <thead class="thead-light">
+                                                                <tr>
+                                                                    <th class="min-w-200px">
+                                                                        <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="type_piece">
+                                                                            Type piéce d'identité
+                                                                        </a>
+                                                                    </th>
+                                                                    <th>
+                                                                        <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="n_piece">
+                                                                            Numéro piéce d'identité
+                                                                        </a>
+                                                                    </th>
+                                                                    <th>
+                                                                        <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="Identity">
+                                                                            Identité
+                                                                        </a>
+                                                                    </th>
+                                                                </tr>
+                                                                </thead>
+
+                                                                <tbody class="list">
+                                                                <tr>
+                                                                    <td class="type_piece">CIN</td>
+                                                                    <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
+                                                                    <td class="identity">Med ben Mansour</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="type_piece">CIN</td>
+                                                                    <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
+                                                                    <td class="identity">Med ben Mansour</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="type_piece">CIN</td>
+                                                                    <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
+                                                                    <td class="identity">Med ben Mansour</td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
                                                     </div>
 
 
@@ -395,26 +526,12 @@
                                             </div>
                                         </form>
                                     </div>
-                                </div>                                
-                            </div>                            
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-            </div>
 
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col">
-                        <div class="card border-0 p-md-6">
-                            <div class="card-body">
-                                <div class="row">
-
-                </div>
-                   </div>
-                        </div>
-                            </div>
-                                </div>
             </div>
 
             <!-- Footer-->
@@ -425,14 +542,14 @@
                         <div class="col">
                             Direction de controle
                         </div>
-            
+
                         <div class="col-auto">
                             Application de saisie
                         </div>
                     </div> <!-- / .row -->
                 </div>
             </footer>
-            
+
         </main> <!-- / main -->
 
         <!-- JAVASCRIPT-->
