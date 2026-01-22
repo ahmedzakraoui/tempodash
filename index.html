@@ -556,20 +556,19 @@
         <!-- Theme JS -->
         <script src="assets/js/theme.bundle.js"></script>
         <script>
-            <script>
-                function getTodayArabicDate() {
-                return new Intl.DateTimeFormat("ar-TN", {
+            function setTodayArabicDate(spanId) {
+                const el = document.getElementById(spanId);
+                if (!el) return;
+
+                el.textContent = new Intl.DateTimeFormat("ar-TN", {
                 day: "numeric",
                 month: "long",
                 year: "numeric"
-            }).format(new Date());
+                }).format(new Date());
             }
 
-                document.addEventListener("DOMContentLoaded", function () {
-                document.getElementById("todayDate").textContent = getTodayArabicDate();
-            });
-        </script>
-
-            </script>
+            // call it
+            setTodayArabicDate("todayDate");
+</script>
     </body>
 </html>
