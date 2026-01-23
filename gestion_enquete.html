@@ -488,33 +488,141 @@
             <!--top info enquete-->
             <div class="container-fluid">
                 <div class="d-flex justify-content-between m-5">
-                    <button type="button" class="btn btn-secondary pe-none">المرجع:&nbsp;&nbsp;99&nbsp;-&nbsp;900&nbsp;-&nbsp;2099&nbsp;&nbsp;&nbsp;<span class="badge rounded-pill text-bg-warning">E</span></button>
-                <button type="button" class="btn btn-secondary pe-none">المعني:&nbsp;&nbsp;00-12345678&nbsp;&nbsp;&nbsp;</button>
-                </div> 
-                <div class="row">
-                    <div class="col">
-                        <div class="card border-0 p-md-6">
-                            <div class="card-body">
-                                <ul class="nav nav-tabs mb-4" id="myTab-07" role="tablist">
-                                    <li class="nav-item" role="presentation">
-                                        <button
-                                            class="nav-link active"
-                                            id="preview-tab-07"
-                                            data-bs-toggle="tab"
-                                            data-bs-target="#preview-tab-pane-07"
-                                            type="button"
-                                            role="tab"
-                                            aria-controls="preview-tab-pane-07"
-                                            aria-selected="true"
-                                        >
-                                            Historique
-                                        </button>
-                                    </li>
-                                </ul>
+                    <p type="button" class="btn btn-secondary pe-none position-relative">المرجع:&nbsp;&nbsp;99&nbsp;-&nbsp;900&nbsp;-&nbsp;2099&nbsp;&nbsp;&nbsp;<span class="position-absolute top-0 start-100 translate-middle badge bg-warning rounded" style="line-height: unset;">E</span><span class="btn badge text-bg-danger-soft pe-auto" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">Historique</span></p>
+                    <!--popup_enquete_historique-->
+                    <div id="exampleModalCenteredScrollable" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header" style="padding-top: 1em; padding-bottom: 0.5em;">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" style="padding-top: 1em;">
+                                    <div class="table-responsive">
+                                        <h3 class="modal-title" id="exampleModalCenteredScrollableTitle">Situations enquete</h3>
+                                        <table class="table table-nowrap mb-0" data-list='{"valueNames": ["matricule", "key", "type_piece", "n_piece", "Identity"]}'>
+                                            <thead class="thead-light">
+                                            <tr>
+                                                <th class="w-80px">
+                                                    <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="matricule">
+                                                        Choix
+                                                    </a>
+                                                </th>
+                                                <th>
+                                                    <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="key">
+                                                        Lettre
+                                                    </a>
+                                                </th>
+                                                <th class="min-w-200px">
+                                                    <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="type_piece">
+                                                        Situation
+                                                    </a>
+                                                </th>
+                                                <th>
+                                                    <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="n_piece">
+                                                        Date situation
+                                                    </a>
+                                                </th>
+                                                <th>
+                                                    <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="Identity">
+                                                        Annotations
+                                                    </a>
+                                                </th>
+                                            </tr>
+                                            </thead>
+
+                                            <tbody class="list">
+                                            <tr>
+                                                <td class="matricule"></td>
+                                                <td class="key">E</td>
+                                                <td class="type_piece">Enquête au secrétariat</td>
+                                                <td class="n_piece"><span class="badge text-bg-success rounded-pill">01-01-2025</span></td>
+                                                <td class="identity">NA</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="matricule"></td>
+                                                <td class="key">C</td>
+                                                <td class="type_piece">Chez le controleur</td>
+                                                <td class="n_piece"><span class="badge text-bg-success rounded-pill">11-01-2025</span></td>
+                                                <td class="identity">NA</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="matricule"></td>
+                                                <td class="key">U</td>
+                                                <td class="type_piece">Enquête chez chef unité</td>
+                                                <td class="n_piece"><span class="badge text-bg-success rounded-pill">01-02-2025</span></td>
+                                                <td class="identity">NA</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="matricule"></td>
+                                                <td class="key">S</td>
+                                                <td class="type_piece">Enquête satisfaite</td>
+                                                <td class="n_piece"><span class="badge text-bg-success rounded-pill">13-03-2025</span></td>
+                                                <td class="identity">NA</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <br><br>
+                                    <div class="table-responsive">
+                                        <h3 class="modal-title" id="exampleModalCenteredScrollableTitle">Transfert enquete</h3>
+                                        <table class="table table-nowrap mb-0" data-list='{"valueNames": ["matricule", "key", "type_piece", "n_piece", "Identity"]}'>
+                                            <thead class="thead-light">
+                                            <tr>
+                                                <th>
+                                                    <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="key">
+                                                        Matricule controleur
+                                                    </a>
+                                                </th>
+                                                <th class="min-w-200px">
+                                                    <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="type_piece">
+                                                        Identité controleur
+                                                    </a>
+                                                </th>
+                                                <th>
+                                                    <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="n_piece">
+                                                        Matricule nv controleur
+                                                    </a>
+                                                </th>
+                                                <th>
+                                                    <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="Identity">
+                                                        Identité nv controleur
+                                                    </a>
+                                                <th>
+                                                    <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="Identity">
+                                                        Date transfert
+                                                    </a>
+                                                </th>
+                                                <th>
+                                                    <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="Identity">
+                                                        Remarques
+                                                    </a>
+                                                </th>
+                                                </th>
+                                            </tr>
+                                            </thead>
+
+                                            <tbody class="list">
+                                            <tr>
+                                                <td class="key">123456-00</td>
+                                                <td class="type_piece">Mohamed ben mohamed</td>
+                                                <td class="n_piece">654789-00</td>
+                                                <td class="identity">Mansour ben Ahmed</td>
+                                                <td class="identity">21-12-2024</td>
+                                                <td class="identity">-</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">إغلاق</button>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <p type="button" class="btn btn-secondary pe-none">المعني:&nbsp;&nbsp;00-12345678&nbsp;&nbsp;&nbsp;<span class="btn badge text-bg-primary-soft pe-auto">Historique</span></p>
                 </div>
+
             </div>
             <!--معلومات البحث-->
             <div class="container-fluid">
