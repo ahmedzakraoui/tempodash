@@ -1409,109 +1409,105 @@
                                 <div class="row g-3 mb-5 mt-5">
                                     <label class="form-label">المصالح الموجهة إليها نتيجة البحث</label>
                                     <div class="table-responsive">
-                                        <table
-                                            class="table table-nowrap mb-0"
-                                            data-list='{"valueNames": ["matricule", "key", "type_piece", "n_piece", "Identity"]}'
-                                        >
+                                        <table class="table table-nowrap mb-0"
+                                                data-list='{"valueNames":["code_service","service","date_transmission"]}'>
+
                                             <thead class="thead-light">
-                                                <tr>
-                                                    <th class="w-80px">
-                                                        <a
-                                                            href="javascript: void(0);"
-                                                            class="text-body-secondary list-sort"
-                                                            data-sort="matricule"
-                                                        >
-                                                            Matricule
-                                                        </a>
-                                                    </th>
-                                                    <th>
-                                                        <a
-                                                            href="javascript: void(0);"
-                                                            class="text-body-secondary list-sort"
-                                                            data-sort="key"
-                                                        >
-                                                            Clé
-                                                        </a>
-                                                    </th>
-                                                    <th class="min-w-200px">
-                                                        <a
-                                                            href="javascript: void(0);"
-                                                            class="text-body-secondary list-sort"
-                                                            data-sort="type_piece"
-                                                        >
-                                                            Type piéce d'identité
-                                                        </a>
-                                                    </th>
-                                                    <th>
-                                                        <a
-                                                            href="javascript: void(0);"
-                                                            class="text-body-secondary list-sort"
-                                                            data-sort="n_piece"
-                                                        >
-                                                            Numéro piéce d'identité
-                                                        </a>
-                                                    </th>
-                                                    <th>
-                                                        <a
-                                                            href="javascript: void(0);"
-                                                            class="text-body-secondary list-sort"
-                                                            data-sort="Identity"
-                                                        >
-                                                            Identité
-                                                        </a>
-                                                    </th>
-                                                </tr>
+                                            <tr>
+                                                <th class="min-w-150px">
+                                                Code service
+                                                </th>
+                                                <th class="min-w-250px">
+                                                Service
+                                                </th>
+                                                <th class="min-w-180px">
+                                                Date transmission
+                                                </th>
+                                            </tr>
                                             </thead>
 
                                             <tbody class="list">
-                                                <tr>
-                                                    <td class="matricule">12345678</td>
-                                                    <td class="key">01</td>
-                                                    <td class="type_piece">CIN</td>
-                                                    <td class="n_piece">
-                                                        <span class="badge text-bg-success rounded-pill">12345678</span>
-                                                    </td>
-                                                    <td class="identity">Mohamed ben Mohamed</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="matricule">12345678</td>
-                                                    <td class="key">01</td>
-                                                    <td class="type_piece">CIN</td>
-                                                    <td class="n_piece">
-                                                        <span class="badge text-bg-success rounded-pill">12345678</span>
-                                                    </td>
-                                                    <td class="identity">Mohamed ben Mohamed</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="matricule">12345678</td>
-                                                    <td class="key">01</td>
-                                                    <td class="type_piece">CIN</td>
-                                                    <td class="n_piece">
-                                                        <span class="badge text-bg-success rounded-pill">12345678</span>
-                                                    </td>
-                                                    <td class="identity">Mohamed ben Mohamed</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="matricule">12345678</td>
-                                                    <td class="key">01</td>
-                                                    <td class="type_piece">CIN</td>
-                                                    <td class="n_piece">
-                                                        <span class="badge text-bg-success rounded-pill">12345678</span>
-                                                    </td>
-                                                    <td class="identity">Mohamed ben Mohamed</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="matricule">12345678</td>
-                                                    <td class="key">01</td>
-                                                    <td class="type_piece">CIN</td>
-                                                    <td class="n_piece">
-                                                        <span class="badge text-bg-success rounded-pill">12345678</span>
-                                                    </td>
-                                                    <td class="identity">Mohamed ben Mohamed</td>
-                                                </tr>
+                                            <tr>
+                                                <td class="code_service">S01</td>
+                                                <td class="service">
+                                                <span class="badge text-bg-success rounded-pill">
+                                                    Service Comptabilité
+                                                </span>
+                                                </td>
+                                                <td class="date_transmission">12/01/2026</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="code_service">S02</td>
+                                                <td class="service">
+                                                <span class="badge text-bg-success rounded-pill">
+                                                    Service Informatique
+                                                </span>
+                                                </td>
+                                                <td class="date_transmission">15/01/2026</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="code_service">S03</td>
+                                                <td class="service">
+                                                <span class="badge text-bg-success rounded-pill">
+                                                    Service Juridique
+                                                </span>
+                                                </td>
+                                                <td class="date_transmission">18/01/2026</td>
+                                            </tr>
                                             </tbody>
                                         </table>
                                     </div>
+                                    <div class="table-responsive">
+                                        <br>
+                                        <label class="form-label">مبلغ النقص مفصل&nbsp;<span class="badge text-bg-danger rounded-pill">29000 دت</span></label>
+                                        <table class="table table-nowrap mb-0"
+                                                data-list='{"valueNames":["code_insuffisance","type_insuffisance","montant_insuffisance"]}'>
+
+                                            <thead class="thead-light">
+                                            <tr>
+                                                <th class="min-w-150px">Code insuffisance</th>
+                                                <th class="min-w-250px">Type insuffisance</th>
+                                                <th class="min-w-180px">Montant insuffisance</th>
+                                            </tr>
+                                            </thead>
+
+                                            <tbody class="list">
+                                            <tr>
+                                                <td class="code_insuffisance">INS-01</td>
+                                                <td class="type_insuffisance">
+                                                <span class="badge text-bg-danger rounded-pill">
+                                                    Insuffisance de solde
+                                                </span>
+                                                </td>
+                                                <td class="montant_insuffisance">10000.000</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="code_insuffisance">INS-02</td>
+                                                <td class="type_insuffisance">
+                                                <span class="badge text-bg-danger rounded-pill">
+                                                    Dépassement plafond
+                                                </span>
+                                                </td>
+                                                <td class="montant_insuffisance">16000.000</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="code_insuffisance">INS-03</td>
+                                                <td class="type_insuffisance">
+                                                <span class="badge text-bg-danger rounded-pill">
+                                                    Erreur de calcul
+                                                </span>
+                                                </td>
+                                                <td class="montant_insuffisance">3000.000</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
                                 </div>
                             </div>
                         </div>
