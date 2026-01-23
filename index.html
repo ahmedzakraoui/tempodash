@@ -360,123 +360,239 @@
                                                     </div>
                                                     <div class="row g-3 mb-5 mt-5">
                                                         <label class="form-label">العملة (موضوع الشكوى)</label>
-                                                            <div class="table-responsive">
-                                                                <table class="table table-nowrap mb-0" data-list='{"valueNames": ["matricule", "key", "type_piece", "n_piece", "Identity"]}'>
-                                                                    <thead class="thead-light">
-                                                                    <tr>
-                                                                        <th class="w-80px">
-                                                                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="matricule">
-                                                                                Matricule
-                                                                            </a>
-                                                                        </th>
-                                                                        <th>
-                                                                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="key">
-                                                                                Clé
-                                                                            </a>
-                                                                        </th>
-                                                                        <th class="min-w-200px">
-                                                                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="type_piece">
-                                                                                Type piéce d'identité
-                                                                            </a>
-                                                                        </th>
-                                                                        <th>
-                                                                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="n_piece">
-                                                                                Numéro piéce d'identité
-                                                                            </a>
-                                                                        </th>
-                                                                        <th>
-                                                                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="Identity">
-                                                                                Identité
-                                                                            </a>
-                                                                        </th>
-                                                                    </tr>
-                                                                    </thead>
 
-                                                                    <tbody class="list">
-                                                                    <tr>
-                                                                        <td class="matricule">12345678</td>
-                                                                        <td class="key">01</td>
-                                                                        <td class="type_piece">CIN</td>
-                                                                        <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
-                                                                        <td class="identity">Mohamed ben Mohamed</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="matricule">12345678</td>
-                                                                        <td class="key">01</td>
-                                                                        <td class="type_piece">CIN</td>
-                                                                        <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
-                                                                        <td class="identity">Mohamed ben Mohamed</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="matricule">12345678</td>
-                                                                        <td class="key">01</td>
-                                                                        <td class="type_piece">CIN</td>
-                                                                        <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
-                                                                        <td class="identity">Mohamed ben Mohamed</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="matricule">12345678</td>
-                                                                        <td class="key">01</td>
-                                                                        <td class="type_piece">CIN</td>
-                                                                        <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
-                                                                        <td class="identity">Mohamed ben Mohamed</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="matricule">12345678</td>
-                                                                        <td class="key">01</td>
-                                                                        <td class="type_piece">CIN</td>
-                                                                        <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
-                                                                        <td class="identity">Mohamed ben Mohamed</td>
-                                                                    </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                        </div>
-                                                    <div class="row g-3 mt-5">
-                                                        <label class="form-label">آخرون (Autres adverses)</label>
                                                         <div class="table-responsive">
-                                                            <table class="table table-nowrap mb-0" data-list='{"valueNames": ["type_piece", "n_piece", "Identity"]}'>
+                                                            <table class="table table-nowrap mb-0"
+                                                                data-list='{"valueNames":["matricule","key","type_piece","n_piece","identity"]}'>
+
                                                                 <thead class="thead-light">
                                                                 <tr>
-                                                                    <th class="min-w-200px">
-                                                                        <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="type_piece">
-                                                                            Type piéce d'identité
-                                                                        </a>
-                                                                    </th>
-                                                                    <th>
-                                                                        <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="n_piece">
-                                                                            Numéro piéce d'identité
-                                                                        </a>
-                                                                    </th>
-                                                                    <th>
-                                                                        <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="Identity">
-                                                                            Identité
-                                                                        </a>
-                                                                    </th>
+                                                                    <th class="w-102px">Matricule</th>
+                                                                    <th>Clé</th>
+                                                                    <th class="min-w-200px">Type pièce d'identité</th>
+                                                                    <th>Numéro pièce d'identité</th>
+                                                                    <th class="min-w-200px">Identité</th>
                                                                 </tr>
                                                                 </thead>
 
                                                                 <tbody class="list">
+
                                                                 <tr>
-                                                                    <td class="type_piece">CIN</td>
-                                                                    <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
-                                                                    <td class="identity">Med ben Mansour</td>
+                                                                    <td class="matricule">
+                                                                        <input type="text" class="form-control form-control-sm" value="12345678">
+                                                                    </td>
+
+                                                                    <td class="key">
+                                                                        <input type="text" class="form-control form-control-sm" value="01">
+                                                                    </td>
+
+                                                                    <td class="type_piece">
+                                                                        <select class="form-select form-select-sm">
+                                                                            <option value="CIN" selected>CIN</option>
+                                                                            <option value="Passport">Passport</option>
+                                                                            <option value="Carte séjour">Carte séjour</option>
+                                                                        </select>
+                                                                    </td>
+
+                                                                    <td class="n_piece">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="12345678">
+                                                                    </td>
+
+                                                                    <td class="identity">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="Mohamed ben Mohamed">
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="type_piece">CIN</td>
-                                                                    <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
-                                                                    <td class="identity">Med ben Mansour</td>
+                                                                    <td class="matricule">
+                                                                        <input type="text" class="form-control form-control-sm" value="12345678">
+                                                                    </td>
+
+                                                                    <td class="key">
+                                                                        <input type="text" class="form-control form-control-sm" value="01">
+                                                                    </td>
+
+                                                                    <td class="type_piece">
+                                                                        <select class="form-select form-select-sm">
+                                                                            <option value="CIN" selected>CIN</option>
+                                                                            <option value="Passport">Passport</option>
+                                                                            <option value="Carte séjour">Carte séjour</option>
+                                                                        </select>
+                                                                    </td>
+
+                                                                    <td class="n_piece">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="12345678">
+                                                                    </td>
+
+                                                                    <td class="identity">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="Mohamed ben Mohamed">
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="type_piece">CIN</td>
-                                                                    <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
-                                                                    <td class="identity">Med ben Mansour</td>
+                                                                    <td class="matricule">
+                                                                        <input type="text" class="form-control form-control-sm" value="12345678">
+                                                                    </td>
+
+                                                                    <td class="key">
+                                                                        <input type="text" class="form-control form-control-sm" value="01">
+                                                                    </td>
+
+                                                                    <td class="type_piece">
+                                                                        <select class="form-select form-select-sm">
+                                                                            <option value="CIN" selected>CIN</option>
+                                                                            <option value="Passport">Passport</option>
+                                                                            <option value="Carte séjour">Carte séjour</option>
+                                                                        </select>
+                                                                    </td>
+
+                                                                    <td class="n_piece">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="12345678">
+                                                                    </td>
+
+                                                                    <td class="identity">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="Mohamed ben Mohamed">
+                                                                    </td>
                                                                 </tr>
+                                                                <tr>
+                                                                    <td class="matricule">
+                                                                        <input type="text" class="form-control form-control-sm" value="12345678">
+                                                                    </td>
+
+                                                                    <td class="key">
+                                                                        <input type="text" class="form-control form-control-sm" value="01">
+                                                                    </td>
+
+                                                                    <td class="type_piece">
+                                                                        <select class="form-select form-select-sm">
+                                                                            <option value="CIN" selected>CIN</option>
+                                                                            <option value="Passport">Passport</option>
+                                                                            <option value="Carte séjour">Carte séjour</option>
+                                                                        </select>
+                                                                    </td>
+
+                                                                    <td class="n_piece">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="12345678">
+                                                                    </td>
+
+                                                                    <td class="identity">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="Mohamed ben Mohamed">
+                                                                    </td>
+                                                                </tr>
+
+                                                                <!-- Duplique cette ligne si nécessaire -->
                                                                 </tbody>
                                                             </table>
                                                         </div>
                                                     </div>
 
+                                                    <div class="row g-3 mt-5">
+                                                        <label class="form-label">آخرون (Autres adverses)</label>
+
+                                                        <div class="table-responsive">
+                                                            <table class="table table-nowrap mb-0"
+                                                                data-list='{"valueNames": ["type_piece", "n_piece", "identity"]}'>
+
+                                                                <thead class="thead-light">
+                                                                <tr>
+                                                                    <th class="min-w-200px">
+                                                                        Type pièce d'identité
+                                                                    </th>
+                                                                    <th class="min-w-150px">
+                                                                        Numéro pièce d'identité
+                                                                    </th>
+                                                                    <th class="min-w-200px">
+                                                                        Identité
+                                                                    </th>
+                                                                </tr>
+                                                                </thead>
+
+                                                                <tbody class="list">
+
+                                                                <tr>
+                                                                    <td class="type_piece">
+                                                                        <select class="form-select form-select-sm">
+                                                                            <option value="CIN" selected>CIN</option>
+                                                                            <option value="Passport">Passport</option>
+                                                                            <option value="Carte séjour">Carte séjour</option>
+                                                                        </select>
+                                                                    </td>
+
+                                                                    <td class="n_piece">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="12345678">
+                                                                    </td>
+
+                                                                    <td class="identity">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="Med ben Mansour">
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="type_piece">
+                                                                        <select class="form-select form-select-sm">
+                                                                            <option value="CIN" selected>CIN</option>
+                                                                            <option value="Passport">Passport</option>
+                                                                            <option value="Carte séjour">Carte séjour</option>
+                                                                        </select>
+                                                                    </td>
+
+                                                                    <td class="n_piece">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="12345678">
+                                                                    </td>
+
+                                                                    <td class="identity">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="Med ben Mansour">
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="type_piece">
+                                                                        <select class="form-select form-select-sm">
+                                                                            <option value="CIN" selected>CIN</option>
+                                                                            <option value="Passport">Passport</option>
+                                                                            <option value="Carte séjour">Carte séjour</option>
+                                                                        </select>
+                                                                    </td>
+
+                                                                    <td class="n_piece">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="12345678">
+                                                                    </td>
+
+                                                                    <td class="identity">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            value="Med ben Mansour">
+                                                                    </td>
+                                                                </tr>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
 
                                                     <script>
                                                   const cnssSwitch = document.getElementById("cnssSwitch");
