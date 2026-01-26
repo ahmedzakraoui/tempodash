@@ -6,6 +6,7 @@
     data-sidebar-behaviour="fixed"
     data-navigation-color="inverted"
     data-is-fluid="true"
+    class="h-100"
 >
     <head>
         <meta charset="utf-8" />
@@ -21,6 +22,9 @@
                 padding-top: 0.5rem !important;
                 padding-bottom: 0rem !important;
             }
+            .page-section {display: none;
+            }
+
         </style>
 
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
@@ -51,7 +55,7 @@
         <title>Dashboard | Dashly</title>
     </head>
 
-    <body>
+    <body class="h-100 overflow-hidden">
         <!-- THEME CONFIGURATION -->
         <script>
             let themeAttrs = document.documentElement.dataset;
@@ -317,7 +321,7 @@
             </div>
         </nav>
         <!-- MAIN CONTENT -->
-        <main>
+        <main class="h-100 overflow-auto">
             <!-- HEADER -->
             <header class="container-fluid d-flex py-6 mb-4">
                 <!-- Top buttons -->
@@ -527,7 +531,7 @@
             <!--top info enquete-->
             <div class="container-fluid">
                 <div class="d-flex justify-content-between m-5">
-                    <p type="button" class="btn btn-secondary pe-none position-relative">المرجع:&nbsp;&nbsp;99&nbsp;-&nbsp;900&nbsp;-&nbsp;2099&nbsp;&nbsp;&nbsp;<span class="position-absolute top-0 start-100 translate-middle badge bg-warning rounded" style="line-height: unset;">S</span><span class="btn badge text-bg-danger-soft pe-auto" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">Historique</span></p>
+                    <p type="button" class="btn btn-secondary pe-none position-relative">المرجع:&nbsp;&nbsp;209990009&nbsp;&nbsp;&nbsp;<span class="position-absolute top-0 start-100 translate-middle badge bg-warning rounded" style="line-height: unset;">S</span><span class="btn badge text-bg-danger-soft pe-auto" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">Historique</span></p>
                     <!--popup_enquete_historique-->
                     <div id="exampleModalCenteredScrollable" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
                         <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered" role="document">
@@ -664,7 +668,7 @@
 
             </div>
             <!--معلومات البحث-->
-            <div class="container-fluid" id="info">
+            <div class="container-fluid page-section" id="info">
                 <div class="row">
                     <div class="col">
                         <div class="card border-0 p-md-6">
@@ -697,17 +701,11 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <label for="validationCustom04" class="form-label">المصلحة التي تطلب البحث</label>
-                                                <select class="form-select" id="validationCustom04" required="">
-                                                    <option selected="" disabled="" value="">خلية الانخراط</option>
-                                                    <option>...</option>
-                                                </select>
-                                                <div class="invalid-feedback">
-                                                    أدخل طبيعة البحث
-                                                </div>
+                                                <input type="text" class="form-control" id="validationCustom05" required="" disabled value="خلية الانخراط">
                                             </div>
                                             <div class="col-md-2">
                                                 <label for="validationCustom05" class="form-label">تاريخ الاستقبال</label>
-                                                <input type="text" class="form-control" id="validationCustom05" required="" value="15-12-2025">
+                                                <input type="text" class="form-control" id="validationCustom05" required="" value="15-12-2025" disabled>
                                                 <div class="invalid-feedback">
                                                     أدخل  تاريخ صحيح
                                                 </div>
@@ -732,13 +730,6 @@
                                                     <div class="col-md-3">
                                                         <label for="validationCustom05" class="form-label">رقم انخراط المؤجر /TNS</label>
                                                         <input type="text" class="form-control" id="validationCustom05" required="" value="12345678">
-                                                        <div class="invalid-feedback">
-                                                            رقم خاطئ
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-1">
-                                                        <label for="validationCustom05" class="form-label" style="visibility: hidden;"> مفتاح</label>
-                                                        <input type="text" class="form-control" id="validationCustom05" required="" value="95">
                                                         <div class="invalid-feedback">
                                                             رقم خاطئ
                                                         </div>
@@ -1073,7 +1064,7 @@
                 </div>
             </div>
             <!--Affectation-->
-            <div class="container-fluid" id="affectation">
+            <div class="container-fluid page-section" id="affectation">
                 <div class="row">
                     <div class="col">
                         <div class="card border-0 p-md-6">
@@ -1224,7 +1215,7 @@
                 </div>
             </div>
 
-            <div class="container-fluid" id="transfert">
+            <div class="container-fluid page-section" id="transfert">
                 <div class="row">
                     <div class="col">
                         <div class="card border-0 p-md-6">
@@ -1407,7 +1398,7 @@
                 </div>
             </div>
 
-            <div class="container-fluid" id="resultat">
+            <div class="container-fluid page-section" id="resultat">
                 <div class="row">
                     <div class="col">
                         <div class="card border-0 p-md-6">
@@ -1567,6 +1558,28 @@
 
             // call it
             setTodayArabicDate("todayDate");
+
+            const sections = document.querySelectorAll('.page-section');
+
+            function showSectionFromHash() {
+                const hash = window.location.hash.replace('#', '') || 'info';
+
+                sections.forEach(section => {
+                section.style.display = 'none';
+                });
+
+                const activeSection = document.getElementById(hash);
+                if (activeSection) {
+                activeSection.style.display = 'block';
+                }
+            }
+
+            // عند تحميل الصفحة
+            window.addEventListener('load', showSectionFromHash);
+
+            // عند الضغط على menu
+            window.addEventListener('hashchange', showSectionFromHash);
+
         </script>
 
     </body>
