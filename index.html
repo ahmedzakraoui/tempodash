@@ -61,89 +61,226 @@
             </script>
         <!-- NAVIGATION -->
         <nav id="mainNavbar" class="navbar navbar-vertical navbar-expand-lg scrollbar bg-dark navbar-dark">
-
             <!-- Theme configuration (navbar) -->
-                <script>
-                    let navigationColor = localStorage.getItem('navigationColor'),
-                        navbar = document.getElementById('mainNavbar');
+            <script>
+                let navigationColor = localStorage.getItem("navigationColor"),
+                    navbar = document.getElementById("mainNavbar");
 
-                    if(navigationColor != null && navbar != null) {
-                        if(navigationColor == 'inverted') {
-                            navbar.classList.add('bg-dark', 'navbar-dark');
-                            navbar.classList.remove('bg-white', 'navbar-light');
-                        } else {
-                            navbar.classList.add('bg-white', 'navbar-light');
-                            navbar.classList.remove('bg-dark', 'navbar-dark');
-                        }
+                if (navigationColor != null && navbar != null) {
+                    if (navigationColor == "inverted") {
+                        navbar.classList.add("bg-dark", "navbar-dark");
+                        navbar.classList.remove("bg-white", "navbar-light");
+                    } else {
+                        navbar.classList.add("bg-white", "navbar-light");
+                        navbar.classList.remove("bg-dark", "navbar-dark");
                     }
-                </script>
+                }
+            </script>
             <div class="container-fluid">
-
                 <!-- Brand -->
-                <a class="navbar-brand" href="#" style="margin: auto;">
-                    <img src="assets/images/cnss_logo.svg" class="navbar-brand-img logo-light logo-small" alt="..." width="19" height="60" style="  ">
-                    <img src="assets/images/cnss_logo.svg" class="navbar-brand-img logo-light logo-large" alt="..." width="125" height="60">
+                <a class="navbar-brand" href="#" style="margin: auto">
+                    <img
+                        src="assets/images/cnss_logo.svg"
+                        class="navbar-brand-img logo-light logo-small"
+                        alt="..."
+                        width="19"
+                        height="60"
+                        style=""
+                    />
+                    <img
+                        src="assets/images/cnss_logo.svg"
+                        class="navbar-brand-img logo-light logo-large"
+                        alt="..."
+                        width="125"
+                        height="60"
+                    />
 
-                    <img src="assets/images/cnss_logo.svg" class="navbar-brand-img logo-dark logo-small" alt="..." width="19" height="60">
-                    <img src="assets/images/cnss_logo.svg" class="navbar-brand-img logo-dark logo-large" alt="..." width="125" height="60">
+                    <img
+                        src="assets/images/cnss_logo.svg"
+                        class="navbar-brand-img logo-dark logo-small"
+                        alt="..."
+                        width="19"
+                        height="60"
+                    />
+                    <img
+                        src="assets/images/cnss_logo.svg"
+                        class="navbar-brand-img logo-dark logo-large"
+                        alt="..."
+                        width="125"
+                        height="60"
+                    />
                 </a>
 
                 <!-- Navbar toggler -->
-                <a href="javascript: void(0);" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#sidenavCollapse" aria-controls="sidenavCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <a
+                    href="javascript: void(0);"
+                    class="navbar-toggler"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidenavCollapse"
+                    aria-controls="sidenavCollapse"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
                     <span class="navbar-toggler-icon"></span>
                 </a>
 
                 <!-- Collapse -->
                 <div class="collapse navbar-collapse" id="sidenavCollapse">
-
                     <!-- Navigation -->
                     <ul class="navbar-nav mb-lg-7">
                         <li class="nav-item">
-                            <a class="nav-link " href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="nav-link-icon" height="18" width="18"><path d="M22.627 14.87 15 22.5l-3.75.75.75-3.75 7.631-7.63a2.113 2.113 0 0 1 2.991 0l.009.008a2.116 2.116 0 0 1-.004 2.992zM8.246 20.25h-6a1.5 1.5 0 0 1-1.5-1.5V2.25a1.5 1.5 0 0 1 1.5-1.5h15a1.5 1.5 0 0 1 1.5 1.5V9m-10.5-3.75h6m-9 4.5h9m-9 4.5h7.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
-                                <span>إضافة بحث</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="gestion_enquete.html">
-                                <svg viewBox="0 0 24 24" class="nav-link-icon" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M20.25,9.75v-3a1.5,1.5,0,0,0-1.5-1.5H8.25V3.75a1.5,1.5,0,0,0-1.5-1.5H2.25a1.5,1.5,0,0,0-1.5,1.5v16.3a1.7,1.7,0,0,0,3.336.438l2.351-9.657A1.5,1.5,0,0,1,7.879,9.75H21.75A1.5,1.5,0,0,1,23.2,11.636l-2.2,9A1.5,1.5,0,0,1,19.55,21.75H2.447" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
-                                <span>التصرف في بحث</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="#">
-                                <svg viewBox="0 0 24 24" class="nav-link-icon" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M22.91,6.953,12.7,1.672a1.543,1.543,0,0,0-1.416,0L1.076,6.953a.615.615,0,0,0,0,1.094l10.209,5.281a1.543,1.543,0,0,0,1.416,0L22.91,8.047a.616.616,0,0,0,0-1.094Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M.758,12.75l10.527,5.078a1.543,1.543,0,0,0,1.416,0L23.258,12.75" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M.758,17.25l10.527,5.078a1.543,1.543,0,0,0,1.416,0L23.258,17.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
-                                <span>التصرف في عدة بحوث</span>
+                            <a class="nav-link" href="index.html">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    class="nav-link-icon"
+                                    height="18"
+                                    width="18"
+                                >
+                                    <path
+                                        d="M22.627 14.87 15 22.5l-3.75.75.75-3.75 7.631-7.63a2.113 2.113 0 0 1 2.991 0l.009.008a2.116 2.116 0 0 1-.004 2.992zM8.246 20.25h-6a1.5 1.5 0 0 1-1.5-1.5V2.25a1.5 1.5 0 0 1 1.5-1.5h15a1.5 1.5 0 0 1 1.5 1.5V9m-10.5-3.75h6m-9 4.5h9m-9 4.5h7.5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                    ></path>
+                                </svg>
+                                <span>تسجيل بحث</span>
                             </a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="#pagesCollapse" data-bs-toggle="collapse" role="button" aria-expanded="true" aria-controls="pagesCollapse">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="nav-link-icon" height="18" width="18"><defs><style>.a{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs><title>غإعدادات</title><path class="a" d="M17.25,23.25H3.75a1.5,1.5,0,0,1-1.5-1.5V5.25"></path><rect class="a" x="5.25" y="0.75" width="16.5" height="19.5" rx="1" ry="1"></rect></svg>
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    class="nav-link-icon"
+                                    height="18"
+                                    width="18"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M20.25,9.75v-3a1.5,1.5,0,0,0-1.5-1.5H8.25V3.75a1.5,1.5,0,0,0-1.5-1.5H2.25a1.5,1.5,0,0,0-1.5,1.5v16.3a1.7,1.7,0,0,0,3.336.438l2.351-9.657A1.5,1.5,0,0,1,7.879,9.75H21.75A1.5,1.5,0,0,1,23.2,11.636l-2.2,9A1.5,1.5,0,0,1,19.55,21.75H2.447"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                    ></path>
+                                </svg>
+                                <span>التصرف في البحث</span>
+                            </a>
+                            <div class="collapse show" id="pagesCollapse">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item"><a href="/gestion_enquete.html" class="nav-link "><span>تحيين معطيات</span></a></li>
+                                    <li class="nav-item"><a href="/gestion_enquete.html#affectation" class="nav-link "><span>تكليف المراقب بالبحث</span></a></li>
+                                    <li class="nav-item"><a href="/gestion_enquete.html#transfert" class="nav-link "><span>تغيير المراقب المكلف</span></a></li>
+                                    <li class="nav-item"><a href="/gestion_enquete.html#resultat" class="nav-link "><span>نتائج البحث</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    class="nav-link-icon"
+                                    height="18"
+                                    width="18"
+                                >
+                                    <path
+                                        d="M22.627 14.87 15 22.5l-3.75.75.75-3.75 7.631-7.63a2.113 2.113 0 0 1 2.991 0l.009.008a2.116 2.116 0 0 1-.004 2.992zM8.246 20.25h-6a1.5 1.5 0 0 1-1.5-1.5V2.25a1.5 1.5 0 0 1 1.5-1.5h15a1.5 1.5 0 0 1 1.5 1.5V9m-10.5-3.75h6m-9 4.5h9m-9 4.5h7.5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                    ></path>
+                                </svg>
+                                <span>الإطلاع على البحث</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    class="nav-link-icon"
+                                    height="18"
+                                    width="18"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M22.91,6.953,12.7,1.672a1.543,1.543,0,0,0-1.416,0L1.076,6.953a.615.615,0,0,0,0,1.094l10.209,5.281a1.543,1.543,0,0,0,1.416,0L22.91,8.047a.616.616,0,0,0,0-1.094Z"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                    ></path>
+                                    <path
+                                        d="M.758,12.75l10.527,5.078a1.543,1.543,0,0,0,1.416,0L23.258,12.75"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                    ></path>
+                                    <path
+                                        d="M.758,17.25l10.527,5.078a1.543,1.543,0,0,0,1.416,0L23.258,17.25"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                    ></path>
+                                </svg>
+                                <span>التصرف في عدة بحوث</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link"
+                                href="#pagesCollapse"
+                                data-bs-toggle="collapse"
+                                role="button"
+                                aria-expanded="true"
+                                aria-controls="pagesCollapse"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    class="nav-link-icon"
+                                    height="18"
+                                    width="18"
+                                >
+                                    <defs>
+                                        <style>
+                                            .a {
+                                                fill: none;
+                                                stroke: currentColor;
+                                                stroke-linecap: round;
+                                                stroke-linejoin: round;
+                                                stroke-width: 1.5px;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <title>غإعدادات</title>
+                                    <path class="a" d="M17.25,23.25H3.75a1.5,1.5,0,0,1-1.5-1.5V5.25"></path>
+                                    <rect class="a" x="5.25" y="0.75" width="16.5" height="19.5" rx="1" ry="1"></rect>
+                                </svg>
                                 <span>الإعدادات</span>
                             </a>
                             <div class="collapse show" id="pagesCollapse" style="">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a href="" class="nav-link ">
+                                        <a href="" class="nav-link">
                                             <span>إضافة طبيعة بحث</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="" class="nav-link ">
+                                        <a href="" class="nav-link">
                                             <span>إضافة مصلحة طالبة لبحث</span>
                                         </a>
                                     </li>
-
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#pagesCollapse" data-bs-toggle="collapse" role="button" aria-expanded="true" aria-controls="pagesCollapse">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="nav-link-icon" height="18" width="18"><defs><style>.a{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs><title>غإعدادات</title><path class="a" d="M17.25,23.25H3.75a1.5,1.5,0,0,1-1.5-1.5V5.25"></path><rect class="a" x="5.25" y="0.75" width="16.5" height="19.5" rx="1" ry="1"></rect></svg>
-                                <span>المراقب</span>
-                            </a>
-                            <div class="collapse show" id="pagesCollapse" style="">
-                                <ul class="nav flex-column">
                                     <li class="nav-item">
                                         <a href="" class="nav-link ">
                                             <span>إضافة مراقب</span>
@@ -154,7 +291,6 @@
                                             <span>تعديل معلومات مراقب</span>
                                         </a>
                                     </li>
-
                                 </ul>
                             </div>
                         </li>
@@ -242,18 +378,18 @@
                                 <div class="row">
                                     <ul class="nav nav-tabs mb-4" id="myTab-07" role="tablist">
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="preview-tab-07" data-bs-toggle="tab" data-bs-target="#preview-tab-pane-07" type="button" role="tab" aria-controls="preview-tab-pane-07" aria-selected="true">إضافة بحث</button>
+                                                <button class="nav-link active" id="preview-tab-07" data-bs-toggle="tab" data-bs-target="#preview-tab-pane-07" type="button" role="tab" aria-controls="preview-tab-pane-07" aria-selected="true">تسجيل بحث</button>
                                             </li>
                                         </ul>
                                     <div class="col">
                                         <div class="row g-3">
-                                            <p class="lead mb-3 col-md-4 invisible">إضافة بحث</p>
+                                            <p class="lead mb-3 col-md-4 invisible">تسجيل بحث</p>
                                             <h6 class="lead mb-3 col-md-8" style="text-align: left">تاريخ التسجيل <span class="badge bg-secondary" id="todayDate"></span></h6>
                                         </div>
                                         <form class="row g-6 needs-validation" novalidate="">
                                             <div class="col-md-2">
-                                                <label for="validationCustom05" class="form-label">السنة</label>
-                                                <input type="text" class="form-control" id="validationCustom05" required="">
+                                                <label for="validationCustom05" class="form-label">السنة (Auto)</label>
+                                                <input type="text" class="form-control" id="validationCustom05" required=""placeholder="2025 (AutoSaisie)" disabled>
                                                 <div class="invalid-feedback">
                                                     أدخل السنة
                                                 </div>
@@ -270,7 +406,7 @@
                                             </div>
                                             <div class="col-md-2">
                                                 <label for="validationCustom03" class="form-label">المعرف (Auto)</label>
-                                                <input type="text" class="form-control" id="validationCustom03" disabled>
+                                                <input type="text" class="form-control" id="validationCustom03" placeholder="99 (AutoSaisie)" disabled>
                                                 <div class="invalid-feedback">
                                                 </div>
                                             </div>
@@ -297,7 +433,7 @@
                                             </div>
                                                 <div class="row g-2">
                                                     <div class="col-md-2">
-                                                        <label for="validationCustom04" class="form-label">المعني</label>
+                                                        <label for="validationCustom04" class="form-label">المعني بالبحث</label>
                                                         <select class="form-select" id="validationCustom04" required="">
                                                             <option selected="" disabled="" value="">.....</option>
                                                             <option>المؤجر</option>
@@ -313,14 +449,7 @@
                                                 <!-- بلوك رقم CNSS (ظاهر بشكل افتراضي) -->
                                                 <div id="cnssBlock" class="row g-3">
                                                     <div class="col-md-3">
-                                                        <label for="validationCustom05" class="form-label">رقم انخراط المؤجر /TNS</label>
-                                                        <input type="text" class="form-control" id="validationCustom05" required="">
-                                                        <div class="invalid-feedback">
-                                                            رقم خاطئ
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-1">
-                                                        <label for="validationCustom05" class="form-label" style="visibility: hidden;"> مفتاح</label>
+                                                        <label for="validationCustom05" class="form-label">رقم الانخراط /التسجيل</label>
                                                         <input type="text" class="form-control" id="validationCustom05" required="">
                                                         <div class="invalid-feedback">
                                                             رقم خاطئ

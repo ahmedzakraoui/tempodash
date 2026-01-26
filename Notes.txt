@@ -1,0 +1,29 @@
+السنة auto
+المعرف (Auto)   العدد
+
+
+
+لمصلحة التي تطلب البحث  + مكتب المصلحة
+
+
+تاريخ الفاعلية auto info
+
+العملة المسجلين auto complete
+liste des enquetes pour la partie adverse -> historique complet tableau filtrable
+
+
+zone de saisie de ref pour la gestion d'enquete  +  3 champs (directement sans separation)
+
+طبيعة البحث  ->> gestion désactivé
+ref enquete sans tiret 209990099
+
+
+
+menu:
+-تسجيل بحث
+- التصرف في البحث
+	- تحيين معطيات
+	- تكليف المراقب بالبحث  (Affectation)
+	- تغيير المراقب المكلف (Transfert)
+	- نتائج البحث
+- الإطلاع على البحث

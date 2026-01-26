@@ -162,11 +162,11 @@
                                         stroke-width="1.5"
                                     ></path>
                                 </svg>
-                                <span>إضافة بحث</span>
+                                <span>تسجيل بحث</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#pagesCollapse" data-bs-toggle="collapse" role="button" aria-expanded="true" aria-controls="pagesCollapse">
                                 <svg
                                     viewBox="0 0 24 24"
                                     class="nav-link-icon"
@@ -183,7 +183,36 @@
                                         stroke-width="1.5"
                                     ></path>
                                 </svg>
-                                <span>التصرف في بحث</span>
+                                <span>التصرف في البحث</span>
+                            </a>
+                            <div class="collapse show" id="pagesCollapse">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item"><a href="/gestion_enquete.html" class="nav-link "><span>تحيين معطيات</span></a></li>
+                                    <li class="nav-item"><a href="#affectation" class="nav-link "><span>تكليف المراقب بالبحث</span></a></li>
+                                    <li class="nav-item"><a href="#transfert" class="nav-link "><span>تغيير المراقب المكلف</span></a></li>
+                                    <li class="nav-item"><a href="#resultat" class="nav-link "><span>نتائج البحث</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    class="nav-link-icon"
+                                    height="18"
+                                    width="18"
+                                >
+                                    <path
+                                        d="M22.627 14.87 15 22.5l-3.75.75.75-3.75 7.631-7.63a2.113 2.113 0 0 1 2.991 0l.009.008a2.116 2.116 0 0 1-.004 2.992zM8.246 20.25h-6a1.5 1.5 0 0 1-1.5-1.5V2.25a1.5 1.5 0 0 1 1.5-1.5h15a1.5 1.5 0 0 1 1.5 1.5V9m-10.5-3.75h6m-9 4.5h9m-9 4.5h7.5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                    ></path>
+                                </svg>
+                                <span>الإطلاع على البحث</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -266,6 +295,16 @@
                                     <li class="nav-item">
                                         <a href="" class="nav-link">
                                             <span>إضافة مصلحة طالبة لبحث</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link ">
+                                            <span>إضافة مراقب</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link ">
+                                            <span>تعديل معلومات مراقب</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -625,7 +664,7 @@
 
             </div>
             <!--معلومات البحث-->
-            <div class="container-fluid">
+            <div class="container-fluid" id="info">
                 <div class="row">
                     <div class="col">
                         <div class="card border-0 p-md-6">
@@ -648,27 +687,10 @@
                                 </ul>
                                                                     <div class="col">
                                         <div class="row g-3">
-                                            <p class="lead mb-3 col-md-4 invisible">إضافة بحث</p>
+                                            <p class="lead mb-3 col-md-4 invisible">تسجيل بحث</p>
                                             <h6 class="lead mb-3 col-md-8" style="text-align: left">تاريخ التسجيل <span class="badge bg-secondary" id="todayDate"></span></h6>
                                         </div>
                                         <form class="row g-6 needs-validation" novalidate="">
-                                            <div class="col-md-2">
-                                                <label for="validationCustom05" class="form-label">السنة</label>
-                                                <input type="text" class="form-control" id="validationCustom05" required="" value="2025">
-                                                <div class="invalid-feedback">
-                                                    أدخل السنة
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label for="validationCustom04" class="form-label">طبيعة البحث</label>
-                                                <select class="form-select" id="validationCustom04" required="">
-                                                    <option selected="" disabled="" value="">900 بحث إجارة</option>
-                                                    <option>...</option>
-                                                </select>
-                                                <div class="invalid-feedback">
-                                                    أدخل طبيعة البحث
-                                                </div>
-                                            </div>
                                             <div class="col-md-4">
                                                 <label class="form-label" for="exampleFormControlTextarea1">موضوع البحث</label>
                                                 <textarea id="exampleFormControlTextarea1" class="form-control" placeholder="   " rows="4" style="height: 1.5em;">التثبت من إجارة السيد محمد بن محمد</textarea>
@@ -1040,7 +1062,7 @@
                                                 </script>
                                                 </div>
                                             <div class="col-12">
-                                                <button class="btn btn-primary" type="submit">تسجيل البحث</button>
+                                                <button class="btn btn-primary" type="submit">تسجيل التغييرات</button>
                                             </div>
                                             </div>
                                         </form>
@@ -1051,7 +1073,7 @@
                 </div>
             </div>
             <!--Affectation-->
-            <div class="container-fluid">
+            <div class="container-fluid" id="affectation">
                 <div class="row">
                     <div class="col">
                         <div class="card border-0 p-md-6">
@@ -1202,7 +1224,7 @@
                 </div>
             </div>
 
-            <div class="container-fluid">
+            <div class="container-fluid" id="transfert">
                 <div class="row">
                     <div class="col">
                         <div class="card border-0 p-md-6">
@@ -1385,7 +1407,7 @@
                 </div>
             </div>
 
-            <div class="container-fluid">
+            <div class="container-fluid" id="resultat">
                 <div class="row">
                     <div class="col">
                         <div class="card border-0 p-md-6">
@@ -1460,7 +1482,7 @@
                                         </table>
                                     </div>
                                     <div class="table-responsive">
-                                        <br>
+                                        <br><br>
                                         <label class="form-label">مبلغ النقص مفصل&nbsp;<span class="badge text-bg-danger rounded-pill">29000 دت</span></label>
                                         <table class="table table-nowrap mb-0"
                                                 data-list='{"valueNames":["code_insuffisance","type_insuffisance","montant_insuffisance"]}'>
