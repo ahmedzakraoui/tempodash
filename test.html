@@ -1,5 +1,13 @@
 <!doctype html>
-<html lang="ar" dir="rtl"  data-theme="light" data-sidebar-behaviour="fixed"  data-navigation-color="inverted"  data-is-fluid="true">
+<html
+    lang="ar"
+    dir="rtl"
+    data-theme="light"
+    data-sidebar-behaviour="fixed"
+    data-navigation-color="inverted"
+    data-is-fluid="true"
+    class="h-100"
+>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -14,6 +22,9 @@
                 padding-top: 0.5rem !important;
                 padding-bottom: 0rem !important;
             }
+            .page-section {display: none;
+            }
+
         </style>
 
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
@@ -44,7 +55,31 @@
         <title>Dashboard | Dashly</title>
     </head>
 
-    <body>
+    <body class="h-100 overflow-hidden">
+        <!-- THEME CONFIGURATION -->
+        <script>
+            let themeAttrs = document.documentElement.dataset;
+
+            for (let attr in themeAttrs) {
+                if (localStorage.getItem(attr) != null) {
+                    document.documentElement.dataset[attr] = localStorage.getItem(attr);
+
+                    if (theme === "auto") {
+                        document.documentElement.dataset.theme = window.matchMedia("(prefers-color-scheme: dark)")
+                            .matches
+                            ? "dark"
+                            : "light";
+
+                        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+                            e.matches
+                                ? (document.documentElement.dataset.theme = "dark")
+                                : (document.documentElement.dataset.theme = "light");
+                        });
+                    }
+                }
+            }
+        </script>
+        <!-- NAVIGATION -->
         <nav id="mainNavbar" class="navbar navbar-vertical navbar-expand-lg scrollbar bg-dark navbar-dark">
             <!-- Theme configuration (navbar) -->
             <script>
@@ -131,11 +166,11 @@
                                         stroke-width="1.5"
                                     ></path>
                                 </svg>
-                                <span>إضافة بحث</span>
+                                <span>تسجيل بحث</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#pagesCollapse" data-bs-toggle="collapse" role="button" aria-expanded="true" aria-controls="pagesCollapse">
                                 <svg
                                     viewBox="0 0 24 24"
                                     class="nav-link-icon"
@@ -152,7 +187,36 @@
                                         stroke-width="1.5"
                                     ></path>
                                 </svg>
-                                <span>التصرف في بحث</span>
+                                <span>التصرف في البحث</span>
+                            </a>
+                            <div class="collapse show" id="pagesCollapse">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item"><a href="/gestion_enquete.html" class="nav-link "><span>تحيين معطيات</span></a></li>
+                                    <li class="nav-item"><a href="#affectation" class="nav-link "><span>تكليف المراقب بالبحث</span></a></li>
+                                    <li class="nav-item"><a href="#transfert" class="nav-link "><span>تغيير المراقب المكلف</span></a></li>
+                                    <li class="nav-item"><a href="#resultat" class="nav-link "><span>نتائج البحث</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    class="nav-link-icon"
+                                    height="18"
+                                    width="18"
+                                >
+                                    <path
+                                        d="M22.627 14.87 15 22.5l-3.75.75.75-3.75 7.631-7.63a2.113 2.113 0 0 1 2.991 0l.009.008a2.116 2.116 0 0 1-.004 2.992zM8.246 20.25h-6a1.5 1.5 0 0 1-1.5-1.5V2.25a1.5 1.5 0 0 1 1.5-1.5h15a1.5 1.5 0 0 1 1.5 1.5V9m-10.5-3.75h6m-9 4.5h9m-9 4.5h7.5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                    ></path>
+                                </svg>
+                                <span>الإطلاع على البحث</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -237,6 +301,16 @@
                                             <span>إضافة مصلحة طالبة لبحث</span>
                                         </a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link ">
+                                            <span>إضافة مراقب</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link ">
+                                            <span>تعديل معلومات مراقب</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
@@ -247,7 +321,7 @@
             </div>
         </nav>
         <!-- MAIN CONTENT -->
-        <main>
+        <main class="h-100 overflow-auto">
             <!-- HEADER -->
             <header class="container-fluid d-flex py-6 mb-4">
                 <!-- Top buttons -->
@@ -454,345 +528,254 @@
                     </div>
                 </div>
             </header>
-            <!--معلومات البحث-->
-            <div class="container-fluid">
+            
+            
+            
+            <!--popup_historique_employeur-->
+            <div class="container-fluid company_history">
                 <div class="d-flex justify-content-between m-5">
-                    <p type="button" class="btn btn-secondary pe-none position-relative">المرجع:&nbsp;&nbsp;99&nbsp;-&nbsp;900&nbsp;-&nbsp;2099&nbsp;&nbsp;&nbsp;<span class="position-absolute top-0 start-100 translate-middle badge bg-warning rounded" style="line-height: unset;" data-bs-toggle="modal" data-bs-target=".bd-example-modal-lg">E</span><span class="btn badge text-bg-danger-soft pe-auto">Historique</span></p>
-                    <!--popup_historique_enquete-->
-                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
+                    <p type="button" class="btn btn-secondary pe-none position-relative">المرجع:<span class="d-inline-block ref_suffix ms-3"></span><span class="d-inline-block me-3 ref_enquete">209990009</span><span class="position-absolute top-0 start-100 translate-middle badge bg-warning rounded" style="line-height: unset;">S</span><span class="btn badge text-bg-danger-soft pe-auto" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">Historique</span></p>
+                    <div id="exampleModalCenteredScrollable" class="modal fade bd-example-modal-xl popup_history" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered" role="document" style="min-width: 97em !important;">
                             <div class="modal-content">
-                    
-                                <div class="modal-header">
-                                    <h3 class="modal-title h4" id="myLargeModalLabel">Large modal</h3>
+                                <div class="modal-header" style="padding-top: 1em; padding-bottom: 0.5em;">
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body">
-                                ...
+                                <div class="modal-body" style="padding-top: 1em;">
+                                    <div class="table-responsive">
+                                        <h3 class="modal-title text-center" id="exampleModalCenteredScrollableTitle">قائمة البحوث المسجلة</h3>
+                                        <br>
+                                        <table class="table table-hover table-nowrap align-middle">
+                                            <thead class="table-light">
+                                                <tr>
+                                                <th>المرجع</th>
+                                                <th>تاريخ التسجيل</th>
+                                                <th>الوضعية</th>
+                                                <th>تاريخ الوضعية</th>
+                                                <th>رقم الانخراط</th>
+                                                <th>هوية المعني</th>
+                                                <th>معرف المصلحة</th>
+                                                <th>المصلحة</th>
+                                                <th>المكتب</th>
+                                                <th>المراقب</th>
+                                                <th class="text-center">مراجعة بحث</th>
+                                                <th class="text-center">ضم إلى بحث</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr data-situation="E">
+                                                <td>202540010</td>
+                                                <td>01-01-2025</td>
+                                                <td><span class="badge bg-warning">E</span></td>
+                                                <td>05-01-2025</td>
+                                                <td>1234567895</td>
+                                                <td>PlanetY</td>
+                                                <td>45932</td>
+                                                <td>Affiliation</td>
+                                                <td>80</td>
+                                                <td>أحمد محمد</td>
+
+                                                <!-- Revision -->
+                                                <td class="text-center">
+                                                    <div class="form-check form-switch">
+                                                    <input class="form-check-input revision" type="checkbox" disabled>
+                                                    </div>
+                                                </td>
+
+                                                <!-- Jointure -->
+                                                <td class="text-center">
+                                                    <div class="form-check form-switch">
+                                                    <input class="form-check-input jointure" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                </tr>
+
+                                                <tr data-situation="S">
+                                                <td>202590030</td>
+                                                <td>09-01-2025</td>
+                                                <td><span class="badge text-bg-success">S</span></td>
+                                                <td>20-01-2025</td>
+                                                <td>1234567895</td>
+                                                <td>PlanetY</td>
+                                                <td>42635</td>
+                                                <td>Recouvrement</td>
+                                                <td>63</td>
+                                                <td>فاضل علي</td>
+
+                                                <td class="text-center">
+                                                    <div class="form-check form-switch">
+                                                    <input class="form-check-input revision" type="checkbox">
+                                                    </div>
+                                                </td>
+
+                                                <td class="text-center">
+                                                    <div class="form-check form-switch">
+                                                    <input class="form-check-input jointure" type="checkbox" disabled>
+                                                    </div>
+                                                </td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        <button class="btn btn-primary mt-3" id="btnValider" data-bs-dismiss="modal">✔️ تأكيد</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <p type="button" class="btn btn-secondary pe-none">المعني:&nbsp;&nbsp;00-12345678&nbsp;&nbsp;&nbsp;<span class="btn badge text-bg-primary-soft pe-auto">Historique</span></p>
-                </div>         
-                <div class="row">
-                    <div class="col">
-                        <div class="card border-0 p-md-6">
-                            <div class="card-body">
-                                <ul class="nav nav-tabs mb-4" id="myTab-07" role="tablist">
-                                    <li class="nav-item" role="presentation">
-                                        <button
-                                            class="nav-link active"
-                                            id="preview-tab-07"
-                                            data-bs-toggle="tab"
-                                            data-bs-target="#preview-tab-pane-07"
-                                            type="button"
-                                            role="tab"
-                                            aria-controls="preview-tab-pane-07"
-                                            aria-selected="true"
-                                        >
-                                            معلومات البحث
-                                        </button>
-                                    </li>
-                                </ul>
-                                                                    <div class="col">
-                                        <div class="row g-3">
-                                            <p class="lead mb-3 col-md-4 invisible">إضافة بحث</p>
-                                            <h6 class="lead mb-3 col-md-8" style="text-align: left">تاريخ التسجيل <span class="badge bg-secondary" id="todayDate"></span></h6>
-                                        </div>
-                                        <form class="row g-6 needs-validation" novalidate="">
-                                            <div class="col-md-2">
-                                                <label for="validationCustom05" class="form-label">السنة</label>
-                                                <input type="text" class="form-control" id="validationCustom05" required="">
-                                                <div class="invalid-feedback">
-                                                    أدخل السنة
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label for="validationCustom04" class="form-label">طبيعة البحث</label>
-                                                <select class="form-select" id="validationCustom04" required="">
-                                                    <option selected="" disabled="" value="">.....</option>
-                                                    <option>...</option>
-                                                </select>
-                                                <div class="invalid-feedback">
-                                                    أدخل طبيعة البحث
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <label for="validationCustom03" class="form-label">المعرف (Auto)</label>
-                                                <input type="text" class="form-control" id="validationCustom03" disabled>
-                                                <div class="invalid-feedback">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label class="form-label" for="exampleFormControlTextarea1">موضوع البحث</label>
-                                                <textarea id="exampleFormControlTextarea1" class="form-control" placeholder="   " rows="4" style="height: 1.5em;"></textarea>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label for="validationCustom04" class="form-label">المصلحة التي تطلب البحث</label>
-                                                <select class="form-select" id="validationCustom04" required="">
-                                                    <option selected="" disabled="" value="">.....</option>
-                                                    <option>...</option>
-                                                </select>
-                                                <div class="invalid-feedback">
-                                                    أدخل طبيعة البحث
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <label for="validationCustom05" class="form-label">تاريخ الاستقبال</label>
-                                                <input type="text" class="form-control" id="validationCustom05" required="">
-                                                <div class="invalid-feedback">
-                                                    أدخل  تاريخ صحيح
-                                                </div>
-                                            </div>
-                                                <div class="row g-2">
-                                                    <div class="col-md-2">
-                                                        <label for="validationCustom04" class="form-label">المعني</label>
-                                                        <select class="form-select" id="validationCustom04" required="">
-                                                            <option selected="" disabled="" value="">.....</option>
-                                                            <option>المؤجر</option>
-                                                            <option>TNS</option>
-                                                            <option>Assuré(s)</option>
-                                                            <option>Autre(s)</option>
-                                                        </select>
-                                                        <div class="invalid-feedback">
-                                                            أدخل طبيعة البحث
-                                                        </div>
-                                                </div>
-
-                                                <!-- بلوك رقم CNSS (ظاهر بشكل افتراضي) -->
-                                                <div id="cnssBlock" class="row g-3">
-                                                    <div class="col-md-3">
-                                                        <label for="validationCustom05" class="form-label">رقم انخراط المؤجر /TNS</label>
-                                                        <input type="text" class="form-control" id="validationCustom05" required="">
-                                                        <div class="invalid-feedback">
-                                                            رقم خاطئ
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-1">
-                                                        <label for="validationCustom05" class="form-label" style="visibility: hidden;"> مفتاح</label>
-                                                        <input type="text" class="form-control" id="validationCustom05" required="">
-                                                        <div class="invalid-feedback">
-                                                            رقم خاطئ
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row g-4">
-                                                <!-- زر Switch -->
-                                                <div class="form-check form-switch mb-3">
-                                                    <input class="form-check-input" type="checkbox" id="cnssSwitch" />
-                                                    <label class="form-check-label" for="cnssSwitch">
-                                                        المعني غير منخرط/مسجل في CNSS
-                                                    </label>
-                                                </div>
-
-                                                <!-- بلوك معلومات الشركة (مخفي بشكل افتراضي) -->
-                                                    <div id="companyBlock" class="row g-2 d-none">
-
-                                                        <div class="col-md-3">
-                                                            <label class="form-label">اسم المعني (شركة/TNS/اخر)</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-
-                                                        <div class="col-md-3">
-                                                            <label class="form-label">المعرف الجبائي (شركة/TNS)</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-
-                                                        <div class="col-md-3">
-                                                            <label class="form-label">اسم أول مسؤول (شركة/TNS)</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-
-                                                        <div class="col-md-3">
-                                                            <label class="form-label">رقم بطاقة التعريف (CIN)</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                        <div class="row g-3 d-flex justify-content-center">
-                                                            <div class="col-md-3">
-                                                                <label class="form-label">العنوان</label>
-                                                                <textarea id="exampleFormControlTextarea1"
-                                                                          class="form-control" placeholder="   "
-                                                                          rows="4" style="height: 1.5em;"></textarea>
-                                                            </div>
-
-                                                            <div class="col-md-3">
-                                                                <label class="form-label">الترقيم البريدي</label>
-                                                                <input type="text" class="form-control">
-                                                            </div>
-
-                                                            <div class="col-md-3">
-                                                                <label class="form-label">المنطقة (Zone)</label>
-                                                                <input type="text" class="form-control">
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="row g-3 mb-5 mt-5">
-                                                        <label class="form-label">العملة (موضوع الشكوى)</label>
-                                                            <div class="table-responsive">
-                                                                <table class="table table-nowrap mb-0" data-list='{"valueNames": ["matricule", "key", "type_piece", "n_piece", "Identity"]}'>
-                                                                    <thead class="thead-light">
-                                                                    <tr>
-                                                                        <th class="w-80px">
-                                                                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="matricule">
-                                                                                Matricule
-                                                                            </a>
-                                                                        </th>
-                                                                        <th>
-                                                                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="key">
-                                                                                Clé
-                                                                            </a>
-                                                                        </th>
-                                                                        <th class="min-w-200px">
-                                                                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="type_piece">
-                                                                                Type piéce d'identité
-                                                                            </a>
-                                                                        </th>
-                                                                        <th>
-                                                                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="n_piece">
-                                                                                Numéro piéce d'identité
-                                                                            </a>
-                                                                        </th>
-                                                                        <th>
-                                                                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="Identity">
-                                                                                Identité
-                                                                            </a>
-                                                                        </th>
-                                                                    </tr>
-                                                                    </thead>
-
-                                                                    <tbody class="list">
-                                                                    <tr>
-                                                                        <td class="matricule">12345678</td>
-                                                                        <td class="key">01</td>
-                                                                        <td class="type_piece">CIN</td>
-                                                                        <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
-                                                                        <td class="identity">Mohamed ben Mohamed</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="matricule">12345678</td>
-                                                                        <td class="key">01</td>
-                                                                        <td class="type_piece">CIN</td>
-                                                                        <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
-                                                                        <td class="identity">Mohamed ben Mohamed</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="matricule">12345678</td>
-                                                                        <td class="key">01</td>
-                                                                        <td class="type_piece">CIN</td>
-                                                                        <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
-                                                                        <td class="identity">Mohamed ben Mohamed</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="matricule">12345678</td>
-                                                                        <td class="key">01</td>
-                                                                        <td class="type_piece">CIN</td>
-                                                                        <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
-                                                                        <td class="identity">Mohamed ben Mohamed</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="matricule">12345678</td>
-                                                                        <td class="key">01</td>
-                                                                        <td class="type_piece">CIN</td>
-                                                                        <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
-                                                                        <td class="identity">Mohamed ben Mohamed</td>
-                                                                    </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                        </div>
-                                                    <div class="row g-3 mt-5">
-                                                        <label class="form-label">آخرون (Autres adverses)</label>
-                                                        <div class="table-responsive">
-                                                            <table class="table table-nowrap mb-0" data-list='{"valueNames": ["type_piece", "n_piece", "Identity"]}'>
-                                                                <thead class="thead-light">
-                                                                <tr>
-                                                                    <th class="min-w-200px">
-                                                                        <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="type_piece">
-                                                                            Type piéce d'identité
-                                                                        </a>
-                                                                    </th>
-                                                                    <th>
-                                                                        <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="n_piece">
-                                                                            Numéro piéce d'identité
-                                                                        </a>
-                                                                    </th>
-                                                                    <th>
-                                                                        <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="Identity">
-                                                                            Identité
-                                                                        </a>
-                                                                    </th>
-                                                                </tr>
-                                                                </thead>
-
-                                                                <tbody class="list">
-                                                                <tr>
-                                                                    <td class="type_piece">CIN</td>
-                                                                    <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
-                                                                    <td class="identity">Med ben Mansour</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="type_piece">CIN</td>
-                                                                    <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
-                                                                    <td class="identity">Med ben Mansour</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="type_piece">CIN</td>
-                                                                    <td class="n_piece"><span class="badge text-bg-success rounded-pill">12345678</span></td>
-                                                                    <td class="identity">Med ben Mansour</td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <script>
-                                                  const cnssSwitch = document.getElementById("cnssSwitch");
-                                                  const cnssBlock = document.getElementById("cnssBlock");
-                                                  const companyBlock = document.getElementById("companyBlock");
-
-                                                  // حالة افتراضية: الشركة منخرطة (Switch OFF)
-                                                  // لو تفعّل الـ switch (Checked) → تظهر معلومات الشركة وتختفي رقم CNSS
-                                                  cnssSwitch.addEventListener("change", function () {
-                                                    if (this.checked) {
-                                                      cnssBlock.classList.add("d-none");
-                                                      companyBlock.classList.remove("d-none");
-                                                    } else {
-                                                      cnssBlock.classList.remove("d-none");
-                                                      companyBlock.classList.add("d-none");
-                                                    }
-                                                  });
-
-                                                  // لضمان حالة صحيحة عند تحميل الصفحة
-                                                  window.addEventListener("DOMContentLoaded", () => {
-                                                    if (cnssSwitch.checked) {
-                                                      cnssBlock.classList.add("d-none");
-                                                      companyBlock.classList.remove("d-none");
-                                                    } else {
-                                                      cnssBlock.classList.remove("d-none");
-                                                      companyBlock.classList.add("d-none");
-                                                    }
-                                                  });
-                                                </script>
-                                                </div>
-                                            <div class="col-12">
-                                                <button class="btn btn-primary" type="submit">تسجيل البحث</button>
-                                            </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
+            <!-- Footer -->
+            <footer class="mt-auto">
+                <div class="container-fluid mt-4 mb-6 text-body-secondary">
+                    <div class="row justify-content-between">
+                        <div class="col">Direction de controle</div>
 
-
-
+                        <div class="col-auto">Application de saisie</div>
+                    </div>
+                    <!-- / .row -->
+                </div>
+            </footer>
         </main>
+        <!-- / main -->
+
+        <!-- JAVASCRIPT-->
+        <!-- Theme JS -->
+        <script src="assets/js/theme.bundle.js"></script>
+        <script>
+            function setTodayArabicDate(spanId) {
+                const el = document.getElementById(spanId);
+                if (!el) return;
+
+                el.textContent = new Intl.DateTimeFormat("ar-TN", {
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+                }).format(new Date());
+            }
+
+            // call it
+            setTodayArabicDate("todayDate");
+
+            const sections = document.querySelectorAll('.page-section');
+
+            function showSectionFromHash() {
+                const hash = window.location.hash.replace('#', '') || 'info';
+
+                sections.forEach(section => {
+                section.style.display = 'none';
+                });
+
+                const activeSection = document.getElementById(hash);
+                if (activeSection) {
+                activeSection.style.display = 'block';
+                }
+            }
+
+            // عند تحميل الصفحة
+            window.addEventListener('load', showSectionFromHash);
+
+            // عند الضغط على menu
+            window.addEventListener('hashchange', showSectionFromHash);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const hash = window.location.hash;
+    if(hash) {
+      document.querySelectorAll('.nav-link').forEach(link => {
+        if (link.getAttribute('href') === hash) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+  });
+        </script>
+
+        <!--script_company_history-->
+        <script>
+            document.querySelectorAll(".popup_history tbody tr").forEach(row => {
+
+            const situation = row.dataset.situation;
+            const revision = row.querySelector(".revision");
+            const jointure = row.querySelector(".jointure");
+
+            // التفعيل حسب الوضعية
+            if (["E", "C"].includes(situation)) {
+                jointure.disabled = false;
+                revision.disabled = true;
+            }
+
+            if (situation === "S") {
+                revision.disabled = false;
+                jointure.disabled = true;
+            }
+
+            // ====== المنع العام (GLOBAL) ======
+            revision.addEventListener("change", () => {
+                if (revision.checked) {
+                document.querySelectorAll(".jointure").forEach(j => j.checked = false);
+                }
+            });
+
+            jointure.addEventListener("change", () => {
+                if (jointure.checked) {
+                document.querySelectorAll(".revision").forEach(r => r.checked = false);
+                }
+            });
+
+            // رسائل التنبيه
+            revision.addEventListener("click", e => {
+                if (revision.disabled) {
+                e.preventDefault();
+                alert("لا تتم المراجعة إلا لبحث مستوفى");
+                }
+            });
+
+            jointure.addEventListener("click", e => {
+                if (jointure.disabled) {
+                e.preventDefault();
+                alert("لا يتم الضم إلا لبحث جاري");
+                }
+            });
+
+            });
+        </script>
+
+
+        <!--ref_rev_or_joint_letter_switcher-->
+        <script>
+            document.getElementById("btnValider").addEventListener("click", () => {
+
+            const refSpan = document.querySelector(".ref_enquete");
+            const suffixSpan = document.querySelector(".ref_suffix");
+
+            let suffix = "";
+
+            document.querySelectorAll(".popup_history tbody tr").forEach(row => {
+                const revision = row.querySelector(".revision");
+                const jointure = row.querySelector(".jointure");
+
+                if (revision && revision.checked) {
+                suffix = "R";
+                }
+
+                if (jointure && jointure.checked) {
+                suffix = "J";
+                }
+            });
+
+            if (!suffix) {
+                alert("يرجى اختيار عملية (مراجعة أو ضم)");
+                return;
+            }
+
+            // تحديث الحرف فقط
+            suffixSpan.innerHTML = `<span class="text-danger fw-bold">${suffix}</span>`;
+            });
+        </script>
 
 
 

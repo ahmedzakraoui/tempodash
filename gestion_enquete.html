@@ -257,39 +257,11 @@
                             </a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a
-                                class="nav-link"
-                                href="#pagesCollapse"
-                                data-bs-toggle="collapse"
-                                role="button"
-                                aria-expanded="true"
-                                aria-controls="pagesCollapse"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    class="nav-link-icon"
-                                    height="18"
-                                    width="18"
-                                >
-                                    <defs>
-                                        <style>
-                                            .a {
-                                                fill: none;
-                                                stroke: currentColor;
-                                                stroke-linecap: round;
-                                                stroke-linejoin: round;
-                                                stroke-width: 1.5px;
-                                            }
-                                        </style>
-                                    </defs>
-                                    <title>غإعدادات</title>
-                                    <path class="a" d="M17.25,23.25H3.75a1.5,1.5,0,0,1-1.5-1.5V5.25"></path>
-                                    <rect class="a" x="5.25" y="0.75" width="16.5" height="19.5" rx="1" ry="1"></rect>
-                                </svg>
+                            <a class="nav-link " href="#paramsCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="paramsCollapse">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="nav-link-icon" height="18" width="18"><defs><style>.a{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs><title>common-file-double-1</title><path class="a" d="M17.25,23.25H3.75a1.5,1.5,0,0,1-1.5-1.5V5.25"/><rect class="a" x="5.25" y="0.75" width="16.5" height="19.5" rx="1" ry="1"/></svg>
                                 <span>الإعدادات</span>
                             </a>
-                            <div class="collapse show" id="pagesCollapse" style="">
+                            <div class="collapse show" id="paramsCollapse" style="">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
                                         <a href="" class="nav-link">
@@ -531,9 +503,9 @@
             <!--top info enquete-->
             <div class="container-fluid">
                 <div class="d-flex justify-content-between m-5">
-                    <p type="button" class="btn btn-secondary pe-none position-relative">المرجع:&nbsp;&nbsp;209990009&nbsp;&nbsp;&nbsp;<span class="position-absolute top-0 start-100 translate-middle badge bg-warning rounded" style="line-height: unset;">S</span><span class="btn badge text-bg-danger-soft pe-auto" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">Historique</span></p>
+                    <p type="button" class="btn btn-secondary pe-none position-relative">المرجع:<span class="d-inline-block ref_suffix ms-3"></span><span class="d-inline-block me-3 ref_enquete">202540099</span><span class="position-absolute top-0 start-100 translate-middle badge bg-warning rounded" style="line-height: unset;">E</span><span class="btn badge text-bg-danger-soft pe-auto" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable1">Historique</span></p>
                     <!--popup_enquete_historique-->
-                    <div id="exampleModalCenteredScrollable" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
+                    <div id="exampleModalCenteredScrollable1" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
                         <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered" role="document">
                             <div class="modal-content">
                                 <div class="modal-header" style="padding-top: 1em; padding-bottom: 0.5em;">
@@ -658,12 +630,10 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">إغلاق</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <p type="button" class="btn btn-secondary pe-none">المعني:&nbsp;&nbsp;00-12345678&nbsp;&nbsp;&nbsp;<span class="btn badge text-bg-primary-soft pe-auto">Historique</span></p>
                 </div>
 
             </div>
@@ -733,6 +703,10 @@
                                                         <div class="invalid-feedback">
                                                             رقم خاطئ
                                                         </div>
+                                                    </div>
+                                                    <div class="col-md-3 row">
+                                                        <label for="validationCustom05" class="form-label" style="visibility: hidden;">قائمة البحوث المسجلة</label>
+                                                        <button type="button" class="btn btn-outline-secondary ms-5 fs-5" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable2">قائمة البحوث المسجلة</button>
                                                     </div>
                                                 </div>
                                                 <div class="row g-4">
@@ -1214,7 +1188,7 @@
                     </div>
                 </div>
             </div>
-
+            <!--Transfert-->
             <div class="container-fluid page-section" id="transfert">
                 <div class="row">
                     <div class="col">
@@ -1397,7 +1371,7 @@
                     </div>
                 </div>
             </div>
-
+            <!--resultat-->
             <div class="container-fluid page-section" id="resultat">
                 <div class="row">
                     <div class="col">
@@ -1527,6 +1501,100 @@
                     </div>
                 </div>
             </div>
+
+            <!--popup_historique_employeur-->
+            <div class="container-fluid company_history">
+                <div class="d-flex justify-content-between m-5">
+                    <div id="exampleModalCenteredScrollable2" class="modal fade bd-example-modal-xl popup_history" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered" role="document" style="min-width: 97em !important;">
+                            <div class="modal-content">
+                                <div class="modal-header" style="padding-top: 1em; padding-bottom: 0.5em;">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" style="padding-top: 1em;">
+                                    <div class="table-responsive">
+                                        <h3 class="modal-title text-center" id="exampleModalCenteredScrollableTitle">قائمة البحوث المسجلة</h3>
+                                        <br>
+                                        <table class="table table-hover table-nowrap align-middle">
+                                            <thead class="table-light">
+                                                <tr>
+                                                <th>المرجع</th>
+                                                <th>تاريخ التسجيل</th>
+                                                <th>الوضعية</th>
+                                                <th>تاريخ الوضعية</th>
+                                                <th>رقم الانخراط</th>
+                                                <th>هوية المعني</th>
+                                                <th>معرف المصلحة</th>
+                                                <th>المصلحة</th>
+                                                <th>المكتب</th>
+                                                <th>المراقب</th>
+                                                <th class="text-center">مراجعة بحث</th>
+                                                <th class="text-center">ضم إلى بحث</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr data-situation="E">
+                                                <td>202540010</td>
+                                                <td>01-01-2025</td>
+                                                <td><span class="badge bg-warning">E</span></td>
+                                                <td>05-01-2025</td>
+                                                <td>1234567895</td>
+                                                <td>PlanetY</td>
+                                                <td>45932</td>
+                                                <td>Affiliation</td>
+                                                <td>80</td>
+                                                <td>أحمد محمد</td>
+
+                                                <!-- Revision -->
+                                                <td class="text-center">
+                                                    <div class="form-check form-switch">
+                                                    <input class="form-check-input revision" type="checkbox" disabled>
+                                                    </div>
+                                                </td>
+
+                                                <!-- Jointure -->
+                                                <td class="text-center">
+                                                    <div class="form-check form-switch">
+                                                    <input class="form-check-input jointure" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                </tr>
+
+                                                <tr data-situation="S">
+                                                <td>202590030</td>
+                                                <td>09-01-2025</td>
+                                                <td><span class="badge text-bg-success">S</span></td>
+                                                <td>20-01-2025</td>
+                                                <td>1234567895</td>
+                                                <td>PlanetY</td>
+                                                <td>42635</td>
+                                                <td>Recouvrement</td>
+                                                <td>63</td>
+                                                <td>فاضل علي</td>
+
+                                                <td class="text-center">
+                                                    <div class="form-check form-switch">
+                                                    <input class="form-check-input revision" type="checkbox">
+                                                    </div>
+                                                </td>
+
+                                                <td class="text-center">
+                                                    <div class="form-check form-switch">
+                                                    <input class="form-check-input jointure" type="checkbox" disabled>
+                                                    </div>
+                                                </td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        <button class="btn btn-primary mt-3" id="btnValider" data-bs-dismiss="modal">✔️ تأكيد</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Footer -->
             <footer class="mt-auto">
                 <div class="container-fluid mt-4 mb-6 text-body-secondary">
@@ -1544,6 +1612,8 @@
         <!-- JAVASCRIPT-->
         <!-- Theme JS -->
         <script src="assets/js/theme.bundle.js"></script>
+
+        <!--today_date_for_save_date_of_new_mission-->
         <script>
             function setTodayArabicDate(spanId) {
                 const el = document.getElementById(spanId);
@@ -1580,7 +1650,103 @@
             // عند الضغط على menu
             window.addEventListener('hashchange', showSectionFromHash);
 
+            document.addEventListener("DOMContentLoaded", () => {
+                const hash = window.location.hash;
+                if(hash) {
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    if (link.getAttribute('href') === hash) {
+                    link.classList.add('active');
+                    } else {
+                    link.classList.remove('active');
+                    }
+                });
+                }
+            });
         </script>
+
+        <!--script_company_history-->
+        <script>
+            document.querySelectorAll(".popup_history tbody tr").forEach(row => {
+
+            const situation = row.dataset.situation;
+            const revision = row.querySelector(".revision");
+            const jointure = row.querySelector(".jointure");
+
+            // التفعيل حسب الوضعية
+            if (["E", "C"].includes(situation)) {
+                jointure.disabled = false;
+                revision.disabled = true;
+            }
+
+            if (situation === "S") {
+                revision.disabled = false;
+                jointure.disabled = true;
+            }
+
+            // ====== المنع العام (GLOBAL) ======
+            revision.addEventListener("change", () => {
+                if (revision.checked) {
+                document.querySelectorAll(".jointure").forEach(j => j.checked = false);
+                }
+            });
+
+            jointure.addEventListener("change", () => {
+                if (jointure.checked) {
+                document.querySelectorAll(".revision").forEach(r => r.checked = false);
+                }
+            });
+
+            // رسائل التنبيه
+            revision.addEventListener("click", e => {
+                if (revision.disabled) {
+                e.preventDefault();
+                alert("لا تتم المراجعة إلا لبحث مستوفى");
+                }
+            });
+
+            jointure.addEventListener("click", e => {
+                if (jointure.disabled) {
+                e.preventDefault();
+                alert("لا يتم الضم إلا لبحث جاري");
+                }
+            });
+
+            });
+        </script>
+
+
+        <!--ref_rev_or_joint_letter_switcher-->
+        <script>
+            document.getElementById("btnValider").addEventListener("click", () => {
+
+            const refSpan = document.querySelector(".ref_enquete");
+            const suffixSpan = document.querySelector(".ref_suffix");
+
+            let suffix = "";
+
+            document.querySelectorAll(".popup_history tbody tr").forEach(row => {
+                const revision = row.querySelector(".revision");
+                const jointure = row.querySelector(".jointure");
+
+                if (revision && revision.checked) {
+                suffix = "R";
+                }
+
+                if (jointure && jointure.checked) {
+                suffix = "J";
+                }
+            });
+
+            if (!suffix) {
+                suffixSpan.innerHTML = "";   // ✅ مسح R أو J
+                return;
+            }
+
+            // تحديث الحرف فقط
+            suffixSpan.innerHTML = `<span class="text-danger fw-bold">${suffix}</span>`;
+            });
+        </script>
+
 
     </body>
 </html>
