@@ -27,3 +27,40 @@ menu:
 	- تغيير المراقب المكلف (Transfert)
 	- نتائج البحث
 - الإطلاع على البحث
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+J -> non prise en compte dans les stat
+R -> prise en compte
+
+
+قائمة البحوث المسجلة
+prendre la matricule de l'enquete révisé ou à laquelle la présente enquete en question a été jointe
+
+
+قائمة البحوث المسجلة
+ex:
+202540010
+202540010J1
+202540010J2
+202540010R1
+202540010R2
+tableau trié selon ref enquete pour voir:
+les enquetes principales et jointes et révisées les unes sous les autres (liées) directement et facilement
+
+
+التصرف في عدة بحوث
+Affectation-Transfert-Annulation
+
+
+الإطلاع على البحث
+ajouter le controleur et le resultat
+
+
+كشف قائمة بحوث
+filtre par controleur-employeur-situation-période (date début - date fin)-br
+
+ref-n empl- nom empl- date saisie- matr contro- identité cont -situation (Lettre seulement) -date sitaution-insuff (s'il y a)

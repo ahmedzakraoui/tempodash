@@ -14,6 +14,7 @@
         padding-top: 0.5rem !important;
         padding-bottom: 0rem !important;
       }
+
       .page-section {
         display: none;
       }
@@ -115,27 +116,22 @@
               <div class="collapse show" id="pagesCollapse">
                 <ul class="nav flex-column">
                   <li class="nav-item">
-                    <a href="/gestion_enquete.html" class="nav-link"><span>تحيين معطيات</span></a>
+                    <a href="gestion_enquete.html" class="nav-link"><span>تحيين معطيات</span></a>
                   </li>
                   <li class="nav-item">
-                    <a href="#affectation" class="nav-link"><span>تكليف المراقب بالبحث</span></a>
+                    <a href="gestion_enquete.html#affectation" class="nav-link"><span>تكليف المراقب بالبحث</span></a>
                   </li>
                   <li class="nav-item">
-                    <a href="#transfert" class="nav-link"><span>تغيير المراقب المكلف</span></a>
+                    <a href="gestion_enquete.html#transfert" class="nav-link"><span>تغيير المراقب المكلف</span></a>
                   </li>
                   <li class="nav-item">
-                    <a href="#resultat" class="nav-link"><span>نتائج البحث</span></a>
+                    <a href="gestion_enquete.html#resultat" class="nav-link"><span>نتائج البحث</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="gestion_enquete.html#situation" class="nav-link"><span>تغيير وضعية البحث</span></a>
                   </li>
                 </ul>
               </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="nav-link-icon" height="18" width="18">
-                  <path d="M22.627 14.87 15 22.5l-3.75.75.75-3.75 7.631-7.63a2.113 2.113 0 0 1 2.991 0l.009.008a2.116 2.116 0 0 1-.004 2.992zM8.246 20.25h-6a1.5 1.5 0 0 1-1.5-1.5V2.25a1.5 1.5 0 0 1 1.5-1.5h15a1.5 1.5 0 0 1 1.5 1.5V9m-10.5-3.75h6m-9 4.5h9m-9 4.5h7.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-                </svg>
-                <span>الإطلاع على البحث</span>
-              </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="">
@@ -148,7 +144,7 @@
               </a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link" href="#pagesCollapse" data-bs-toggle="collapse" role="button" aria-expanded="true" aria-controls="pagesCollapse">
+              <a class="nav-link" href="#paramsCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="paramsCollapse">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="nav-link-icon" height="18" width="18">
                   <defs>
                     <style>
@@ -161,13 +157,48 @@
                       }
                     </style>
                   </defs>
-                  <title>غإعدادات</title>
-                  <path class="a" d="M17.25,23.25H3.75a1.5,1.5,0,0,1-1.5-1.5V5.25"></path>
-                  <rect class="a" x="5.25" y="0.75" width="16.5" height="19.5" rx="1" ry="1"></rect>
+                  <title>common-file-double-1</title>
+                  <path class="a" d="M17.25,23.25H3.75a1.5,1.5,0,0,1-1.5-1.5V5.25" />
+                  <rect class="a" x="5.25" y="0.75" width="16.5" height="19.5" rx="1" ry="1" />
+                </svg>
+                <span>الإطلاع</span>
+              </a>
+              <div class="collapse show" id="paramsCollapse" style="">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a href="consultation.html" class="nav-link">
+                      <span>الإطلاع على البحث</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="Consultation_many.html" class="nav-link">
+                      <span>كشف قائمة بحوث</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#paramsCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="paramsCollapse">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="nav-link-icon" height="18" width="18">
+                  <defs>
+                    <style>
+                      .a {
+                        fill: none;
+                        stroke: currentColor;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 1.5px;
+                      }
+                    </style>
+                  </defs>
+                  <title>common-file-double-1</title>
+                  <path class="a" d="M17.25,23.25H3.75a1.5,1.5,0,0,1-1.5-1.5V5.25" />
+                  <rect class="a" x="5.25" y="0.75" width="16.5" height="19.5" rx="1" ry="1" />
                 </svg>
                 <span>الإعدادات</span>
               </a>
-              <div class="collapse show" id="pagesCollapse" style="">
+              <div class="collapse" id="paramsCollapse" style="">
                 <ul class="nav flex-column">
                   <li class="nav-item">
                     <a href="" class="nav-link">
@@ -291,13 +322,159 @@
           </div>
         </div>
       </header>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="card border-0 p-md-6">
+              <div class="card-body">
+                <div class="row">
+                  <ul class="nav nav-tabs mb-4" id="myTab-07" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="preview-tab-07" data-bs-toggle="tab" data-bs-target="#preview-tab-pane-07" type="button" role="tab" aria-controls="preview-tab-pane-07" aria-selected="true">كشف قائمة بحوث</button>
+                    </li>
+                  </ul>
+        <div class="row g-3 mt-4">
+          <div class="table-responsive">
+            <table class="table table-nowrap mb-0 align-middle">
+              <thead class="thead-light">
+                <tr>
+                  <th>Réf</th>
+                  <th>Matricule Employeur</th>
+                  <th>Identité Employeur</th>
+                  <th>Date saisie</th>
+                  <th>Matricule Contrôleur</th>
+                  <th>Identité Contrôleur</th>
+                  <th>Situation</th>
+                  <th>Date Situation</th>
+                  <th>Insuffisance (TND)</th>
+                </tr>
+              </thead>
 
-      <select class="form-select" autocomplete="off" data-select>
-        <option value="Thomas Edison">Thomas Edison</option>
-        <option value="John Doe">John Doe</option>
-        <option value="Nikola Tesla">Nikola Tesla</option>
-        <option value="Arnold Schwarzenegger">Arnold Schwarzenegger</option>
-      </select>
+              <tbody>
+                <tr>
+                  <td>2025400001</td>
+                  <td>10024587</td>
+                  <td>Mohamed Ben Ali</td>
+                  <td>2025-01-02</td>
+                  <td>90012</td>
+                  <td>Ali Trabelsi</td>
+                  <td><span class="badge bg-success">E</span></td>
+                  <td>2025-01-05</td>
+                  <td>-</td>
+                </tr>
+
+                <tr>
+                  <td>2025400002</td>
+                  <td>10036754</td>
+                  <td>Salma Hachicha</td>
+                  <td>2025-01-04</td>
+                  <td>90014</td>
+                  <td>Hichem Gharbi</td>
+                  <td><span class="badge bg-warning">C</span></td>
+                  <td>2025-01-08</td>
+                  <td>-</td>
+                </tr>
+
+                <tr>
+                  <td>2025400003</td>
+                  <td>10045896</td>
+                  <td>Walid Ben Amor</td>
+                  <td>2025-01-06</td>
+                  <td>90018</td>
+                  <td>Samir Kefi</td>
+                  <td><span class="badge bg-info">S</span></td>
+                  <td>2025-01-09</td>
+                  <td>450.000</td>
+                </tr>
+
+                <tr>
+                  <td>2025400004</td>
+                  <td>10058741</td>
+                  <td>Rania Ayadi</td>
+                  <td>2025-01-07</td>
+                  <td>90021</td>
+                  <td>Maher Jaziri</td>
+                  <td><span class="badge bg-danger">U</span></td>
+                  <td>2025-01-10</td>
+                  <td>-</td>
+                </tr>
+
+                <tr>
+                  <td>2025400005</td>
+                  <td>10069874</td>
+                  <td>Youssef Dridi</td>
+                  <td>2025-01-09</td>
+                  <td>90024</td>
+                  <td>Imed Saidi</td>
+                  <td><span class="badge bg-primary">A</span></td>
+                  <td>2025-01-12</td>
+                  <td>-</td>
+                </tr>
+
+                <tr>
+                  <td>2025400006</td>
+                  <td>10074521</td>
+                  <td>Amira Ben Salem</td>
+                  <td>2025-01-10</td>
+                  <td>90026</td>
+                  <td>Nabil Khemiri</td>
+                  <td><span class="badge bg-info">S</span></td>
+                  <td>2025-01-13</td>
+                  <td>0.000</td>
+                </tr>
+
+                <tr>
+                  <td>2025400007</td>
+                  <td>10085632</td>
+                  <td>Karim Jouini</td>
+                  <td>2025-01-11</td>
+                  <td>90030</td>
+                  <td>Lotfi Baccar</td>
+                  <td><span class="badge bg-warning">C</span></td>
+                  <td>2025-01-14</td>
+                  <td>-</td>
+                </tr>
+
+                <tr>
+                  <td>2025400008</td>
+                  <td>10096325</td>
+                  <td>Sana Rekik</td>
+                  <td>2025-01-12</td>
+                  <td>90031</td>
+                  <td>Fathi Khlifi</td>
+                  <td><span class="badge bg-info">S</span></td>
+                  <td>2025-01-15</td>
+                  <td>1 250.000</td>
+                </tr>
+
+                <tr>
+                  <td>2025400009</td>
+                  <td>10102587</td>
+                  <td>Hatem Zouari</td>
+                  <td>2025-01-13</td>
+                  <td>90033</td>
+                  <td>Skander Abidi</td>
+                  <td><span class="badge bg-success">E</span></td>
+                  <td>2025-01-16</td>
+                  <td>-</td>
+                </tr>
+
+                <tr>
+                  <td>2025400010</td>
+                  <td>10114523</td>
+                  <td>Ines Ben Romdhane</td>
+                  <td>2025-01-14</td>
+                  <td>90035</td>
+                  <td>Marouen Tlili</td>
+                  <td><span class="badge bg-info">S</span></td>
+                  <td>2025-01-17</td>
+                  <td>300.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
 
       <!-- Footer -->
       <footer class="mt-auto">
@@ -308,6 +485,13 @@
             <div class="col-auto">Application de saisie</div>
           </div>
           <!-- / .row -->
+           </div>
+           </div>
+           </div>
+           </div>
+           </div>
+           </div>
+      </div>
         </div>
       </footer>
     </main>
@@ -436,7 +620,7 @@
         });
 
         if (!suffix) {
-          alert("يرجى اختيار عملية (مراجعة أو ضم)");
+          suffixSpan.innerHTML = ""; // ✅ مسح R أو J
           return;
         }
 
