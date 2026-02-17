@@ -125,10 +125,10 @@
                     <a href="gestion_enquete.html#transfert" class="nav-link"><span>تغيير المراقب المكلف</span></a>
                   </li>
                   <li class="nav-item">
-                    <a href="gestion_enquete.html#resultat" class="nav-link"><span>نتائج البحث</span></a>
+                    <a href="gestion_enquete.html#situation" class="nav-link"><span>تغيير وضعية البحث</span></a>
                   </li>
                   <li class="nav-item">
-                    <a href="gestion_enquete.html#situation" class="nav-link"><span>تغيير وضعية البحث</span></a>
+                    <a href="gestion_enquete.html#resultat" class="nav-link"><span>نتائج البحث</span></a>
                   </li>
                 </ul>
               </div>
@@ -210,16 +210,6 @@
                       <span>إضافة مصلحة طالبة لبحث</span>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a href="" class="nav-link">
-                      <span>إضافة مراقب</span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="" class="nav-link">
-                      <span>تعديل معلومات مراقب</span>
-                    </a>
-                  </li>
                 </ul>
               </div>
             </li>
@@ -235,91 +225,6 @@
       <header class="container-fluid d-flex py-6 mb-4">
         <!-- Top buttons -->
         <div class="d-flex align-items-center ms-auto me-n1 me-lg-n2">
-          <!-- Mode light/Dark -->
-          <div class="dropdown" id="themeSwitcher">
-            <a href="javascript: void(0);" class="dropdown-toggle no-arrow d-flex align-items-center justify-content-center bg-white rounded-circle shadow-sm mx-1 mx-lg-2 w-40px h-40px link-secondary" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-offset="0,0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="18" width="18">
-                <g>
-                  <path d="M12,4.64A7.36,7.36,0,1,0,19.36,12,7.37,7.37,0,0,0,12,4.64Zm0,12.72A5.36,5.36,0,1,1,17.36,12,5.37,5.37,0,0,1,12,17.36Z" style="fill: currentColor" />
-                  <path d="M12,3.47a1,1,0,0,0,1-1V1a1,1,0,0,0-2,0V2.47A1,1,0,0,0,12,3.47Z" style="fill: currentColor" />
-                  <path d="M4.55,6a1,1,0,0,0,.71.29A1,1,0,0,0,6,6,1,1,0,0,0,6,4.55l-1-1A1,1,0,0,0,3.51,4.93Z" style="fill: currentColor" />
-                  <path d="M2.47,11H1a1,1,0,0,0,0,2H2.47a1,1,0,1,0,0-2Z" style="fill: currentColor" />
-                  <path d="M4.55,18l-1,1a1,1,0,0,0,0,1.42,1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29l1-1A1,1,0,0,0,4.55,18Z" style="fill: currentColor" />
-                  <path d="M12,20.53a1,1,0,0,0-1,1V23a1,1,0,0,0,2,0V21.53A1,1,0,0,0,12,20.53Z" style="fill: currentColor" />
-                  <path d="M19.45,18A1,1,0,0,0,18,19.45l1,1a1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.42Z" style="fill: currentColor" />
-                  <path d="M23,11H21.53a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z" style="fill: currentColor" />
-                  <path d="M18.74,6.26A1,1,0,0,0,19.45,6l1-1a1,1,0,1,0-1.42-1.42l-1,1A1,1,0,0,0,18,6,1,1,0,0,0,18.74,6.26Z" style="fill: currentColor" />
-                </g>
-              </svg>
-            </a>
-
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li>
-                <button type="button" class="dropdown-item active" data-theme-value="light">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="me-2" height="18" width="18">
-                    <g>
-                      <path d="M12,4.64A7.36,7.36,0,1,0,19.36,12,7.37,7.37,0,0,0,12,4.64Zm0,12.72A5.36,5.36,0,1,1,17.36,12,5.37,5.37,0,0,1,12,17.36Z" style="fill: currentColor" />
-                      <path d="M12,3.47a1,1,0,0,0,1-1V1a1,1,0,0,0-2,0V2.47A1,1,0,0,0,12,3.47Z" style="fill: currentColor" />
-                      <path d="M4.55,6a1,1,0,0,0,.71.29A1,1,0,0,0,6,6,1,1,0,0,0,6,4.55l-1-1A1,1,0,0,0,3.51,4.93Z" style="fill: currentColor" />
-                      <path d="M2.47,11H1a1,1,0,0,0,0,2H2.47a1,1,0,1,0,0-2Z" style="fill: currentColor" />
-                      <path d="M4.55,18l-1,1a1,1,0,0,0,0,1.42,1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29l1-1A1,1,0,0,0,4.55,18Z" style="fill: currentColor" />
-                      <path d="M12,20.53a1,1,0,0,0-1,1V23a1,1,0,0,0,2,0V21.53A1,1,0,0,0,12,20.53Z" style="fill: currentColor" />
-                      <path d="M19.45,18A1,1,0,0,0,18,19.45l1,1a1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.42Z" style="fill: currentColor" />
-                      <path d="M23,11H21.53a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z" style="fill: currentColor" />
-                      <path d="M18.74,6.26A1,1,0,0,0,19.45,6l1-1a1,1,0,1,0-1.42-1.42l-1,1A1,1,0,0,0,18,6,1,1,0,0,0,18.74,6.26Z" style="fill: currentColor" />
-                    </g>
-                  </svg>
-                  Light mode
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item" data-theme-value="dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="me-2" height="18" width="18">
-                    <path d="M19.57,23.34a1,1,0,0,0,0-1.9,9.94,9.94,0,0,1,0-18.88,1,1,0,0,0,.68-.94,1,1,0,0,0-.68-.95A11.58,11.58,0,0,0,8.88,2.18,12.33,12.33,0,0,0,3.75,12a12.31,12.31,0,0,0,5.11,9.79A11.49,11.49,0,0,0,15.61,24,12.55,12.55,0,0,0,19.57,23.34ZM10,20.17A10.29,10.29,0,0,1,5.75,12a10.32,10.32,0,0,1,4.3-8.19A9.34,9.34,0,0,1,15.59,2a.17.17,0,0,1,.17.13.18.18,0,0,1-.07.2,11.94,11.94,0,0,0-.18,19.21.25.25,0,0,1-.16.45A9.5,9.5,0,0,1,10,20.17Z" style="fill: currentColor" />
-                  </svg>
-                  Dark mode
-                </button>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Separator -->
-          <div class="vr bg-gray-700 mx-2 mx-lg-3"></div>
-
-          <!-- Langue slector -->
-          <div class="dropdown">
-            <a href="javascript: void(0);" class="dropdown-toggle no-arrow d-flex align-items-center justify-content-center bg-white rounded-circle shadow-sm mx-1 mx-lg-2 w-40px h-40px" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-offset="0,0">
-              <span class="avatar avatar-circle avatar-xxs"><img class="avatar-img" src="assets/images/flags/1x1/sa.svg" alt="..." width="18" height="18" /></span>
-            </a>
-
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li>
-                <h6 class="dropdown-header text-uppercase">Sélectionner langue</h6>
-              </li>
-              <li>
-                <a href="javascript: void(0);" class="dropdown-item active">
-                  <span class="avatar avatar-circle avatar-xxs"><img class="avatar-img" src="assets/images/flags/1x1/sa.svg" alt="..." width="18" height="18" /></span><span class="text-truncate ms-2">العربية</span>
-                </a>
-              </li>
-              <li>
-                <a href="javascript: void(0);" class="dropdown-item">
-                  <span class="avatar avatar-circle avatar-xxs"><img class="avatar-img" src="assets/images/flags/1x1/fr.svg" alt="..." width="18" height="18" /></span><span class="text-truncate ms-2">Français</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Separator -->
-          <div class="vr bg-gray-700 mx-2 mx-lg-3"></div>
-
-          <!-- User account bouton -->
-          <div class="dropdown">
-            <a href="#" class="dropdown-toggle no-arrow d-flex align-items-center justify-content-center bg-white rounded-circle shadow-sm mx-1 mx-lg-2 w-40px h-40px" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false" data-bs-offset="0,0">
-              <div class="avatar avatar-circle avatar-sm avatar-online">
-                <img src="assets/images/profiles/user.png" alt="..." class="avatar-img" width="40" height="40" />
-              </div>
-            </a>
-          </div>
         </div>
       </header>
       <div class="container-fluid">
@@ -333,147 +238,261 @@
                       <button class="nav-link active" id="preview-tab-07" data-bs-toggle="tab" data-bs-target="#preview-tab-pane-07" type="button" role="tab" aria-controls="preview-tab-pane-07" aria-selected="true">كشف قائمة بحوث</button>
                     </li>
                   </ul>
-        <div class="row g-3 mt-4">
-          <div class="table-responsive">
-            <table class="table table-nowrap mb-0 align-middle">
-              <thead class="thead-light">
-                <tr>
-                  <th>Réf</th>
-                  <th>Matricule Employeur</th>
-                  <th>Identité Employeur</th>
-                  <th>Date saisie</th>
-                  <th>Matricule Contrôleur</th>
-                  <th>Identité Contrôleur</th>
-                  <th>Situation</th>
-                  <th>Date Situation</th>
-                  <th>Insuffisance (TND)</th>
-                </tr>
-              </thead>
+        <!-- ========== FILTERS ========== -->
+<div class="row g-3 mb-3">
 
-              <tbody>
-                <tr>
-                  <td>2025400001</td>
-                  <td>10024587</td>
-                  <td>Mohamed Ben Ali</td>
-                  <td>2025-01-02</td>
-                  <td>90012</td>
-                  <td>Ali Trabelsi</td>
-                  <td><span class="badge bg-success">E</span></td>
-                  <td>2025-01-05</td>
-                  <td>-</td>
-                </tr>
+  <div class="col-md-2">
+    <input type="text" id="filter-br" class="form-control" placeholder="BR">
+  </div>
 
-                <tr>
-                  <td>2025400002</td>
-                  <td>10036754</td>
-                  <td>Salma Hachicha</td>
-                  <td>2025-01-04</td>
-                  <td>90014</td>
-                  <td>Hichem Gharbi</td>
-                  <td><span class="badge bg-warning">C</span></td>
-                  <td>2025-01-08</td>
-                  <td>-</td>
-                </tr>
+  <div class="col-md-3">
+    <input type="text" id="filter-employeur" class="form-control"
+      placeholder="Employeur (matricule ou identité)">
+  </div>
 
-                <tr>
-                  <td>2025400003</td>
-                  <td>10045896</td>
-                  <td>Walid Ben Amor</td>
-                  <td>2025-01-06</td>
-                  <td>90018</td>
-                  <td>Samir Kefi</td>
-                  <td><span class="badge bg-info">S</span></td>
-                  <td>2025-01-09</td>
-                  <td>450.000</td>
-                </tr>
+  <div class="col-md-3">
+    <input type="text" id="filter-controleur" class="form-control"
+      placeholder="Contrôleur (matricule ou identité)">
+  </div>
 
-                <tr>
-                  <td>2025400004</td>
-                  <td>10058741</td>
-                  <td>Rania Ayadi</td>
-                  <td>2025-01-07</td>
-                  <td>90021</td>
-                  <td>Maher Jaziri</td>
-                  <td><span class="badge bg-danger">U</span></td>
-                  <td>2025-01-10</td>
-                  <td>-</td>
-                </tr>
+  <div class="col-md-3">
+    <input type="text" id="filter-controleur" class="form-control"
+      placeholder="Nature d'enquete">
+  </div>
 
-                <tr>
-                  <td>2025400005</td>
-                  <td>10069874</td>
-                  <td>Youssef Dridi</td>
-                  <td>2025-01-09</td>
-                  <td>90024</td>
-                  <td>Imed Saidi</td>
-                  <td><span class="badge bg-primary">A</span></td>
-                  <td>2025-01-12</td>
-                  <td>-</td>
-                </tr>
+  <div class="col-md-2">
+    <select id="filter-situation" class="form-select">
+      <option value="">Situation</option>
+      <option value="E">E</option>
+      <option value="C">C</option>
+      <option value="S">S</option>
+      <option value="U">U</option>
+      <option value="A">A</option>
+    </select>
+  </div>
 
-                <tr>
-                  <td>2025400006</td>
-                  <td>10074521</td>
-                  <td>Amira Ben Salem</td>
-                  <td>2025-01-10</td>
-                  <td>90026</td>
-                  <td>Nabil Khemiri</td>
-                  <td><span class="badge bg-info">S</span></td>
-                  <td>2025-01-13</td>
-                  <td>0.000</td>
-                </tr>
+  <div class="col-md-1">
+    <input type="date" id="date-start" class="form-control">
+  </div>
 
-                <tr>
-                  <td>2025400007</td>
-                  <td>10085632</td>
-                  <td>Karim Jouini</td>
-                  <td>2025-01-11</td>
-                  <td>90030</td>
-                  <td>Lotfi Baccar</td>
-                  <td><span class="badge bg-warning">C</span></td>
-                  <td>2025-01-14</td>
-                  <td>-</td>
-                </tr>
+  <div class="col-md-1">
+    <input type="date" id="date-end" class="form-control">
+  </div>
 
-                <tr>
-                  <td>2025400008</td>
-                  <td>10096325</td>
-                  <td>Sana Rekik</td>
-                  <td>2025-01-12</td>
-                  <td>90031</td>
-                  <td>Fathi Khlifi</td>
-                  <td><span class="badge bg-info">S</span></td>
-                  <td>2025-01-15</td>
-                  <td>1 250.000</td>
-                </tr>
+</div>
 
-                <tr>
-                  <td>2025400009</td>
-                  <td>10102587</td>
-                  <td>Hatem Zouari</td>
-                  <td>2025-01-13</td>
-                  <td>90033</td>
-                  <td>Skander Abidi</td>
-                  <td><span class="badge bg-success">E</span></td>
-                  <td>2025-01-16</td>
-                  <td>-</td>
-                </tr>
+<!-- ========== TABLE ========== -->
+<div class="row g-3 mt-2">
+  <div class="table-responsive"
+       id="sortingList"
+       data-list='{"valueNames":["br","ref","mat_emp","id_emp","date_saisie","mat_ctrl","id_ctrl","situation","date_situation","insuffisance"]}'>
 
-                <tr>
-                  <td>2025400010</td>
-                  <td>10114523</td>
-                  <td>Ines Ben Romdhane</td>
-                  <td>2025-01-14</td>
-                  <td>90035</td>
-                  <td>Marouen Tlili</td>
-                  <td><span class="badge bg-info">S</span></td>
-                  <td>2025-01-17</td>
-                  <td>300.000</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+<table id="dashly-table" class="table table-nowrap mb-0 align-middle datatable">
+
+<thead class="thead-light">
+<tr>
+  <th><a href="#" class="list-sort asc" data-sort="br" data-default="true">BR</a></th>
+  <th><a href="#" class="list-sort" data-sort="ref">Réf</a></th>
+  <th><a href="#" class="list-sort" data-sort="mat_emp">Matricule Employeur</a></th>
+  <th><a href="#" class="list-sort" data-sort="id_emp">Identité Employeur</a></th>
+  <th><a href="#" class="list-sort" data-sort="date_saisie">Date saisie</a></th>
+  <th><a href="#" class="list-sort" data-sort="mat_ctrl">Matricule Contrôleur</a></th>
+  <th><a href="#" class="list-sort" data-sort="id_ctrl">Identité Contrôleur</a></th>
+  <th><a href="#" class="list-sort" data-sort="situation">Situation</a></th>
+  <th><a href="#" class="list-sort" data-sort="date_situation">Date Situation</a></th>
+  <th><a href="#" class="list-sort" data-sort="insuffisance">Insuffisance (TND)</a></th>
+</tr>
+</thead>
+
+<tbody class="list">
+
+<tr>
+<td class="br">80</td>
+<td class="ref">2025400001</td>
+<td class="mat_emp">10024587</td>
+<td class="id_emp">Mohamed Ben Ali</td>
+<td class="date_saisie">2025-01-02</td>
+<td class="mat_ctrl">90012</td>
+<td class="id_ctrl">Ali Trabelsi</td>
+<td class="situation"><span class="badge bg-success">E</span></td>
+<td class="date_situation">2025-01-05</td>
+<td class="insuffisance">-</td>
+</tr>
+
+<tr>
+<td class="br">5</td>
+<td class="ref">2025400002</td>
+<td class="mat_emp">10036754</td>
+<td class="id_emp">Salma Hachicha</td>
+<td class="date_saisie">2025-01-04</td>
+<td class="mat_ctrl">90014</td>
+<td class="id_ctrl">Hichem Gharbi</td>
+<td class="situation"><span class="badge bg-warning">C</span></td>
+<td class="date_situation">2025-01-08</td>
+<td class="insuffisance">-</td>
+</tr>
+
+<tr>
+<td class="br">16</td>
+<td class="ref">2025400003</td>
+<td class="mat_emp">10045896</td>
+<td class="id_emp">Walid Ben Amor</td>
+<td class="date_saisie">2025-01-06</td>
+<td class="mat_ctrl">90018</td>
+<td class="id_ctrl">Samir Kefi</td>
+<td class="situation"><span class="badge bg-info">S</span></td>
+<td class="date_situation">2025-01-09</td>
+<td class="insuffisance">450.000</td>
+</tr>
+
+<tr>
+<td class="br">12</td>
+<td class="ref">2025400004</td>
+<td class="mat_emp">10058741</td>
+<td class="id_emp">Rania Ayadi</td>
+<td class="date_saisie">2025-01-07</td>
+<td class="mat_ctrl">90021</td>
+<td class="id_ctrl">Maher Jaziri</td>
+<td class="situation"><span class="badge bg-danger">U</span></td>
+<td class="date_situation">2025-01-10</td>
+<td class="insuffisance">-</td>
+</tr>
+
+<tr>
+<td class="br">45</td>
+<td class="ref">2025400005</td>
+<td class="mat_emp">10069874</td>
+<td class="id_emp">Youssef Dridi</td>
+<td class="date_saisie">2025-01-09</td>
+<td class="mat_ctrl">90024</td>
+<td class="id_ctrl">Imed Saidi</td>
+<td class="situation"><span class="badge bg-primary">A</span></td>
+<td class="date_situation">2025-01-12</td>
+<td class="insuffisance">-</td>
+</tr>
+
+<tr>
+<td class="br">83</td>
+<td class="ref">2025400006</td>
+<td class="mat_emp">10074521</td>
+<td class="id_emp">Amira Ben Salem</td>
+<td class="date_saisie">2025-01-10</td>
+<td class="mat_ctrl">90026</td>
+<td class="id_ctrl">Nabil Khemiri</td>
+<td class="situation"><span class="badge bg-info">S</span></td>
+<td class="date_situation">2025-01-13</td>
+<td class="insuffisance">0.000</td>
+</tr>
+
+<tr>
+<td class="br">14</td>
+<td class="ref">2025400007</td>
+<td class="mat_emp">10085632</td>
+<td class="id_emp">Karim Jouini</td>
+<td class="date_saisie">2025-01-11</td>
+<td class="mat_ctrl">90030</td>
+<td class="id_ctrl">Lotfi Baccar</td>
+<td class="situation"><span class="badge bg-warning">C</span></td>
+<td class="date_situation">2025-01-14</td>
+<td class="insuffisance">-</td>
+</tr>
+
+<tr>
+<td class="br">20</td>
+<td class="ref">2025400008</td>
+<td class="mat_emp">10096325</td>
+<td class="id_emp">Sana Rekik</td>
+<td class="date_saisie">2025-01-12</td>
+<td class="mat_ctrl">90031</td>
+<td class="id_ctrl">Fathi Khlifi</td>
+<td class="situation"><span class="badge bg-info">S</span></td>
+<td class="date_situation">2025-01-15</td>
+<td class="insuffisance">1 250.000</td>
+</tr>
+
+<tr>
+<td class="br">24</td>
+<td class="ref">2025400009</td>
+<td class="mat_emp">10102587</td>
+<td class="id_emp">Hatem Zouari</td>
+<td class="date_saisie">2025-01-13</td>
+<td class="mat_ctrl">90033</td>
+<td class="id_ctrl">Skander Abidi</td>
+<td class="situation"><span class="badge bg-success">E</span></td>
+<td class="date_situation">2025-01-16</td>
+<td class="insuffisance">-</td>
+</tr>
+
+<tr>
+<td class="br">19</td>
+<td class="ref">2025400010</td>
+<td class="mat_emp">10114523</td>
+<td class="id_emp">Ines Ben Romdhane</td>
+<td class="date_saisie">2025-01-14</td>
+<td class="mat_ctrl">90035</td>
+<td class="id_ctrl">Marouen Tlili</td>
+<td class="situation"><span class="badge bg-info">S</span></td>
+<td class="date_situation">2025-01-17</td>
+<td class="insuffisance">300.000</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+</div>
+
+<!-- ========== SCRIPT (END OF PAGE) ========== -->
+<script src="assets/vendor/list.js/list.min.js"></script> <!-- Dashly List.js -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const rows = document.querySelectorAll("#dashly-table tbody tr");
+
+  function applyFilters() {
+
+    const br = document.getElementById("filter-br").value.toLowerCase();
+    const emp = document.getElementById("filter-employeur").value.toLowerCase();
+    const ctrl = document.getElementById("filter-controleur").value.toLowerCase();
+    const sit = document.getElementById("filter-situation").value;
+    const d1 = document.getElementById("date-start").value;
+    const d2 = document.getElementById("date-end").value;
+
+    rows.forEach(row => {
+
+      const c = row.children;
+
+      const brVal   = c[0].innerText.toLowerCase();
+      const empVal  = (c[2].innerText + c[3].innerText).toLowerCase();
+      const ctrlVal = (c[5].innerText + c[6].innerText).toLowerCase();
+      const sitVal  = c[7].innerText.trim();
+      const dateVal = c[8].innerText;
+
+      let visible = true;
+
+      if (br && !brVal.includes(br)) visible = false;
+      if (emp && !empVal.includes(emp)) visible = false;
+      if (ctrl && !ctrlVal.includes(ctrl)) visible = false;
+      if (sit && sitVal !== sit) visible = false;
+      if (d1 && dateVal < d1) visible = false;
+      if (d2 && dateVal > d2) visible = false;
+
+      row.style.display = visible ? "" : "none";
+
+    });
+  }
+
+  document.querySelectorAll(
+    "#filter-br, #filter-employeur, #filter-controleur, #filter-situation, #date-start, #date-end"
+  ).forEach(el => {
+    el.addEventListener("input", applyFilters);
+    el.addEventListener("change", applyFilters);
+  });
+
+});
+</script>
+
       </div>
 
       <!-- Footer -->

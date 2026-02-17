@@ -124,10 +124,10 @@
                     <a href="gestion_enquete.html#transfert" class="nav-link"><span>تغيير المراقب المكلف</span></a>
                   </li>
                   <li class="nav-item">
-                    <a href="gestion_enquete.html#resultat" class="nav-link"><span>نتائج البحث</span></a>
+                    <a href="gestion_enquete.html#situation" class="nav-link"><span>تغيير وضعية البحث</span></a>
                   </li>
                   <li class="nav-item">
-                    <a href="gestion_enquete.html#situation" class="nav-link"><span>تغيير وضعية البحث</span></a>
+                    <a href="gestion_enquete.html#resultat" class="nav-link"><span>نتائج البحث</span></a>
                   </li>
                 </ul>
               </div>
@@ -209,16 +209,6 @@
                       <span>إضافة مصلحة طالبة لبحث</span>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a href="" class="nav-link">
-                      <span>إضافة مراقب</span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="" class="nav-link">
-                      <span>تعديل معلومات مراقب</span>
-                    </a>
-                  </li>
                 </ul>
               </div>
             </li>
@@ -233,98 +223,12 @@
       <!-- HEADER -->
       <header class="container-fluid d-flex py-6 mb-4">
         <!-- Top buttons -->
-        <div class="d-flex align-items-center ms-auto me-n1 me-lg-n2">
-          <!-- Mode light/Dark -->
-          <div class="dropdown" id="themeSwitcher">
-            <a href="javascript: void(0);" class="dropdown-toggle no-arrow d-flex align-items-center justify-content-center bg-white rounded-circle shadow-sm mx-1 mx-lg-2 w-40px h-40px link-secondary" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-offset="0,0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="18" width="18">
-                <g>
-                  <path d="M12,4.64A7.36,7.36,0,1,0,19.36,12,7.37,7.37,0,0,0,12,4.64Zm0,12.72A5.36,5.36,0,1,1,17.36,12,5.37,5.37,0,0,1,12,17.36Z" style="fill: currentColor" />
-                  <path d="M12,3.47a1,1,0,0,0,1-1V1a1,1,0,0,0-2,0V2.47A1,1,0,0,0,12,3.47Z" style="fill: currentColor" />
-                  <path d="M4.55,6a1,1,0,0,0,.71.29A1,1,0,0,0,6,6,1,1,0,0,0,6,4.55l-1-1A1,1,0,0,0,3.51,4.93Z" style="fill: currentColor" />
-                  <path d="M2.47,11H1a1,1,0,0,0,0,2H2.47a1,1,0,1,0,0-2Z" style="fill: currentColor" />
-                  <path d="M4.55,18l-1,1a1,1,0,0,0,0,1.42,1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29l1-1A1,1,0,0,0,4.55,18Z" style="fill: currentColor" />
-                  <path d="M12,20.53a1,1,0,0,0-1,1V23a1,1,0,0,0,2,0V21.53A1,1,0,0,0,12,20.53Z" style="fill: currentColor" />
-                  <path d="M19.45,18A1,1,0,0,0,18,19.45l1,1a1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.42Z" style="fill: currentColor" />
-                  <path d="M23,11H21.53a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z" style="fill: currentColor" />
-                  <path d="M18.74,6.26A1,1,0,0,0,19.45,6l1-1a1,1,0,1,0-1.42-1.42l-1,1A1,1,0,0,0,18,6,1,1,0,0,0,18.74,6.26Z" style="fill: currentColor" />
-                </g>
-              </svg>
-            </a>
-
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li>
-                <button type="button" class="dropdown-item active" data-theme-value="light">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="me-2" height="18" width="18">
-                    <g>
-                      <path d="M12,4.64A7.36,7.36,0,1,0,19.36,12,7.37,7.37,0,0,0,12,4.64Zm0,12.72A5.36,5.36,0,1,1,17.36,12,5.37,5.37,0,0,1,12,17.36Z" style="fill: currentColor" />
-                      <path d="M12,3.47a1,1,0,0,0,1-1V1a1,1,0,0,0-2,0V2.47A1,1,0,0,0,12,3.47Z" style="fill: currentColor" />
-                      <path d="M4.55,6a1,1,0,0,0,.71.29A1,1,0,0,0,6,6,1,1,0,0,0,6,4.55l-1-1A1,1,0,0,0,3.51,4.93Z" style="fill: currentColor" />
-                      <path d="M2.47,11H1a1,1,0,0,0,0,2H2.47a1,1,0,1,0,0-2Z" style="fill: currentColor" />
-                      <path d="M4.55,18l-1,1a1,1,0,0,0,0,1.42,1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29l1-1A1,1,0,0,0,4.55,18Z" style="fill: currentColor" />
-                      <path d="M12,20.53a1,1,0,0,0-1,1V23a1,1,0,0,0,2,0V21.53A1,1,0,0,0,12,20.53Z" style="fill: currentColor" />
-                      <path d="M19.45,18A1,1,0,0,0,18,19.45l1,1a1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.42Z" style="fill: currentColor" />
-                      <path d="M23,11H21.53a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z" style="fill: currentColor" />
-                      <path d="M18.74,6.26A1,1,0,0,0,19.45,6l1-1a1,1,0,1,0-1.42-1.42l-1,1A1,1,0,0,0,18,6,1,1,0,0,0,18.74,6.26Z" style="fill: currentColor" />
-                    </g>
-                  </svg>
-                  Light mode
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item" data-theme-value="dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="me-2" height="18" width="18">
-                    <path d="M19.57,23.34a1,1,0,0,0,0-1.9,9.94,9.94,0,0,1,0-18.88,1,1,0,0,0,.68-.94,1,1,0,0,0-.68-.95A11.58,11.58,0,0,0,8.88,2.18,12.33,12.33,0,0,0,3.75,12a12.31,12.31,0,0,0,5.11,9.79A11.49,11.49,0,0,0,15.61,24,12.55,12.55,0,0,0,19.57,23.34ZM10,20.17A10.29,10.29,0,0,1,5.75,12a10.32,10.32,0,0,1,4.3-8.19A9.34,9.34,0,0,1,15.59,2a.17.17,0,0,1,.17.13.18.18,0,0,1-.07.2,11.94,11.94,0,0,0-.18,19.21.25.25,0,0,1-.16.45A9.5,9.5,0,0,1,10,20.17Z" style="fill: currentColor" />
-                  </svg>
-                  Dark mode
-                </button>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Separator -->
-          <div class="vr bg-gray-700 mx-2 mx-lg-3"></div>
-
-          <!-- Langue slector -->
-          <div class="dropdown">
-            <a href="javascript: void(0);" class="dropdown-toggle no-arrow d-flex align-items-center justify-content-center bg-white rounded-circle shadow-sm mx-1 mx-lg-2 w-40px h-40px" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-offset="0,0">
-              <span class="avatar avatar-circle avatar-xxs"><img class="avatar-img" src="assets/images/flags/1x1/sa.svg" alt="..." width="18" height="18" /></span>
-            </a>
-
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li>
-                <h6 class="dropdown-header text-uppercase">Sélectionner langue</h6>
-              </li>
-              <li>
-                <a href="javascript: void(0);" class="dropdown-item active">
-                  <span class="avatar avatar-circle avatar-xxs"><img class="avatar-img" src="assets/images/flags/1x1/sa.svg" alt="..." width="18" height="18" /></span><span class="text-truncate ms-2">العربية</span>
-                </a>
-              </li>
-              <li>
-                <a href="javascript: void(0);" class="dropdown-item">
-                  <span class="avatar avatar-circle avatar-xxs"><img class="avatar-img" src="assets/images/flags/1x1/fr.svg" alt="..." width="18" height="18" /></span><span class="text-truncate ms-2">Français</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Separator -->
-          <div class="vr bg-gray-700 mx-2 mx-lg-3"></div>
-
-          <!-- User account bouton -->
-          <div class="dropdown">
-            <a href="#" class="dropdown-toggle no-arrow d-flex align-items-center justify-content-center bg-white rounded-circle shadow-sm mx-1 mx-lg-2 w-40px h-40px" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false" data-bs-offset="0,0">
-              <div class="avatar avatar-circle avatar-sm avatar-online">
-                <img src="assets/images/profiles/user.png" alt="..." class="avatar-img" width="40" height="40" />
-              </div>
-            </a>
-          </div>
-        </div>
+        <div class="d-flex align-items-center ms-auto me-n1 me-lg-n2"></div>
       </header>
       <!--top info enquete-->
       <div class="container-fluid">
         <div class="d-flex justify-content-between m-5">
-          <p type="button" class="btn btn-secondary pe-none position-relative">المرجع:<span class="d-inline-block ref_suffix ms-3"></span><span class="d-inline-block me-3 ref_enquete">202540099</span><span class="position-absolute top-0 start-100 translate-middle badge bg-warning rounded" style="line-height: unset">E</span><span class="btn badge text-bg-danger-soft pe-auto" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable1">Historique</span></p>
+          <p type="button" class="btn btn-secondary pe-none position-relative">المرجع:<span class="d-inline-block ref_suffix ms-3"></span><span class="d-inline-block me-3 ref_enquete">80202540099</span><span class="position-absolute top-0 start-100 translate-middle badge bg-warning rounded" style="line-height: unset">E</span><span class="btn badge text-bg-danger-soft pe-auto" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable1">Historique</span></p>
           <!--popup_enquete_historique-->
           <div id="exampleModalCenteredScrollable1" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
             <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered" role="document">
@@ -338,59 +242,59 @@
                     <table class="table table-nowrap mb-0" data-list='{"valueNames": ["matricule", "key", "type_piece", "n_piece", "Identity"]}'>
                       <thead class="thead-light">
                         <tr>
-                          <th class="w-80px">
-                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="matricule"> Choix </a>
-                          </th>
                           <th>
-                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="key"> Lettre </a>
+                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="lettre"> Lettre </a>
                           </th>
                           <th class="min-w-200px">
-                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="type_piece"> Situation </a>
+                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="situation"> Situation </a>
                           </th>
                           <th>
-                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="n_piece"> Date situation </a>
+                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="date_situation"> Date situation </a>
                           </th>
                           <th>
-                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="Identity"> Annotations </a>
+                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="matricule"> Matricule saisie </a>
+                          </th>
+                          <th>
+                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="annotations"> Annotations </a>
                           </th>
                         </tr>
                       </thead>
 
                       <tbody class="list">
                         <tr>
-                          <td class="matricule"></td>
-                          <td class="key">E</td>
-                          <td class="type_piece">Enquête au secrétariat</td>
-                          <td class="n_piece"><span class="badge text-bg-success rounded-pill">01-01-2025</span></td>
-                          <td class="identity">NA</td>
+                          <td class="lettre">E</td>
+                          <td class="situation">Enquête au secrétariat</td>
+                          <td class="date_situation"><span class="badge text-bg-success rounded-pill">01-01-2025</span></td>
+                          <td class="matricule">126359</td>
+                          <td class="annotations"></td>
                         </tr>
                         <tr>
-                          <td class="matricule"></td>
-                          <td class="key">C</td>
-                          <td class="type_piece">Chez le controleur</td>
-                          <td class="n_piece"><span class="badge text-bg-success rounded-pill">11-01-2025</span></td>
-                          <td class="identity">NA</td>
+                          <td class="lettre">C</td>
+                          <td class="situation">Chez le controleur</td>
+                          <td class="date_situation"><span class="badge text-bg-success rounded-pill">11-01-2025</span></td>
+                          <td class="matricule">126359</td>
+                          <td class="annotations"></td>
                         </tr>
                         <tr>
-                          <td class="matricule"></td>
-                          <td class="key">U</td>
-                          <td class="type_piece">Enquête chez chef unité</td>
-                          <td class="n_piece"><span class="badge text-bg-success rounded-pill">01-02-2025</span></td>
-                          <td class="identity">NA</td>
+                          <td class="lettre">U</td>
+                          <td class="situation">Enquête chez chef unité</td>
+                          <td class="date_situation"><span class="badge text-bg-success rounded-pill">01-02-2025</span></td>
+                          <td class="matricule">126359</td>
+                          <td class="annotations"></td>
                         </tr>
                         <tr>
-                          <td class="matricule"></td>
-                          <td class="key">S</td>
-                          <td class="type_piece">Enquête satisfaite</td>
-                          <td class="n_piece"><span class="badge text-bg-success rounded-pill">13-03-2025</span></td>
-                          <td class="identity">NA</td>
+                          <td class="lettre">S</td>
+                          <td class="situation">Enquête satisfaite</td>
+                          <td class="date_situation"><span class="badge text-bg-success rounded-pill">13-03-2025</span></td>
+                          <td class="matricule">126359</td>
+                          <td class="annotations"></td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                   <br /><br />
                   <div class="table-responsive">
-                    <h3 class="modal-title" id="exampleModalCenteredScrollableTitle">Transfert enquete</h3>
+                    <h3 class="modal-title" id="exampleModalCenteredScrollableTitle">Historique affectation controleurs</h3>
                     <table class="table table-nowrap mb-0" data-list='{"valueNames": ["matricule", "key", "type_piece", "n_piece", "Identity"]}'>
                       <thead class="thead-light">
                         <tr>
@@ -401,16 +305,7 @@
                             <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="type_piece"> Identité controleur </a>
                           </th>
                           <th>
-                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="n_piece"> Matricule nv controleur </a>
-                          </th>
-                          <th>
-                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="Identity"> Identité nv controleur </a>
-                          </th>
-                          <th>
-                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="Identity"> Date transfert </a>
-                          </th>
-                          <th>
-                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="Identity"> Remarques </a>
+                            <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="Identity"> Date d'affectation </a>
                           </th>
                         </tr>
                       </thead>
@@ -419,10 +314,7 @@
                         <tr>
                           <td class="key">123456-00</td>
                           <td class="type_piece">Mohamed ben mohamed</td>
-                          <td class="n_piece">654789-00</td>
-                          <td class="identity">Mansour ben Ahmed</td>
                           <td class="identity">21-12-2024</td>
-                          <td class="identity">-</td>
                         </tr>
                       </tbody>
                     </table>
@@ -456,6 +348,11 @@
                       <label class="form-label" for="exampleFormControlTextarea1">موضوع البحث</label>
                       <textarea id="exampleFormControlTextarea1" class="form-control" placeholder="   " rows="4" style="height: 1.5em">التثبت من إجارة السيد محمد بن محمد</textarea>
                     </div>
+                    <div class="col-md-2">
+                      <label for="validationCustom03" class="form-label">المكتب (Auto)</label>
+                      <button type="button" class="btn btn-light ms-5 fs-5 pe-none">16<span class="ref_suffix"></span></button>
+                      <div class="invalid-feedback"></div>
+                    </div>
                     <div class="col-md-4">
                       <label for="validationCustom04" class="form-label">المصلحة التي تطلب البحث</label>
                       <input type="text" class="form-control" id="validationCustom05" required="" disabled value="خلية الانخراط" />
@@ -484,10 +381,6 @@
                           <label for="validationCustom05" class="form-label">رقم انخراط المؤجر /TNS</label>
                           <input type="text" class="form-control" id="validationCustom05" required="" value="12345678" />
                           <div class="invalid-feedback">رقم خاطئ</div>
-                        </div>
-                        <div class="col-md-3 row">
-                          <label for="validationCustom05" class="form-label" style="visibility: hidden">قائمة البحوث المسجلة</label>
-                          <button type="button" class="btn btn-outline-secondary ms-5 fs-5" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable2">قائمة البحوث المسجلة</button>
                         </div>
                       </div>
                       <div class="row g-4">
@@ -783,31 +676,27 @@
                   </li>
                 </ul>
                 <div class="row g-3 m-5 mb-7">
-                  <div class="col-md-3">
-                    <label for="validationCustom05" class="form-label">المراقب</label>
-                    <input type="text" class="form-control" id="validationCustom05" required="" />
-                    <div class="invalid-feedback">رقم خاطئ</div>
-                  </div>
-                  <div class="col-md-1">
-                    <label for="validationCustom05" class="form-label" style="visibility: hidden"> مفتاح</label>
-                    <input type="text" class="form-control" id="validationCustom05" required="" />
-                    <div class="invalid-feedback">رقم خاطئ</div>
-                  </div>
                   <div class="tab-content col-md-7 ms-auto" id="myTabContent-02">
                     <div class="tab-pane fade show active" id="preview-tab-pane-02" role="tabpanel" aria-labelledby="preview-tab-02" tabindex="0">
                       <div class="w-md-50">
-                        <label for="validationCustom05" class="form-label">بحث عن مراقب</label>
+                        <label for="validationCustom05" class="form-label">المراقب</label>
                         <select
                           class="form-select"
-                          autocomplete="off"
+                          multiple
                           data-select='{
-                                                                "placeholder": "اسم..."
-                                                            }'>
-                          <option value="">البحث عن مراقب</option>
-                          <option value="Thomas Edison">أحمد مهدي</option>
-                          <option value="John Doe">مراد الأسود</option>
-                          <option value="Nikola Tesla">رضا امر</option>
-                          <option value="Arnold Schwarzenegger">مرتضى شافي</option>
+        "placeholder": "Choose members..."
+    }'>
+                          <option value="">Choose members...</option>
+                          <option value="Norma Peck">Norma Peck</option>
+                          <option value="Perry Hart">Perry Hart</option>
+                          <option value="Jimmy Riley">Jimmy Riley</option>
+                          <option value="Martin Edwards">Martin Edwards</option>
+                          <option value="Katie Fowler">Katie Fowler</option>
+                          <option value="Zachary Ortiz">Zachary Ortiz</option>
+                          <option value="Dylan Sutton">Dylan Sutton</option>
+                          <option value="Melissa Stewart">Melissa Stewart</option>
+                          <option value="Lester William">Lester William</option>
+                          <option value="Chloe Brewer">Chloe Brewer</option>
                         </select>
                       </div>
                     </div>
@@ -872,11 +761,6 @@
                   </div>
                 </div>
                 <div class="row g-3 m-5 mb-7">
-                  <div class="col-md-3">
-                    <label for="validationCustom05" class="form-label">تحويل البحث إلى المراقب:</label>
-                    <input type="text" class="form-control" id="validationCustom05" required="" />
-                    <div class="invalid-feedback">رقم خاطئ</div>
-                  </div>
                   <div class="col-md-1">
                     <label for="validationCustom05" class="form-label" style="visibility: hidden"> مفتاح</label>
                     <input type="text" class="form-control" id="validationCustom05" required="" />
@@ -885,7 +769,7 @@
                   <div class="tab-content col-md-7 ms-auto" id="myTabContent-02">
                     <div class="tab-pane fade show active" id="preview-tab-pane-02" role="tabpanel" aria-labelledby="preview-tab-02" tabindex="0">
                       <div class="w-md-50">
-                        <label for="validationCustom05" class="form-label">بحث عن مراقب</label>
+                        <label for="validationCustom05" class="form-label" style="font-weight: bold">تحويل البحث إلى المراقب:</label>
                         <select
                           class="form-select"
                           autocomplete="off"
@@ -989,7 +873,7 @@
                   </div>
                   <div class="table-responsive">
                     <br /><br />
-                    <label class="form-label">مبلغ النقص مفصل&nbsp;<span class="badge text-bg-danger rounded-pill">29000 دت</span></label>
+                    <label class="form-label">تفاصيل النقص في المساهمات&nbsp;<span class="badge text-bg-danger rounded-pill">29000 دت</span></label>
                     <table class="table table-nowrap mb-0" data-list='{"valueNames":["code_insuffisance","type_insuffisance","montant_insuffisance"]}'>
                       <thead class="thead-light">
                         <tr>
@@ -1027,6 +911,11 @@
                     </table>
                   </div>
                 </div>
+                <br class="col-12">
+                  <p>تاريخ الإنجاز</p>
+                  <button class="btn btn-primary" type="submit">16-02-2026</button>
+                  <br></br>
+                </div>
                 <div class="col-12">
                   <button class="btn btn-primary" type="submit">تسجيل التغييرات</button>
                 </div>
@@ -1057,6 +946,9 @@
                         <th class="min-w-200px">
                           <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="type_piece"> Situation </a>
                         </th>
+                        <th class="min-w-200px">
+                          <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="type_piece"> Matricule saisie </a>
+                        </th>
                         <th>
                           <a href="javascript: void(0);" class="text-body-secondary list-sort" data-sort="n_piece"> Date situation </a>
                         </th>
@@ -1070,14 +962,13 @@
                       <tr>
                         <td class="key">
                           <select class="form-select" autocomplete="off" data-select>
-                            <option value="E" selected disabled>E</option>
-                            <option value="C" disabled>C</option>
                             <option value="U">U</option>
-                            <option value="S">S</option>
                             <option value="َA">A</option>
+                            <option value="R">R</option>
                           </select>
                         </td>
                         <td class="type_piece">Enquête au secrétariat</td>
+                        <td class="type_piece">126359</td>
                         <td class="n_piece"><span class="badge text-bg-success rounded-pill">01-01-2025</span></td>
                         <td class="identity">NA</td>
                       </tr>
@@ -1086,100 +977,6 @@
                 </div>
                 <div class="col-12">
                   <button class="btn btn-primary" type="submit">تسجيل التغييرات</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!--popup_historique_employeur-->
-      <div class="container-fluid company_history">
-        <div class="d-flex justify-content-between m-5">
-          <div id="exampleModalCenteredScrollable2" class="modal fade bd-example-modal-xl popup_history" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered" role="document" style="min-width: 97em !important">
-              <div class="modal-content">
-                <div class="modal-header" style="padding-top: 1em; padding-bottom: 0.5em">
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" style="padding-top: 1em">
-                  <div class="table-responsive">
-                    <h3 class="modal-title text-center" id="exampleModalCenteredScrollableTitle">قائمة البحوث المسجلة</h3>
-                    <br />
-                    <table class="table table-hover table-nowrap align-middle">
-                      <thead class="table-light">
-                        <tr>
-                          <th>المرجع</th>
-                          <th>تاريخ التسجيل</th>
-                          <th>الوضعية</th>
-                          <th>تاريخ الوضعية</th>
-                          <th>رقم الانخراط</th>
-                          <th>هوية المعني</th>
-                          <th>معرف المصلحة</th>
-                          <th>المصلحة</th>
-                          <th>المكتب</th>
-                          <th>المراقب</th>
-                          <th class="text-center">مراجعة بحث</th>
-                          <th class="text-center">ضم إلى بحث</th>
-                        </tr>
-                      </thead>
-
-                      <tbody>
-                        <tr data-situation="E">
-                          <td>202540010</td>
-                          <td>01-01-2025</td>
-                          <td><span class="badge bg-warning">E</span></td>
-                          <td>05-01-2025</td>
-                          <td>1234567895</td>
-                          <td>PlanetY</td>
-                          <td>45932</td>
-                          <td>Affiliation</td>
-                          <td>80</td>
-                          <td>أحمد محمد</td>
-
-                          <!-- Revision -->
-                          <td class="text-center">
-                            <div class="form-check form-switch">
-                              <input class="form-check-input revision" type="checkbox" disabled />
-                            </div>
-                          </td>
-
-                          <!-- Jointure -->
-                          <td class="text-center">
-                            <div class="form-check form-switch">
-                              <input class="form-check-input jointure" type="checkbox" />
-                            </div>
-                          </td>
-                        </tr>
-
-                        <tr data-situation="S">
-                          <td>202590030</td>
-                          <td>09-01-2025</td>
-                          <td><span class="badge text-bg-success">S</span></td>
-                          <td>20-01-2025</td>
-                          <td>1234567895</td>
-                          <td>PlanetY</td>
-                          <td>42635</td>
-                          <td>Recouvrement</td>
-                          <td>63</td>
-                          <td>فاضل علي</td>
-
-                          <td class="text-center">
-                            <div class="form-check form-switch">
-                              <input class="form-check-input revision" type="checkbox" />
-                            </div>
-                          </td>
-
-                          <td class="text-center">
-                            <div class="form-check form-switch">
-                              <input class="form-check-input jointure" type="checkbox" disabled />
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <button class="btn btn-primary mt-3" id="btnValider" data-bs-dismiss="modal">✔️ تأكيد</button>
-                  </div>
                 </div>
               </div>
             </div>

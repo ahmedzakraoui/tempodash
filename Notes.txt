@@ -34,7 +34,7 @@ menu:
 
 
 J -> non prise en compte dans les stat
-R -> prise en compte
+R -> prise en compte dans les stat
 
 
 قائمة البحوث المسجلة
@@ -53,14 +53,95 @@ les enquetes principales et jointes et révisées les unes sous les autres (lié
 
 
 التصرف في عدة بحوث
-Affectation-Transfert-Annulation
+par 3 rubrique (comme portail): Affectation (E seulement, affectation à un seul controleur)-Transfert (C seulement, transfert à un seul controleur)-Annulation (E et C)
+recherche par employeur et/ou controleur et /ou sitaution et periode (date debut et date fin) de  situation, 
+avec case à cocher pour choisir parmi la liste et faire l'action
+ajout filtre par Nature enq
+recherche par : BR, empl, contr, nature, situation, période situation, champs obligatoire: période quelque soit la situation=> recherche avant d'afficher la liste et non le filtre
 
 
 الإطلاع على البحث
-ajouter le controleur et le resultat
+ajouter le controleur et le resultat (tab service et tab insuff) et historique enquete dans une partie directe au bas de page
 
 
 كشف قائمة بحوث
 filtre par controleur-employeur-situation-période (date début - date fin)-br
+recherche par employeur et/ou controleur et /ou sitaution et periode (date debut et date fin) de  situation, 
+ajout filtre par Nature enq
+recherche par : BR, empl, contr, nature, situation, période situation, champs obligatoire: période quelque soit la situation=> recherche avant d'afficher la liste et non le filtre
 
 ref-n empl- nom empl- date saisie- matr contro- identité cont -situation (Lettre seulement) -date sitaution-insuff (s'il y a)
+
+
+تحيين معطيات والتسجيل
+العملة (موضوع الشكوى)
+matri + clé fusionnés
+bouton إضافة pour inserer ou ajouter un ligne et saisir les data 
+et meme chose pour آخرون (Autres adverses)
+
+dans آخرون (Autres adverses)
+ex municipalité TN: ajouter autre dans Type pièce d'identité et (-) dans Numéro pièce d'identité et saisir nom dans Identité
+
+تحيين معطيات
+ajout interface de rcherche d'enquete par ref uniquement complete (n'est pas une recherche) dans le meme br
+ 
+تحيين معطيات
+une fois l'enquete est satisfaite ou annulée => la modification n'est pas permise   S ou A
+
+Composition de la REF d'enquete:  BR+Année+nature+n°enquete
+
+br du service demandeur peut se différe du br dans lequel l'enquete se crée
+
+(Auto saisie) juste pour remarque enlevler la apres 
+
+dans تسجيل بحث
+ajouter un bouton  معطيات حول الاؤجر (الذي تم ادخال رقم انخراطه) (partie haut du portail)
+الجهة الطالبة للبحث
+المكتب + code dans meme liste
+
+dans تسجيل بحث
+oncilick sur تسجيل البحث sans voir قائمة البحوث المسجلة => message: يتعين الإطلاع على قائمة البحوث المسجلة sous le bouton قائمة البحوث المسجلة en rouge (event listener)
+
+تكليف المراقب بالبحث
+3 champs pour ajouter max 3 controleurs pour la meme enquete, 1 par defaut et un bouton إضافة
+liste déroulante avec matriicule et identité cotrl
+
+
+historique enquete
+Ajout colonne Matricule saisie (personne modificatrice) entre "Date situation" et "Annotations"
+
+dans popup de historique enquete ajouter au top et au centre en rouge REF enquete pour survoler au user l'enquete concernée
+
+تحويل البحث
+Ajouter un bouton pour enlever un ou plus de contr 
+
+نتائج البحث est apres chang situation dans le menu
+
+dans نتائج البحث 
+Sections:   1-Base 2-insuff 3-service transmissions section
+insuff section est avant service transimissions section
+ajout au premier:  أسس احتساب  قاعدة الاشتراكات (plusieurs textaria avec bouton إضافة pour chaque element de base )
+dans المصالح الموجهة إليها نتيجة البحث ajouter bouton إضافة pour chaque service
+dans مبلغ النقص ajouter bouton إضافة pour chaque insuff
+Montant insuffisance
+dans المصالح الموجهة إليها نتيجة البحث ajouter colonne BR avant le code service (br du service demandeur)
+
+dans نتائج البحث
+dans المصالح الموجهة إليها نتيجة البحث
+colonnes: Code BR + nom du BR + Code service et son nom + Date transmission
+
+dans تسجيل بحث une fois l'enquete a été => automatiquement sa situation est "E": Enquête au secrétariat
+dans تكليف المراقب بالبحث Une fois l'enquete a été affecté au controleur X =>automatiquement sa situation  devenue "C": Chez le controleur
+dans نتائج البحث  Une fois les resultats de l'enquete ont été saisis et enregsitrés =>automatiquement sa situation  devenue "S": satisfaite
+dans تغيير الوضعية => persimes: U - A - R et en attendant voir les autres lettres (T...)
+
+dans نتائج البحث
+la date de satisfaction des résultats est entre: date de ce jour (du systeme) et le 5 du mois prochain M+1
+champs systematique de date d'ajourd'hui modifiable au max le 5 du mois prochain m+1; ajouter un indication ou information à droite ou gauche du champs
+
+dans كشف قائمة بحوث 
+pagination 10 lignes
+chaque ref enquete est cliquable: quand on clique sur une ref une popup nous donne الإطلاع على البحث individuelle
+
+
+
