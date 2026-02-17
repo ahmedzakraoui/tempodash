@@ -230,195 +230,269 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col">
-            <div class="card shadow-sm border-0 mb-4">
-              <div class="card-header bg-white border-bottom py-4">
-                <div class="d-flex justify-content-between align-items-center">
-                  <div>
-                    <h3 class="fw-bold text-dark mb-1"> معطيات البحث</h3>
-                    <span class="badge bg-primary-soft text-primary">رقم المرجع: 202540099</span>
-                  </div>
-                  <div class="text-end">
-                    <button class="btn btn-outline-secondary btn-sm d-print-none" onclick="window.print()"><i class="fe fe-printer me-1"></i> طباعة التقرير</button>
-                  </div>
-                </div>
-              </div>
+            <div class="card border-0 p-md-6">
+              <div class="card-body">
+                <div class="row">
+                  <ul class="nav nav-tabs mb-4" id="myTab-07" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="preview-tab-07" data-bs-toggle="tab" data-bs-target="#preview-tab-pane-07" type="button" role="tab" aria-controls="preview-tab-pane-07" aria-selected="true">التصرف في عدة بحوث</button>
+                    </li>
+                  </ul>
+        <!-- ========== FILTERS ========== -->
+<div class="row g-3 mb-3">
 
-              <div class="card-body p-5">
-                <div class="row mb-5">
-                  <div class="col-12 mb-3">
-                    <h5 class="text-uppercase tracking-wider text-muted small fw-bold">1. معلومات عامة</h5>
-                    <hr class="my-2 opacity-10" />
-                  </div>
-                  <div class="col-md-2">
-                    <p class="text-muted mb-1 small">تاريخ الاستقبال</p>
-                    <p class="fw-semibold text-dark">15 جانفي 2026</p>
-                  </div>
-                  <div class="col-md-2">
-                    <p class="text-muted mb-1 small">المصلحة الطالبة للبحث</p>
-                    <p class="fw-semibold text-dark">مصلحة الانخراط والتسجيل</p>
-                  </div>
-                  <div class="col-md-2">
-                    <p class="text-muted mb-1 small">المعني</p>
-                    <p class="fw-semibold text-dark">شركة إكس (مؤجر)</p>
-                  </div>
-                  <div class="col-md-2">
-                    <p class="text-muted mb-1 small">رقم الانخراط</p>
-                    <p class="fw-semibold text-dark">1234567809</p>
-                  </div>
-                  <div class="col-md-1">
-                    <p class="text-muted mb-1 small">تاريخ التسجيل</p>
-                    <p class="fw-semibold text-dark">20 جانفي 2026</p>
-                  </div>
-                  <div class="col-md-1 text-mb-1 small">
-                    <p class="text-muted mb-1 small">وضعية البجث</p>
-                    <span class="badge bg-success-soft text-success">C</span>
-                  </div>
-                  <div class="col-md-2">
-                    <p class="text-muted mb-1 small">تاريخ الوضعية</p>
-                    <p class="fw-semibold text-dark">13 فيفري 2026</p>
-                  </div>
-                </div>
-                <div class="row mb-5">
-                  <div class="col-12 mb-3">
-                    <h5 class="text-uppercase tracking-wider text-muted small fw-bold">2. موضوع البحث</h5>
-                    <hr class="my-2 opacity-10" />
-                  </div>
-                  <div class="col-12">
-                    <div class="p-4 bg-light rounded-3 border-start border-primary border-4">
-                      <p class="mb-0 text-dark leading-relaxed"></p>التثبت من إجارة السيد محمد بن محمد</p>
-                    </div>
-                  </div>
-                </div>
-<div class="col-12 mb-3">
-                    <h5 class="text-uppercase tracking-wider text-muted small fw-bold">3. المشمولين</h5>
-                    <hr class="my-2 opacity-10" />
-                  </div>
-                <div class="row g-3 mb-5 mt-5">
-  <label class="form-label">العملة (موضوع الشكوى)</label>
-
-  <div class="table-responsive">
-    <table class="table table-nowrap mb-0">
-      <thead class="thead-light">
-        <tr>
-          <th class="w-102px">Matricule</th>
-          <th>Clé</th>
-          <th class="min-w-200px">Type pièce d'identité</th>
-          <th>Numéro pièce d'identité</th>
-          <th class="min-w-200px">Identité</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>12345678</td>
-          <td>01</td>
-          <td>CIN</td>
-          <td>12345678</td>
-          <td>Mohamed ben Mohamed</td>
-        </tr>
-
-        <tr>
-          <td>12345678</td>
-          <td>01</td>
-          <td>CIN</td>
-          <td>12345678</td>
-          <td>Mohamed ben Mohamed</td>
-        </tr>
-
-        <tr>
-          <td>12345678</td>
-          <td>01</td>
-          <td>CIN</td>
-          <td>12345678</td>
-          <td>Mohamed ben Mohamed</td>
-        </tr>
-
-        <tr>
-          <td>12345678</td>
-          <td>01</td>
-          <td>CIN</td>
-          <td>12345678</td>
-          <td>Mohamed ben Mohamed</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="col-md-2">
+    <input type="text" id="filter-br" class="form-control" placeholder="BR">
   </div>
-</div>
-<div class="row g-3 mt-5">
-  <label class="form-label">آخرون (Autres adverses)</label>
 
-  <div class="table-responsive">
-    <table class="table table-nowrap mb-0">
-      <thead class="thead-light">
-        <tr>
-          <th class="min-w-200px">Type pièce d'identité</th>
-          <th class="min-w-150px">Numéro pièce d'identité</th>
-          <th class="min-w-200px">Identité</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>CIN</td>
-          <td>12345678</td>
-          <td>Med ben Mansour</td>
-        </tr>
-
-        <tr>
-          <td>CIN</td>
-          <td>12345678</td>
-          <td>Med ben Mansour</td>
-        </tr>
-
-        <tr>
-          <td>CIN</td>
-          <td>12345678</td>
-          <td>Med ben Mansour</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="col-md-3">
+    <input type="text" id="filter-employeur" class="form-control"
+      placeholder="Employeur (matricule ou identité)">
   </div>
+
+  <div class="col-md-3">
+    <input type="text" id="filter-controleur" class="form-control"
+      placeholder="Contrôleur (matricule ou identité)">
+  </div>
+
+  <div class="col-md-3">
+    <input type="text" id="filter-controleur" class="form-control"
+      placeholder="Nature d'enquete">
+  </div>
+
+  <div class="col-md-2">
+    <select id="filter-situation" class="form-select">
+      <option value="">Situation</option>
+      <option value="E">E</option>
+      <option value="C">C</option>
+      <option value="S">S</option>
+      <option value="U">U</option>
+      <option value="A">A</option>
+    </select>
+  </div>
+
+  <div class="col-md-1">
+    <input type="date" id="date-start" class="form-control">
+  </div>
+
+  <div class="col-md-1">
+    <input type="date" id="date-end" class="form-control">
+  </div>
+
 </div>
 
-            </div>
+<!-- ========== TABLE ========== -->
+<div class="row g-3 mt-2">
+  <div class="table-responsive"
+       id="sortingList"
+       data-list='{"valueNames":["br","ref","mat_emp","id_emp","date_saisie","mat_ctrl","id_ctrl","situation","date_situation","insuffisance"]}'>
 
-            <style>
-              /* Dashly Specific Colors & Utilities */
-              .bg-primary-soft {
-                background-color: rgba(98, 75, 255, 0.1) !important;
-              }
-              .text-primary {
-                color: #624bff !important;
-              }
-              .bg-success-soft {
-                background-color: rgba(25, 135, 84, 0.1) !important;
-              }
-              .bg-info-soft {
-                background-color: rgba(13, 202, 240, 0.1) !important;
-              }
-              .tracking-wider {
-                letter-spacing: 0.05em;
-              }
+<table id="dashly-table" class="table table-nowrap mb-0 align-middle datatable">
 
-              @media print {
-                .btn,
-                .card-footer {
-                  display: none !important;
-                }
-                .card {
-                  border: none !important;
-                  shadow: none !important;
-                }
-                body {
-                  background-color: white !important;
-                }
-                .p-5 {
-                  padding: 0 !important;
-                }
-              }
-            </style>
-          </div>
-        </div>
+<thead class="thead-light">
+<tr>
+  <th><a href="#" class="list-sort asc" data-sort="br" data-default="true">BR</a></th>
+  <th><a href="#" class="list-sort" data-sort="ref">Réf</a></th>
+  <th><a href="#" class="list-sort" data-sort="mat_emp">Matricule Employeur</a></th>
+  <th><a href="#" class="list-sort" data-sort="id_emp">Identité Employeur</a></th>
+  <th><a href="#" class="list-sort" data-sort="date_saisie">Date saisie</a></th>
+  <th><a href="#" class="list-sort" data-sort="mat_ctrl">Matricule Contrôleur</a></th>
+  <th><a href="#" class="list-sort" data-sort="id_ctrl">Identité Contrôleur</a></th>
+  <th><a href="#" class="list-sort" data-sort="situation">Situation</a></th>
+  <th><a href="#" class="list-sort" data-sort="date_situation">Date Situation</a></th>
+  <th><a href="#" class="list-sort" data-sort="insuffisance">Insuffisance (TND)</a></th>
+</tr>
+</thead>
+
+<tbody class="list">
+
+<tr>
+<td class="br">80</td>
+<td class="ref">2025400001</td>
+<td class="mat_emp">10024587</td>
+<td class="id_emp">Mohamed Ben Ali</td>
+<td class="date_saisie">2025-01-02</td>
+<td class="mat_ctrl">90012</td>
+<td class="id_ctrl">Ali Trabelsi</td>
+<td class="situation"><span class="badge bg-success">E</span></td>
+<td class="date_situation">2025-01-05</td>
+<td class="insuffisance">-</td>
+</tr>
+
+<tr>
+<td class="br">5</td>
+<td class="ref">2025400002</td>
+<td class="mat_emp">10036754</td>
+<td class="id_emp">Salma Hachicha</td>
+<td class="date_saisie">2025-01-04</td>
+<td class="mat_ctrl">90014</td>
+<td class="id_ctrl">Hichem Gharbi</td>
+<td class="situation"><span class="badge bg-warning">C</span></td>
+<td class="date_situation">2025-01-08</td>
+<td class="insuffisance">-</td>
+</tr>
+
+<tr>
+<td class="br">16</td>
+<td class="ref">2025400003</td>
+<td class="mat_emp">10045896</td>
+<td class="id_emp">Walid Ben Amor</td>
+<td class="date_saisie">2025-01-06</td>
+<td class="mat_ctrl">90018</td>
+<td class="id_ctrl">Samir Kefi</td>
+<td class="situation"><span class="badge bg-info">S</span></td>
+<td class="date_situation">2025-01-09</td>
+<td class="insuffisance">450.000</td>
+</tr>
+
+<tr>
+<td class="br">12</td>
+<td class="ref">2025400004</td>
+<td class="mat_emp">10058741</td>
+<td class="id_emp">Rania Ayadi</td>
+<td class="date_saisie">2025-01-07</td>
+<td class="mat_ctrl">90021</td>
+<td class="id_ctrl">Maher Jaziri</td>
+<td class="situation"><span class="badge bg-danger">U</span></td>
+<td class="date_situation">2025-01-10</td>
+<td class="insuffisance">-</td>
+</tr>
+
+<tr>
+<td class="br">45</td>
+<td class="ref">2025400005</td>
+<td class="mat_emp">10069874</td>
+<td class="id_emp">Youssef Dridi</td>
+<td class="date_saisie">2025-01-09</td>
+<td class="mat_ctrl">90024</td>
+<td class="id_ctrl">Imed Saidi</td>
+<td class="situation"><span class="badge bg-primary">A</span></td>
+<td class="date_situation">2025-01-12</td>
+<td class="insuffisance">-</td>
+</tr>
+
+<tr>
+<td class="br">83</td>
+<td class="ref">2025400006</td>
+<td class="mat_emp">10074521</td>
+<td class="id_emp">Amira Ben Salem</td>
+<td class="date_saisie">2025-01-10</td>
+<td class="mat_ctrl">90026</td>
+<td class="id_ctrl">Nabil Khemiri</td>
+<td class="situation"><span class="badge bg-info">S</span></td>
+<td class="date_situation">2025-01-13</td>
+<td class="insuffisance">0.000</td>
+</tr>
+
+<tr>
+<td class="br">14</td>
+<td class="ref">2025400007</td>
+<td class="mat_emp">10085632</td>
+<td class="id_emp">Karim Jouini</td>
+<td class="date_saisie">2025-01-11</td>
+<td class="mat_ctrl">90030</td>
+<td class="id_ctrl">Lotfi Baccar</td>
+<td class="situation"><span class="badge bg-warning">C</span></td>
+<td class="date_situation">2025-01-14</td>
+<td class="insuffisance">-</td>
+</tr>
+
+<tr>
+<td class="br">20</td>
+<td class="ref">2025400008</td>
+<td class="mat_emp">10096325</td>
+<td class="id_emp">Sana Rekik</td>
+<td class="date_saisie">2025-01-12</td>
+<td class="mat_ctrl">90031</td>
+<td class="id_ctrl">Fathi Khlifi</td>
+<td class="situation"><span class="badge bg-info">S</span></td>
+<td class="date_situation">2025-01-15</td>
+<td class="insuffisance">1 250.000</td>
+</tr>
+
+<tr>
+<td class="br">24</td>
+<td class="ref">2025400009</td>
+<td class="mat_emp">10102587</td>
+<td class="id_emp">Hatem Zouari</td>
+<td class="date_saisie">2025-01-13</td>
+<td class="mat_ctrl">90033</td>
+<td class="id_ctrl">Skander Abidi</td>
+<td class="situation"><span class="badge bg-success">E</span></td>
+<td class="date_situation">2025-01-16</td>
+<td class="insuffisance">-</td>
+</tr>
+
+<tr>
+<td class="br">19</td>
+<td class="ref">2025400010</td>
+<td class="mat_emp">10114523</td>
+<td class="id_emp">Ines Ben Romdhane</td>
+<td class="date_saisie">2025-01-14</td>
+<td class="mat_ctrl">90035</td>
+<td class="id_ctrl">Marouen Tlili</td>
+<td class="situation"><span class="badge bg-info">S</span></td>
+<td class="date_situation">2025-01-17</td>
+<td class="insuffisance">300.000</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+</div>
+
+<!-- ========== SCRIPT (END OF PAGE) ========== -->
+<script src="assets/vendor/list.js/list.min.js"></script> <!-- Dashly List.js -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const rows = document.querySelectorAll("#dashly-table tbody tr");
+
+  function applyFilters() {
+
+    const br = document.getElementById("filter-br").value.toLowerCase();
+    const emp = document.getElementById("filter-employeur").value.toLowerCase();
+    const ctrl = document.getElementById("filter-controleur").value.toLowerCase();
+    const sit = document.getElementById("filter-situation").value;
+    const d1 = document.getElementById("date-start").value;
+    const d2 = document.getElementById("date-end").value;
+
+    rows.forEach(row => {
+
+      const c = row.children;
+
+      const brVal   = c[0].innerText.toLowerCase();
+      const empVal  = (c[2].innerText + c[3].innerText).toLowerCase();
+      const ctrlVal = (c[5].innerText + c[6].innerText).toLowerCase();
+      const sitVal  = c[7].innerText.trim();
+      const dateVal = c[8].innerText;
+
+      let visible = true;
+
+      if (br && !brVal.includes(br)) visible = false;
+      if (emp && !empVal.includes(emp)) visible = false;
+      if (ctrl && !ctrlVal.includes(ctrl)) visible = false;
+      if (sit && sitVal !== sit) visible = false;
+      if (d1 && dateVal < d1) visible = false;
+      if (d2 && dateVal > d2) visible = false;
+
+      row.style.display = visible ? "" : "none";
+
+    });
+  }
+
+  document.querySelectorAll(
+    "#filter-br, #filter-employeur, #filter-controleur, #filter-situation, #date-start, #date-end"
+  ).forEach(el => {
+    el.addEventListener("input", applyFilters);
+    el.addEventListener("change", applyFilters);
+  });
+
+});
+</script>
+
       </div>
 
       <!-- Footer -->
@@ -430,6 +504,13 @@
             <div class="col-auto">Application de saisie</div>
           </div>
           <!-- / .row -->
+           </div>
+           </div>
+           </div>
+           </div>
+           </div>
+           </div>
+      </div>
         </div>
       </footer>
     </main>

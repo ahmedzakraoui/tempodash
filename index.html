@@ -134,7 +134,7 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">
+              <a class="nav-link" href="gestion_enquete_many.html">
                 <svg viewBox="0 0 24 24" class="nav-link-icon" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
                   <path d="M22.91,6.953,12.7,1.672a1.543,1.543,0,0,0-1.416,0L1.076,6.953a.615.615,0,0,0,0,1.094l10.209,5.281a1.543,1.543,0,0,0,1.416,0L22.91,8.047a.616.616,0,0,0,0-1.094Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
                   <path d="M.758,12.75l10.527,5.078a1.543,1.543,0,0,0,1.416,0L23.258,12.75" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
@@ -272,7 +272,6 @@
                       </div>
                       <div>
                         <h5 class="text-uppercase tracking-wider text-muted small fw-bold">الجهة الطالبة للبحث</h5>
-                        <hr class="my-2 opacity-10" />
                       </div>
                       <div class="col-md-2">
                         <label for="validationCustom04" class="form-label">المكتب</label>
@@ -319,7 +318,8 @@
                           </div>
                           <div class="col-md-3 row">
                             <label for="validationCustom05" class="form-label" style="visibility: hidden">قائمة البحوث المسجلة</label>
-                            <button type="button" class="btn btn-outline-secondary ms-5 fs-5" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">قائمة البحوث المسجلة</button>
+                            <button id="btnShowList" type="button" class="btn btn-outline-secondary ms-5 fs-5" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">قائمة البحوث المسجلة</button>
+                            <div id="listError" style="display: none; color: red; font-weight: bold; margin-top: 10px; text-align: center">يتعين الإطلاع على قائمة البحوث المسجلة</div>
                           </div>
                         </div>
                       </div>
@@ -593,7 +593,7 @@
                         </script>
                       </div>
                       <div class="col-12">
-                        <button class="btn btn-primary" type="submit">تسجيل البحث</button>
+                        <button id="btnSubmitSearch" type="submit" class="btn btn-primary">تسجيل البحث</button>
                       </div>
                     </form>
                   </div>
@@ -841,6 +841,37 @@
 
         // تحديث الحرف فقط
         suffixSpan.innerHTML = `<span class="text-danger fw-bold">${suffix}</span>`;
+      });
+    </script>
+    <!--Historique_consultation_enforcement-->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const btnShowList = document.getElementById("btnShowList");
+        const btnSubmitSearch = document.getElementById("btnSubmitSearch");
+        const listError = document.getElementById("listError");
+        const cnssSwitch = document.getElementById("cnssSwitch");
+
+        let hasSeenList = false;
+
+        // Quand on clique sur "قائمة البحوث المسجلة"
+        btnShowList.addEventListener("click", function () {
+          hasSeenList = true;
+          listError.style.display = "none"; // Cache le message si l'utilisateur consulte enfin
+        });
+
+        // Quand on clique sur "تسجيل البحث"
+        btnSubmitSearch.addEventListener("click", function (event) {
+          // On ne vérifie que si le switch n'est PAS coché (donc le bloc CNSS est actif)
+          if (!cnssSwitch.checked && !hasSeenList) {
+            event.preventDefault(); // Arrête la soumission du formulaire
+
+            // Affiche le message
+            listError.style.display = "block";
+
+            // Fait défiler la page jusqu'au message d'erreur
+            listError.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+        });
       });
     </script>
   </body>
