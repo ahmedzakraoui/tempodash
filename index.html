@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="ar" dir="rtl" data-theme="light" data-sidebar-behaviour="fixed" data-navigation-color="inverted" data-is-fluid="true" class="h-100">
+<html lang="ar" dir="ltr" data-theme="light" data-sidebar-behaviour="fixed" data-navigation-color="inverted" data-is-fluid="true" class="h-100">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta content="Webinning" name="author" />
 
     <!-- Theme CSS -->
-    <!--<link rel="stylesheet" href="assets/css/theme.bundle.css" id="stylesheetLTR">-->
-    <link rel="stylesheet" href="assets/css/theme.rtl.bundle.css" id="stylesheetRTL" />
+    <link rel="stylesheet" href="assets/css/theme.bundle.css" id="stylesheetLTR" />
+    <!--<link rel="stylesheet" href="assets/css/theme.rtl.bundle.css" id="stylesheetRTL" />-->
     <!--Custom css-->
     <style type="text/css">
       header.py-6 {
@@ -103,35 +103,16 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="nav-link-icon" height="18" width="18">
                   <path d="M22.627 14.87 15 22.5l-3.75.75.75-3.75 7.631-7.63a2.113 2.113 0 0 1 2.991 0l.009.008a2.116 2.116 0 0 1-.004 2.992zM8.246 20.25h-6a1.5 1.5 0 0 1-1.5-1.5V2.25a1.5 1.5 0 0 1 1.5-1.5h15a1.5 1.5 0 0 1 1.5 1.5V9m-10.5-3.75h6m-9 4.5h9m-9 4.5h7.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
                 </svg>
-                <span>تسجيل بحث</span>
+                <span>Création enquête</span>
               </a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#pagesCollapse" data-bs-toggle="collapse" role="button" aria-expanded="true" aria-controls="pagesCollapse">
-                <svg viewBox="0 0 24 24" class="nav-link-icon" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20.25,9.75v-3a1.5,1.5,0,0,0-1.5-1.5H8.25V3.75a1.5,1.5,0,0,0-1.5-1.5H2.25a1.5,1.5,0,0,0-1.5,1.5v16.3a1.7,1.7,0,0,0,3.336.438l2.351-9.657A1.5,1.5,0,0,1,7.879,9.75H21.75A1.5,1.5,0,0,1,23.2,11.636l-2.2,9A1.5,1.5,0,0,1,19.55,21.75H2.447" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+            <li class="nav-item">
+              <a class="nav-link" href="gestion_enquete.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="nav-link-icon" height="18" width="18">
+                  <path d="M22.627 14.87 15 22.5l-3.75.75.75-3.75 7.631-7.63a2.113 2.113 0 0 1 2.991 0l.009.008a2.116 2.116 0 0 1-.004 2.992zM8.246 20.25h-6a1.5 1.5 0 0 1-1.5-1.5V2.25a1.5 1.5 0 0 1 1.5-1.5h15a1.5 1.5 0 0 1 1.5 1.5V9m-10.5-3.75h6m-9 4.5h9m-9 4.5h7.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
                 </svg>
-                <span>التصرف في البحث</span>
+                <span>Gestion d'une enquête</span>
               </a>
-              <div class="collapse show" id="pagesCollapse">
-                <ul class="nav flex-column">
-                  <li class="nav-item">
-                    <a href="gestion_enquete.html" class="nav-link"><span>تحيين معطيات</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="gestion_enquete.html#affectation" class="nav-link"><span>تكليف المراقب بالبحث</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="gestion_enquete.html#transfert" class="nav-link"><span>تغيير المراقب المكلف</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="gestion_enquete.html#situation" class="nav-link"><span>تغيير وضعية البحث</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="gestion_enquete.html#resultat" class="nav-link"><span>نتائج البحث</span></a>
-                  </li>
-                </ul>
-              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="gestion_enquete_many.html">
@@ -140,7 +121,7 @@
                   <path d="M.758,12.75l10.527,5.078a1.543,1.543,0,0,0,1.416,0L23.258,12.75" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
                   <path d="M.758,17.25l10.527,5.078a1.543,1.543,0,0,0,1.416,0L23.258,17.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
                 </svg>
-                <span>التصرف في عدة بحوث</span>
+                <span>Gestion de plusieurs enquêtes</span>
               </a>
             </li>
             <li class="nav-item dropdown">
@@ -161,18 +142,18 @@
                   <path class="a" d="M17.25,23.25H3.75a1.5,1.5,0,0,1-1.5-1.5V5.25" />
                   <rect class="a" x="5.25" y="0.75" width="16.5" height="19.5" rx="1" ry="1" />
                 </svg>
-                <span>الإطلاع</span>
+                <span>consultation</span>
               </a>
               <div class="collapse show" id="paramsCollapse" style="">
                 <ul class="nav flex-column">
                   <li class="nav-item">
                     <a href="consultation.html" class="nav-link">
-                      <span>الإطلاع على البحث</span>
+                      <span>Consultation enquête</span>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="Consultation_many.html" class="nav-link">
-                      <span>كشف قائمة بحوث</span>
+                      <span>Consultation plusieurs enquêtes</span>
                     </a>
                   </li>
                 </ul>
@@ -196,18 +177,18 @@
                   <path class="a" d="M17.25,23.25H3.75a1.5,1.5,0,0,1-1.5-1.5V5.25" />
                   <rect class="a" x="5.25" y="0.75" width="16.5" height="19.5" rx="1" ry="1" />
                 </svg>
-                <span>الإعدادات</span>
+                <span>Paramètres</span>
               </a>
               <div class="collapse" id="paramsCollapse" style="">
                 <ul class="nav flex-column">
                   <li class="nav-item">
                     <a href="" class="nav-link">
-                      <span>إضافة طبيعة بحث</span>
+                      <span>Ajouter nouveau nature d'enquete</span>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="" class="nav-link">
-                      <span>إضافة مصلحة طالبة لبحث</span>
+                      <span>Ajouter nouveau service demandeur</span>
                     </a>
                   </li>
                 </ul>
@@ -234,142 +215,145 @@
                 <div class="row">
                   <ul class="nav nav-tabs mb-4" id="myTab-07" role="tablist">
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="preview-tab-07" data-bs-toggle="tab" data-bs-target="#preview-tab-pane-07" type="button" role="tab" aria-controls="preview-tab-pane-07" aria-selected="true">تسجيل بحث</button>
+                      <button class="nav-link active" id="preview-tab-07" data-bs-toggle="tab" data-bs-target="#preview-tab-pane-07" type="button" role="tab" aria-controls="preview-tab-pane-07" aria-selected="true">Création enquête</button>
                     </li>
                   </ul>
                   <div class="col">
                     <div class="row g-3">
-                      <p class="lead mb-3 col-md-4 invisible">تسجيل بحث</p>
-                      <h6 class="lead mb-3 col-md-8" style="text-align: left">تاريخ التسجيل <span class="badge bg-secondary" id="todayDate"></span></h6>
+                      <p class="lead mb-3 col-md-4 invisible">Création enquête</p>
+                      <h6 class="lead mb-3 col-md-8" style="text-align: right">Date de saisie<span class="badge bg-secondary m-2" id="todayDate"></span></h6>
                     </div>
                     <form class="row g-6 needs-validation" novalidate="">
                       <div class="col-md-2">
-                        <label for="validationCustom03" class="form-label">المكتب (Auto)</label>
+                        <label for="validationCustom03" class="form-label">Bureau (Auto)</label>
                         <button type="button" class="btn btn-light ms-5 fs-5 pe-none">80<span class="ref_suffix"></span></button>
                         <div class="invalid-feedback"></div>
                       </div>
                       <div class="col-md-2">
-                        <label for="validationCustom03" class="form-label">السنة (Auto)</label>
+                        <label for="validationCustom03" class="form-label">Année (Auto)</label>
                         <button type="button" class="btn btn-light ms-5 fs-5 pe-none">2026<span class="ref_suffix"></span></button>
                         <div class="invalid-feedback"></div>
                       </div>
                       <div class="col-md-4">
-                        <label for="validationCustom04" class="form-label">طبيعة البحث</label>
-                        <select class="form-select" id="validationCustom04" required="">
-                          <option selected="" disabled="" value="">وضعية عامة</option>
-                          <option>...</option>
+                        <label for="validationCustom04" class="form-label">Nature d'enquête</label>
+                        <select class="form-select" autocomplete="off" data-select>
+                          <option>700-Mission comptable</option>
+                          <option>400-Situation générale</option>
+                          <option>100-Affiliation</option>
+                          <option>600-Enquete sociale</option>
                         </select>
-                        <div class="invalid-feedback">أدخل طبيعة البحث</div>
+
+                        <div class="invalid-feedback">Entrez la nature de l'enquête</div>
                       </div>
                       <div class="col-md-2">
-                        <label for="validationCustom03" class="form-label">عدد البحث (Auto)</label>
+                        <label for="validationCustom03" class="form-label">Ref (Auto)</label>
                         <button type="button" class="btn btn-light ms-5 fs-5 pe-none">99<span class="ref_suffix"></span></button>
                         <div class="invalid-feedback"></div>
                       </div>
                       <div class="col-md-3">
-                        <label class="form-label" for="exampleFormControlTextarea1">موضوع البحث</label>
+                        <label class="form-label" for="exampleFormControlTextarea1">Objet</label>
                         <textarea id="exampleFormControlTextarea1" class="form-control" placeholder="   " rows="4" style="height: 1.5em"></textarea>
                       </div>
                       <div>
-                        <h5 class="text-uppercase tracking-wider text-muted small fw-bold">الجهة الطالبة للبحث</h5>
+                        <h5 class="text-uppercase tracking-wider text-muted small fw-bold">service demandeur</h5>
                       </div>
                       <div class="col-md-2">
-                        <label for="validationCustom04" class="form-label">المكتب</label>
-                        <select class="form-select" id="validationCustom04" required="">
+                        <label for="validationCustom04" class="form-label">Bureau</label>
+                        <select class="form-select" autocomplete="off" data-select>
                           <option selected="" disabled="" value="">...</option>
                           <option>80</option>
                           <option>16</option>
                           <option>20</option>
                           <option>86</option>
                         </select>
-                        <div class="invalid-feedback">أدخل طبيعة البحث</div>
+                        <div class="invalid-feedback">Entrez nature d'enquête</div>
                       </div>
                       <div class="col-md-4">
-                        <label for="validationCustom04" class="form-label">المصلحة</label>
-                        <select class="form-select" id="validationCustom04" required="">
-                          <option selected="" disabled="" value="">مصلحة الانخراط</option>
-                          <option>...</option>
+                        <label for="validationCustom04" class="form-label">Service</label>
+                        <select class="form-select" autocomplete="off" data-select>
+                          <option>80401-Service affiliation</option>
+                          <option>80402-Service pension</option>
                         </select>
-                        <div class="invalid-feedback">أدخل طبيعة البحث</div>
+                        <div class="invalid-feedback">Entrez le service</div>
                       </div>
                       <div class="col-md-2">
-                        <label for="validationCustom05" class="form-label">تاريخ الاستقبال</label>
+                        <label for="validationCustom05" class="form-label">Date récéption</label>
                         <input type="text" class="form-control" id="validationCustom05" required="" />
-                        <div class="invalid-feedback">أدخل تاريخ صحيح</div>
+                        <div class="invalid-feedback">Entrez une date valide</div>
                       </div>
                       <div class="row g-2">
                         <div class="col-md-2">
-                          <label for="validationCustom04" class="form-label">المعني بالبحث</label>
-                          <select class="form-select" id="validationCustom04" required="">
+                          <label for="validationCustom04" class="form-label">Type partie adverse</label>
+                          <select class="form-select" autocomplete="off" data-select>
                             <option selected="" disabled="" value="">.....</option>
-                            <option>المؤجر</option>
+                            <option>Employeur</option>
                             <option>TNS</option>
                             <option>Assuré(s)</option>
                             <option>Autre(s)</option>
                           </select>
                         </div>
 
-                        <!-- بلوك رقم CNSS (ظاهر بشكل افتراضي) -->
+                        <!--Matricule cnss (visible by default) -->
                         <div id="cnssBlock" class="row g-3">
                           <div class="col-md-3">
-                            <label for="validationCustom05" class="form-label">رقم الانخراط /التسجيل</label>
+                            <label for="validationCustom05" class="form-label">N° d'affiliation / Immatriculation</label>
                             <input type="text" class="form-control" id="validationCustom05" required="" />
-                            <div class="invalid-feedback">رقم خاطئ</div>
+                            <div class="invalid-feedback">Numéro incorrect</div>
                           </div>
-                          <div class="col-md-3 row">
-                            <label for="validationCustom05" class="form-label" style="visibility: hidden">قائمة البحوث المسجلة</label>
-                            <button id="btnShowList" type="button" class="btn btn-outline-secondary ms-5 fs-5" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">قائمة البحوث المسجلة</button>
-                            <div id="listError" style="display: none; color: red; font-weight: bold; margin-top: 10px; text-align: center">يتعين الإطلاع على قائمة البحوث المسجلة</div>
+                          <div class="col-md-3 row text-nowrap">
+                            <label for="validationCustom05" class="form-label" style="visibility: hidden">Historique des enquêtes en cours</label>
+                            <button id="btnShowList" type="button" class="btn btn-outline-secondary ms-5 fs-5" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">Liste des enquêtes en cours</button>
+                            <div id="listError" style="display: none; color: red; font-weight: bold; margin-top: 10px; text-align: center">La consultation de la liste des enquêtes en cours est obligatoire</div>
                           </div>
                         </div>
                       </div>
                       <div class="row g-4">
-                        <!-- زر Switch -->
+                        <!-- Bouton switch -->
                         <div class="form-check form-switch mb-3">
                           <input class="form-check-input" type="checkbox" id="cnssSwitch" />
-                          <label class="form-check-label" for="cnssSwitch"> المعني غير منخرط/مسجل في CNSS </label>
+                          <label class="form-check-label" for="cnssSwitch">Partie adverse non aff/Imm au CNSS</label>
                         </div>
 
-                        <!-- بلوك معلومات الشركة (مخفي بشكل افتراضي) -->
+                        <!-- Employeur informations block (hidden by default) -->
                         <div id="companyBlock" class="row g-2 d-none">
                           <div class="col-md-3">
-                            <label class="form-label">اسم المعني (شركة/TNS/اخر)</label>
+                            <label class="form-label">Identité partie adverse (Emp/TNS/autre)</label>
                             <input type="text" class="form-control" />
                           </div>
 
                           <div class="col-md-3">
-                            <label class="form-label">المعرف الجبائي (شركة/TNS)</label>
+                            <label class="form-label">Matricule fiscale (Empl/TNS)</label>
                             <input type="text" class="form-control" />
                           </div>
 
                           <div class="col-md-3">
-                            <label class="form-label">اسم أول مسؤول (شركة/TNS)</label>
+                            <label class="form-label">Nom du 1er responsable (Empl/TNS)</label>
                             <input type="text" class="form-control" />
                           </div>
 
                           <div class="col-md-3">
-                            <label class="form-label">رقم بطاقة التعريف (CIN)</label>
+                            <label class="form-label">N°CIN 1er responsable</label>
                             <input type="text" class="form-control" />
                           </div>
                           <div class="row g-3 d-flex justify-content-center">
                             <div class="col-md-3">
-                              <label class="form-label">العنوان</label>
+                              <label class="form-label">Adresse</label>
                               <textarea id="exampleFormControlTextarea1" class="form-control" placeholder="   " rows="4" style="height: 1.5em"></textarea>
                             </div>
 
                             <div class="col-md-3">
-                              <label class="form-label">الترقيم البريدي</label>
+                              <label class="form-label">Code postal</label>
                               <input type="text" class="form-control" />
                             </div>
 
                             <div class="col-md-3">
-                              <label class="form-label">المنطقة (Zone)</label>
+                              <label class="form-label">Zone</label>
                               <input type="text" class="form-control" />
                             </div>
                           </div>
                         </div>
                         <div class="row g-3 mb-5 mt-5">
-                          <label class="form-label">العملة (موضوع الشكوى)</label>
+                          <label class="form-label">Assurés (sujet de la plainte)</label>
 
                           <div class="table-responsive">
                             <table class="table table-nowrap mb-0" data-list='{"valueNames":["matricule","key","type_piece","n_piece","identity"]}'>
@@ -484,15 +468,13 @@
                                     <input type="text" class="form-control form-control-sm" value="Mohamed ben Mohamed" />
                                   </td>
                                 </tr>
-
-                                <!-- Duplique cette ligne si nécessaire -->
                               </tbody>
                             </table>
                           </div>
                         </div>
 
                         <div class="row g-3 mt-5">
-                          <label class="form-label">آخرون (Autres adverses)</label>
+                          <label class="form-label">Autres affectés</label>
 
                           <div class="table-responsive">
                             <table class="table table-nowrap mb-0" data-list='{"valueNames": ["type_piece", "n_piece", "identity"]}'>
@@ -568,8 +550,8 @@
                           const cnssBlock = document.getElementById("cnssBlock");
                           const companyBlock = document.getElementById("companyBlock");
 
-                          // حالة افتراضية: الشركة منخرطة (Switch OFF)
-                          // لو تفعّل الـ switch (Checked) → تظهر معلومات الشركة وتختفي رقم CNSS
+                          // Switch OFF (by default) => Empl affilié
+                          // Switch ON => show companyBlock & hide N°affiliation block
                           cnssSwitch.addEventListener("change", function () {
                             if (this.checked) {
                               cnssBlock.classList.add("d-none");
@@ -593,7 +575,7 @@
                         </script>
                       </div>
                       <div class="col-12">
-                        <button id="btnSubmitSearch" type="submit" class="btn btn-primary">تسجيل البحث</button>
+                        <button id="btnSubmitSearch" type="submit" class="btn btn-primary">Créer l'enquête</button>
                       </div>
                     </form>
                   </div>
@@ -615,23 +597,23 @@
                 </div>
                 <div class="modal-body" style="padding-top: 1em">
                   <div class="table-responsive">
-                    <h3 class="modal-title text-center" id="exampleModalCenteredScrollableTitle">قائمة البحوث المسجلة</h3>
+                    <h3 class="modal-title text-center" id="exampleModalCenteredScrollableTitle">Liste des enquêtes en cours</h3>
                     <br />
                     <table class="table table-hover table-nowrap align-middle">
                       <thead class="table-light">
                         <tr>
-                          <th>المرجع</th>
-                          <th>تاريخ التسجيل</th>
-                          <th>الوضعية</th>
-                          <th>تاريخ الوضعية</th>
-                          <th>رقم الانخراط</th>
-                          <th>هوية المعني</th>
-                          <th>معرف المصلحة</th>
-                          <th>المصلحة</th>
-                          <th>المكتب</th>
-                          <th>المراقب</th>
-                          <th class="text-center">مراجعة بحث</th>
-                          <th class="text-center">ضم إلى بحث</th>
+                          <th>REF</th>
+                          <th>Date de saisie</th>
+                          <th>Situation</th>
+                          <th>Date situation</th>
+                          <th>N° d'affiliation</th>
+                          <th>Identité partie adverse</th>
+                          <th>Code Service</th>
+                          <th>Service</th>
+                          <th>Bureau</th>
+                          <th>contrôleur</th>
+                          <th class="text-center">Révision enquête</th>
+                          <th class="text-center">Joindre à une enquête</th>
                         </tr>
                       </thead>
 
@@ -689,7 +671,7 @@
                         </tr>
                       </tbody>
                     </table>
-                    <button class="btn btn-primary mt-3" id="btnValider" data-bs-dismiss="modal">✔️ تأكيد</button>
+                    <button class="btn btn-primary mt-3" id="btnValider" data-bs-dismiss="modal">✔️ Valider</button>
                   </div>
                 </div>
               </div>
@@ -715,12 +697,14 @@
     <!-- JAVASCRIPT-->
     <!-- Theme JS -->
     <script src="assets/js/theme.bundle.js"></script>
+
+    <!-- Today date with format-->
     <script>
       function setTodayArabicDate(spanId) {
         const el = document.getElementById(spanId);
         if (!el) return;
 
-        el.textContent = new Intl.DateTimeFormat("ar-TN", {
+        el.textContent = new Intl.DateTimeFormat("FR-TN", {
           day: "numeric",
           month: "long",
           year: "numeric",
@@ -730,6 +714,7 @@
       // call it
       setTodayArabicDate("todayDate");
 
+      //Switch between sections based on URL hash
       const sections = document.querySelectorAll(".page-section");
 
       function showSectionFromHash() {
@@ -745,10 +730,10 @@
         }
       }
 
-      // عند تحميل الصفحة
+      // On page load, show the section based on the current hash (or default to "info")
       window.addEventListener("load", showSectionFromHash);
 
-      // عند الضغط على menu
+      // On clic k on nav links, update the active class and show the corresponding section
       window.addEventListener("hashchange", showSectionFromHash);
 
       document.addEventListener("DOMContentLoaded", () => {
@@ -772,7 +757,7 @@
         const revision = row.querySelector(".revision");
         const jointure = row.querySelector(".jointure");
 
-        // التفعيل حسب الوضعية
+        // Activer/désactiver les cases à cocher en fonction de la situation
         if (["E", "C"].includes(situation)) {
           jointure.disabled = false;
           revision.disabled = true;
@@ -783,7 +768,7 @@
           jointure.disabled = true;
         }
 
-        // ====== المنع العام (GLOBAL) ======
+        // ====== Interdiction global ======
         revision.addEventListener("change", () => {
           if (revision.checked) {
             document.querySelectorAll(".jointure").forEach((j) => (j.checked = false));
@@ -796,18 +781,18 @@
           }
         });
 
-        // رسائل التنبيه
+        // Message d'alerte en cas de clic sur une option désactivée
         revision.addEventListener("click", (e) => {
           if (revision.disabled) {
             e.preventDefault();
-            alert("لا تتم المراجعة إلا لبحث مستوفى");
+            alert("La révision n'est possible que pour une enquête satisfaite");
           }
         });
 
         jointure.addEventListener("click", (e) => {
           if (jointure.disabled) {
             e.preventDefault();
-            alert("لا يتم الضم إلا لبحث جاري");
+            alert("La jointure n'est possible que pour une enquête en cours");
           }
         });
       });
@@ -839,7 +824,7 @@
           return;
         }
 
-        // تحديث الحرف فقط
+        // mettre à jour le suffixe uniquement
         suffixSpan.innerHTML = `<span class="text-danger fw-bold">${suffix}</span>`;
       });
     </script>
@@ -853,13 +838,13 @@
 
         let hasSeenList = false;
 
-        // Quand on clique sur "قائمة البحوث المسجلة"
+        // Quand on clique sur "Liste des enquêtes en cours"
         btnShowList.addEventListener("click", function () {
           hasSeenList = true;
           listError.style.display = "none"; // Cache le message si l'utilisateur consulte enfin
         });
 
-        // Quand on clique sur "تسجيل البحث"
+        // Quand on clique sur "Créer l'enquête"
         btnSubmitSearch.addEventListener("click", function (event) {
           // On ne vérifie que si le switch n'est PAS coché (donc le bloc CNSS est actif)
           if (!cnssSwitch.checked && !hasSeenList) {

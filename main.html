@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="light" data-sidebar-behaviour="fixed" data-navigation-color="inverted" data-is-fluid="true" class="h-100">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta content="Webinning" name="author" />
+
+    <!-- Theme CSS -->
+    <!--<link rel="stylesheet" href="assets/css/theme.bundle.css" id="stylesheetLTR">-->
+    <link rel="stylesheet" href="assets/css/theme.rtl.bundle.css" id="stylesheetRTL" />
+    <!--Custom css-->
+    <style type="text/css">
+      header.py-6 {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0rem !important;
+      }
+
+      .page-section {
+        display: none;
+      }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap" />
+    <link
+      rel="stylesheet"
+      media="print"
+      onload="
+        this.onload = null;
+        this.removeAttribute('media');
+      "
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap" />
+
+    <!-- no-JS fallback -->
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap" />
+    </noscript>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon/favicon.ico" sizes="any" />
+
+    <!-- Page Title -->
+    <title>Dashboard | Dashly</title>
+  </head>
+
+  <body class="h-100 overflow-hidden">
+    <!-- THEME CONFIGURATION -->
+    <script>
+      let themeAttrs = document.documentElement.dataset;
+
+      for (let attr in themeAttrs) {
+        if (localStorage.getItem(attr) != null) {
+          document.documentElement.dataset[attr] = localStorage.getItem(attr);
+
+          if (theme === "auto") {
+            document.documentElement.dataset.theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+              e.matches ? (document.documentElement.dataset.theme = "dark") : (document.documentElement.dataset.theme = "light");
+            });
+          }
+        }
+      }
+    </script>
+    <nav id="mainNavbar" class="navbar navbar-vertical navbar-expand-lg scrollbar bg-dark navbar-dark">
+      <!-- Theme configuration (navbar) -->
+      <script>
+        let navigationColor = localStorage.getItem("navigationColor"),
+          navbar = document.getElementById("mainNavbar");
+
+        if (navigationColor != null && navbar != null) {
+          if (navigationColor == "inverted") {
+            navbar.classList.add("bg-dark", "navbar-dark");
+            navbar.classList.remove("bg-white", "navbar-light");
+          } else {
+            navbar.classList.add("bg-white", "navbar-light");
+            navbar.classList.remove("bg-dark", "navbar-dark");
+          }
+        }
+      </script>
+      <div class="container-fluid">
+        <!-- Navbar toggler -->
+        <a href="javascript: void(0);" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#sidenavCollapse" aria-controls="sidenavCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </a>
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="sidenavCollapse">
+          <!-- Navigation -->
+
+          <!-- End of Navigation -->
+        </div>
+        <!-- End of Collapse -->
+      </div>
+    </nav>
+    <!-- MAIN CONTENT -->
+    <main class="h-100 overflow-auto">
+      <!-- HEADER -->
+      <header class="container-fluid d-flex py-6 mb-4">
+        <!-- Top buttons -->
+        <div class="d-flex align-items-center ms-auto me-n1 me-lg-n2"></div>
+      </header>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="card border-0 p-md-6">
+              <div class="card-body">
+                <div class="row mb-5 md-5">
+                  <img src="assets/images/cnss_logo.svg" class="navbar-brand-img mb-7" alt="..." width="60" height="100" />
+                  <div class="col-md-12 d-flex justify-content-between gap-7 align-items-center">
+                    <div class="card w-275px">
+                      <img src="../assets/images/backgrounds/background-01.jpg" class="card-img-top" alt="..." />
+                      <div class="card-body">
+                        <p class="card-text text-center">Gestion des enquêtes</p>
+                      </div>
+                    </div>
+                    <div class="card w-275px">
+                      <img src="../assets/images/backgrounds/background-03.jpg" class="card-img-top" alt="..." />
+                      <div class="card-body">
+                        <p class="card-text text-center">Etablissement & suivie des contrats objectifs et calcul prime intéressement</p>
+                      </div>
+                    </div>
+                    <div class="card w-275px">
+                      <img src="../assets/images/backgrounds/background-02.jpg" class="card-img-top" alt="..." />
+                      <div class="card-body">
+                        <p class="card-text text-center">Gestion des controlleurs</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="mt-auto"></footer>
+    </main>
+    <!-- / main -->
+
+    <!-- JAVASCRIPT-->
+    <!-- Theme JS -->
+    <script src="assets/js/theme.bundle.js"></script>
+    <script>
+      function setTodayArabicDate(spanId) {
+        const el = document.getElementById(spanId);
+        if (!el) return;
+
+        el.textContent = new Intl.DateTimeFormat("ar-TN", {
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        }).format(new Date());
+      }
+
+      // call it
+      setTodayArabicDate("todayDate");
+
+      const sections = document.querySelectorAll(".page-section");
+
+      function showSectionFromHash() {
+        const hash = window.location.hash.replace("#", "") || "info";
+
+        sections.forEach((section) => {
+          section.style.display = "none";
+        });
+
+        const activeSection = document.getElementById(hash);
+        if (activeSection) {
+          activeSection.style.display = "block";
+        }
+      }
+
+      // عند تحميل الصفحة
+      window.addEventListener("load", showSectionFromHash);
+
+      // عند الضغط على menu
+      window.addEventListener("hashchange", showSectionFromHash);
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const hash = window.location.hash;
+        if (hash) {
+          document.querySelectorAll(".nav-link").forEach((link) => {
+            if (link.getAttribute("href") === hash) {
+              link.classList.add("active");
+            } else {
+              link.classList.remove("active");
+            }
+          });
+        }
+      });
+    </script>
+
+    <!--script_company_history-->
+    <script>
+      document.querySelectorAll(".popup_history tbody tr").forEach((row) => {
+        const situation = row.dataset.situation;
+        const revision = row.querySelector(".revision");
+        const jointure = row.querySelector(".jointure");
+
+        // التفعيل حسب الوضعية
+        if (["E", "C"].includes(situation)) {
+          jointure.disabled = false;
+          revision.disabled = true;
+        }
+
+        if (situation === "S") {
+          revision.disabled = false;
+          jointure.disabled = true;
+        }
+
+        // ====== المنع العام (GLOBAL) ======
+        revision.addEventListener("change", () => {
+          if (revision.checked) {
+            document.querySelectorAll(".jointure").forEach((j) => (j.checked = false));
+          }
+        });
+
+        jointure.addEventListener("change", () => {
+          if (jointure.checked) {
+            document.querySelectorAll(".revision").forEach((r) => (r.checked = false));
+          }
+        });
+
+        // رسائل التنبيه
+        revision.addEventListener("click", (e) => {
+          if (revision.disabled) {
+            e.preventDefault();
+            alert("لا تتم المراجعة إلا لبحث مستوفى");
+          }
+        });
+
+        jointure.addEventListener("click", (e) => {
+          if (jointure.disabled) {
+            e.preventDefault();
+            alert("لا يتم الضم إلا لبحث جاري");
+          }
+        });
+      });
+    </script>
+
+    <!--ref_rev_or_joint_letter_switcher-->
+    <script>
+      document.getElementById("btnValider").addEventListener("click", () => {
+        const refSpan = document.querySelector(".ref_enquete");
+        const suffixSpan = document.querySelector(".ref_suffix");
+
+        let suffix = "";
+
+        document.querySelectorAll(".popup_history tbody tr").forEach((row) => {
+          const revision = row.querySelector(".revision");
+          const jointure = row.querySelector(".jointure");
+
+          if (revision && revision.checked) {
+            suffix = "R";
+          }
+
+          if (jointure && jointure.checked) {
+            suffix = "J";
+          }
+        });
+
+        if (!suffix) {
+          suffixSpan.innerHTML = ""; // ✅ مسح R أو J
+          return;
+        }
+
+        // تحديث الحرف فقط
+        suffixSpan.innerHTML = `<span class="text-danger fw-bold">${suffix}</span>`;
+      });
+    </script>
+    <!--Historique_consultation_enforcement-->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const btnShowList = document.getElementById("btnShowList");
+        const btnSubmitSearch = document.getElementById("btnSubmitSearch");
+        const listError = document.getElementById("listError");
+        const cnssSwitch = document.getElementById("cnssSwitch");
+
+        let hasSeenList = false;
+
+        // Quand on clique sur "قائمة البحوث المسجلة"
+        btnShowList.addEventListener("click", function () {
+          hasSeenList = true;
+          listError.style.display = "none"; // Cache le message si l'utilisateur consulte enfin
+        });
+
+        // Quand on clique sur "تسجيل البحث"
+        btnSubmitSearch.addEventListener("click", function (event) {
+          // On ne vérifie que si le switch n'est PAS coché (donc le bloc CNSS est actif)
+          if (!cnssSwitch.checked && !hasSeenList) {
+            event.preventDefault(); // Arrête la soumission du formulaire
+
+            // Affiche le message
+            listError.style.display = "block";
+
+            // Fait défiler la page jusqu'au message d'erreur
+            listError.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
